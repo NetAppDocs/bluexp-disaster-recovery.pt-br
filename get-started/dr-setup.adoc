@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-setup.html 
+keywords: bluexp, disaster recovery, aws, amazon web services, amazon fsx for netapp ontap 
+summary: Para usar a recuperação de desastres do BlueXP , execute algumas etapas para configurá-la. 
+---
+= Configure sua infraestrutura para recuperação de desastres no BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+Para usar a recuperação de desastres do BlueXP , execute algumas etapas para configurá-la tanto no Amazon Web Services (AWS) quanto no BlueXP .
+
+
+TIP: Revise link:../get-started/dr-prerequisites.html["pré-requisitos"] para garantir que seu ambiente esteja pronto.
+
+
+
+== Prepare-se para a recuperação de desastres do BlueXP 
+
+* Verifique seu ambiente de produção.
++
+** Verifique se as VMs que você deseja proteger estão hospedadas em datastores NFS (usando volumes NFS do ONTAP) ou armazenamentos de dados VMFS (usando LUNs iSCSI do NetApp).
+** Verifique se você tem credenciais e chaves de acesso para seus arrays ONTAP locais, vCenters e instâncias de nuvem VMware hospedadas pela AWS.
+
+
+* Crie ou verifique seu local de recuperação de desastres.
++
+** Crie ou verifique se o sistema de arquivos do Amazon FSX está pronto.
+** Certifique-se de que as VMs de origem e de destino estejam direcionadas.
+
+
+
+
+
+
+== Configurar o VMware Cloud para AWS SDDC
+
+Configure o VMware Cloud para o data center definido por software (SDDC) da AWS.
+
+* Crie um sistema de arquivos do Amazon FSX for ONTAP. Provisione e configure o FSX for ONTAP. O Amazon FSX for NetApp ONTAP é um serviço totalmente gerenciado que fornece armazenamento de arquivos altamente confiável, escalável, de alto desempenho e rico em recursos, construído no popular sistema de arquivos NetApp ONTAP.
+* Siga as etapas https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["link"^] aqui e aqui https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/task-getting-started-fsx.html["Início rápido para o Amazon FSX for NetApp ONTAP"] para provisionar e configurar o FSX for NetApp ONTAP.
+* Adicione o Amazon FSX for NetApp ONTAP ao ambiente de trabalho e adicione credenciais da AWS para o FSX for ONTAP.
+* Na AWS, você precisará executar as seguintes etapas:
++
+** Implante e configure o VMware Cloud na AWS.
+** Use uma conta VMware e provisione o SDDC. Certifique-se de que o SDDC tenha conetividade com o FSX for ONTAP.
+
+
+
+
+
+
+=== Implante o VMware Cloud
+
+https://www.vmware.com/products/vmc-on-aws.html["VMware Cloud na AWS"^] Fornece uma experiência nativa em nuvem para workloads baseados em VMware no ecossistema AWS. Cada data center definido por software (SDDC) da VMware é executado em uma Amazon Virtual Private Cloud (VPC) e fornece uma pilha completa de VMware (incluindo vCenter Server), rede definida por software NSX-T, armazenamento definido por software VSAN e um ou mais hosts ESXi que fornecem recursos de computação e armazenamento para as cargas de trabalho.
+
+Para configurar um ambiente VMC na AWS, siga as etapas https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-setup.html["link"^] neste . Um cluster de luz piloto também pode ser usado para fins de recuperação de desastres.
+
+
+
+== Configure o licenciamento
+
+Com a recuperação de desastres do BlueXP , você pode se inscrever para uma avaliação gratuita de 90 dias.
+
+Você pode comprar um dos seguintes itens:
+
+* Uma assinatura PAYGO (pagamento conforme o uso) com o AWS Marketplace
+* Traga sua própria licença (BYOL), que é um arquivo de licença do NetApp (NLF).
+
+
+link:../get-started/dr-licensing.html["Configurar o licenciamento de recuperação de desastres do BlueXP "]Consulte a .

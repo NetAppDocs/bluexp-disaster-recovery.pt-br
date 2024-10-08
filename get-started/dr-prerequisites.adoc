@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-prerequisites.html 
+keywords: what are bluexp disaster recovery requirements, disaster recovery prerequisites, bluexp disaster recovery 
+summary: Antes de usar a recuperação de desastres do BlueXP , você deve garantir que seu ambiente atenda aos requisitos de storage do ONTAP, cluster do VMware vCenter e BlueXP . 
+---
+= Pré-requisitos de recuperação de desastres do BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+Antes de usar a recuperação de desastres do BlueXP , você deve garantir que seu ambiente atenda aos requisitos de storage do ONTAP, cluster do VMware vCenter e BlueXP .
+
+
+
+== Pré-requisitos de storage do ONTAP
+
+Esses pré-requisitos se aplicam a instâncias do ONTAP ou do Amazon FSX for NetApp ONTAP.
+
+* Os clusters de origem e destino devem ter um relacionamento entre pares.
+* O SVM que hospedará os volumes de recuperação de desastre precisa estar no cluster de destino.
+* O SVM de origem e o SVM de destino devem ter um relacionamento próximo.
++
+
+NOTE: Os volumes de recuperação de desastre no SVM ou SVMs de destino não devem ser criados com antecedência. A recuperação de desastres do BlueXP  criará os volumes de destino conforme necessário para o plano de replicação.
+
+* Se estiver implantando com o Amazon FSX for NetApp ONTAP, o seguinte pré-requisito se aplica:
++
+** Uma instância do Amazon FSX for NetApp ONTAP para hospedar armazenamentos de dados VMware DR deve existir na VPC. Consulte a documentação do Amazon FSX para ONTAP no https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["como começar"^].
+
+
+
+
+
+
+== Pré-requisitos dos clusters do VMware vCenter
+
+Esses pré-requisitos se aplicam aos clusters do vCenter no local e ao VMware Cloud para data center definido por software (SDDC) da AWS.
+
+* Todos os clusters do VMware que você deseja gerenciar a recuperação de desastres do BlueXP  devem estar hospedados no ONTAP volumes.
+* Todos os datastores VMware a serem gerenciados pela recuperação de desastres do BlueXP  devem usar um dos seguintes protocolos:
++
+** NFS
+** VMFS usando o protocolo iSCSI ou FC
+
+
+* Se você estiver usando o VMware Cloud SDDC, esses pré-requisitos se aplicam.
++
+** No Console do VMware Cloud, use as funções de serviço de Administrador e Administrador do NSX Cloud. Use também o proprietário da organização para a função Organização. Consulte a https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["Usando o VMware Cloud Foundations com a documentação do AWS FSX for NetApp ONTAP"^].
+** Vincule a instância do VMware Cloud SDDC ao Amazon FSX for NetApp ONTAP. Consulte a https://vmc.techzone.vmware.com/fsx-guide#overview["Integração do VMware Cloud no AWS com as informações de implantação do Amazon FSX for NetApp ONTAP"^].
+
+
+
+
+
+
+== Pré-requisitos do BlueXP 
+
+
+
+=== Comece a usar o BlueXP 
+
+Se você ainda não fez isso, https://docs.netapp.com/us-en/bluexp-setup-admin/task-sign-up-saas.html["Inscreva-se no BlueXP  e crie uma organização"^]
+
+
+
+=== Reunir credenciais para ONTAP e VMware
+
+* As credenciais do Amazon FSX for ONTAP e AWS devem ser adicionadas ao ambiente de trabalho do projeto BlueXP  que será usado para gerenciar a recuperação de desastres do BlueXP .
+* A recuperação de desastres do BlueXP  requer credenciais do vCenter. Você insere as credenciais do vCenter ao adicionar um site na recuperação de desastres do BlueXP .
++
+Para obter uma lista do vCenter Privileges necessário, link:../reference/vcenter-privileges.html["O vCenter Privileges é necessário para a recuperação de desastres do BlueXP "]consulte . Para obter instruções sobre como adicionar um site, link:../use/sites-add.html["Adicione um site"]consulte .
+
+
+
+
+
+=== Crie um conetor BlueXP 
+
+Um conetor BlueXP  deve ser configurado no BlueXP . Quando você usa o BlueXP  Connector, ele incluirá os recursos apropriados para o serviço de recuperação de desastres.
+
+* A recuperação de desastres do BlueXP  funciona apenas com a implantação do conetor de modo padrão.  https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-standard-mode.html["Introdução ao BlueXP  no modo padrão"^]Consulte .
+* Tipo de conetor BlueXP  necessário:
++
+** *Recuperação de desastres on-premises para no local*: Instale o BlueXP  on-premises Connector no local de recuperação de desastres. Consulte a https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["Instale e configure um conetor no local"^].
+** *No local da AWS*: Instale o BlueXP  Connector para AWS na VPC da AWS. Consulte a https://docs.netapp.com/us-en/bluexp-setup-admin/concept-install-options-aws.html["Opções de instalação do conetor na AWS"^].
++
+
+TIP: Para on-premises a on-premises, use o conector BlueXP  no local. Para ambientes locais para a AWS, use o BlueXP  AWS Connector, que tem acesso ao vCenter de origem no local e ao vCenter de destino no local.
+
+** O BlueXP  Connector instalado deve ser capaz de acessar qualquer cluster VMware que a recuperação de desastres do BlueXP  gerenciará.
+
+
+* Todos os arrays ONTAP a serem gerenciados pela recuperação de desastres do BlueXP  devem ser adicionados a qualquer ambiente de trabalho dentro do projeto BlueXP  que seja usado para gerenciar a recuperação de desastres do BlueXP .
++
+ https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["Descubra clusters ONTAP no local"^]Consulte .
+
+
+
+
+
+== Pré-requisitos de workload
+
+Para garantir que os processos de consistência de aplicativos sejam bem-sucedidos, aplique estes pré-requisitos:
+
+* Certifique-se de que as ferramentas VMware (ou ferramentas de VM abertas) estejam sendo executadas nas VMs que serão protegidas.
+* Para VMs do Windows que executam o Microsoft SQL Server ou o Oracle Database ou ambos, os bancos de dados devem ter seus gravadores VSS habilitados.
+* Os bancos de dados Oracle que estão sendo executados em um sistema operacional Linux devem ter a autenticação do usuário do sistema operacional habilitada para a função SYSDBA do banco de dados Oracle.
+

@@ -1,0 +1,56 @@
+---
+indexpage:
+  title: Documentação de recuperação de desastres do BlueXP 
+  summary: Com a recuperação de desastres do BlueXP  para VMware, é possível replicar
+    workloads da VMware no local que executam o storage ONTAP para um data center
+    definido por software da VMware em uma nuvem pública como um local de recuperação
+    de desastres usando o storage de nuvem da NetApp.
+  keywords: disaster, disaster recovery, bluexp, replicate, replication, cloud storage
+  lead: A recuperação de desastres na nuvem é uma maneira resiliente e econômica de
+    proteger workloads contra interrupções no local e eventos de corrupção de dados
+    (por exemplo, ransomware). Com a recuperação de desastres do BlueXP  para VMware,
+    é possível replicar workloads da VMware no local que executam o storage ONTAP
+    para um data center definido por software da VMware em uma nuvem pública ou para
+    outro local local local como local de recuperação de desastres.
+  tiles:
+  - title: Comece agora
+    links:
+    - title: Saiba mais sobre a recuperação de desastres do BlueXP 
+      url: "/get-started/dr-intro.html"
+    - title: Novidades na recuperação de desastres do BlueXP 
+      url: "/release-notes/dr-whats-new.html"
+    - title: Início rápido
+      url: "/get-started/dr-quick-start.html"
+    - title: Pré-requisitos
+      url: "/get-started/dr-prerequisites.html"
+    - title: Acesse a recuperação de desastres do BlueXP 
+      url: "/get-started/dr-login.html"
+    - title: FAQ
+      url: "/get-started/dr-faq.html"
+  - title: Use a recuperação de desastres do BlueXP 
+    links:
+    - title: Adicione o vCenter Sites
+      url: "/use/sites-add.html"
+    - title: Crie um plano de recuperação de desastres
+      url: "/use/drplan-create.html"
+    - title: Replique aplicativos para outro site
+      url: "/use/replicate.html"
+    - title: Migrar aplicativos para outro site
+      url: "/use/migrate.html"
+    - title: Fazer failover de aplicativos para um site remoto
+      url: "/use/failover.html"
+    - title: Faça failover de aplicativos para o site de origem original
+      url: "/use/failback.html"
+  - title: Blogs & comunidade
+    links:
+    - title: Comunidade NetApp
+      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
+    - title: Webinars na nuvem
+      url: https://bluexp.netapp.com/events
+    - title: Blog de recuperação de desastres do BlueXP 
+      url: https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-disaster-recovery-service-for-BC-with-VMware-Cloud-on-AWS-and-FSx-for/ba-p/447066
+    - title: Primeiros passos com a recuperação de desastres do BlueXP  como um laboratório
+        de serviços sob demanda
+      url: https://labondemand.netapp.com/lab/draas
+    - title: Vídeos
+      url: https://www.youtube.com/@netapp/videos

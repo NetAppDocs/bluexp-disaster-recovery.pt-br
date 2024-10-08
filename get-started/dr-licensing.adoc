@@ -1,0 +1,169 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-licensing.html 
+keywords: bluexp license, disaster recovery licensing 
+summary: Com a recuperação de desastres do BlueXP , você pode usar diferentes planos de licenciamento, incluindo uma avaliação gratuita, uma assinatura paga conforme o uso ou trazer sua própria licença. 
+---
+= Configurar o licenciamento para recuperação de desastres do BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+Com a recuperação de desastres do BlueXP , você pode usar diferentes planos de licenciamento, incluindo uma avaliação gratuita, uma assinatura paga conforme o uso ou trazer sua própria licença.
+
+Você pode usar os seguintes tipos de licença:
+
+* Inscreva-se para uma avaliação gratuita de 90 dias.
+* Adquira uma assinatura PAYGO (pay-as-you-go) com o Amazon Web Services (AWS) Marketplace.
+* Traga sua própria licença (BYOL), que é um arquivo de licença NetApp (NLF) que você obtém de seu representante de vendas da NetApp Você pode usar o número de série da licença para ativar o BYOL na carteira digital BlueXP .
+
+
+
+NOTE: As cobranças de recuperação de desastres do BlueXP  são baseadas na capacidade provisionada de armazenamentos de dados no local de origem quando há pelo menos uma VM com um plano de replicação. A capacidade de um armazenamento de dados com falha não está incluída no limite de capacidade. Para um BYOL, se os dados excederem a capacidade permitida, as operações no serviço serão limitadas até que você obtenha uma licença de capacidade adicional ou atualize a licença na carteira digital BlueXP .
+
+Depois de configurar seu BYOL, você poderá ver a licença na guia carteira digital do BlueXP  *licenças de serviço de dados*.
+
+Depois que a avaliação gratuita terminar ou a licença expirar, você ainda pode fazer o seguinte no serviço:
+
+* Visualize qualquer recurso, como um workload ou plano de replicação.
+* Exclua qualquer recurso, como uma carga de trabalho ou plano de replicação.
+* Execute todas as operações agendadas que foram criadas durante o período de teste ou sob a licença.
+
+
+
+
+== Experimente-o usando um teste gratuito de 90 dias
+
+Você pode experimentar a recuperação de desastres do BlueXP  usando uma avaliação gratuita de 90 dias.
+
+
+NOTE: Não são aplicados limites de capacidade durante o teste.
+
+Você pode obter uma licença a qualquer momento e você não será cobrado até que o teste de 90 dias termine. Para continuar após o teste de 90 dias, você precisará comprar uma licença BYOL.
+
+Durante o teste, você tem funcionalidade completa.
+
+.Passos
+. Aceder ao https://console.bluexp.netapp.com/["Consola BlueXP "^].
+. Inicie sessão no BlueXP .
+. Na navegação à esquerda do BlueXP , selecione *proteção* > *recuperação de desastres*.
++
+Se esta for a primeira vez que fizer login neste serviço, a página de destino será exibida.
+
++
+image:draas-landing2.png["Captura de tela da página inicial para recuperação de desastres do BlueXP "]
+
+. Se você ainda não adicionou um conetor para outros serviços, adicione um.
++
+Para adicionar um conetor, https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Saiba mais sobre conetores"^] consulte a .
+
+. Depois de configurar um conetor, na página inicial de recuperação de desastres do BlueXP , o botão para adicionar um conetor muda para um botão para iniciar uma avaliação gratuita. Selecione *Iniciar avaliação gratuita*.
+. Comece adicionando vCenters.
++
+Para obter detalhes, link:../use/sites-add.html["Adicione o vCenter Sites"]consulte .
+
+
+
+
+
+== Após o término da avaliação, inscreva-se no AWS Marketplace
+
+Após o término da avaliação gratuita, você pode comprar uma licença da NetApp ou assinar pelo AWS Marketplace. Este procedimento fornece uma visão geral de alto nível de como se inscrever diretamente no AWS Marketplace.
+
+.Passos
+. Na recuperação de desastres do BlueXP , você verá uma mensagem informando que a avaliação gratuita está expirando. Na mensagem, selecione *Subscribe ou compre uma licença*.
+. Selecione *Inscrever-se no AWS Marketplace*.
+. No AWS Marketplace, selecione *Exibir opções de compra*. Use o AWS Marketplace para assinar a recuperação de desastres do BlueXP .
+. Quando você retorna à recuperação de desastres do BlueXP , uma mensagem indica que você está inscrito.
++
+Para ver os detalhes da subscrição na carteira digital BlueXP , selecione *Ver detalhes da subscrição* e veja a subscrição ativa na página *Subscrições*.
+
++
+image:digital-wallet-subscriptions2.png["O separador assinaturas da carteira digital BlueXP "]
+
+
+
+
+
+== Após o término da avaliação, compre uma licença BYOL por meio do NetApp
+
+Após o término da avaliação, você pode comprar uma licença por meio de seu representante de vendas da NetApp
+
+Se você trazer sua própria licença (BYOL), a configuração inclui a compra da licença, obter o arquivo de licença NetApp (NLF) e adicionar a licença à carteira digital BlueXP .
+
+*Ative a licença* depois de adquirir a licença de recuperação de desastres do BlueXP  do seu representante de vendas da NetApp, ative a licença inserindo o número de série da recuperação de desastres do BlueXP  e as informações da conta do site de suporte da NetApp (NSS).
+
+Você precisará do número de série da recuperação de desastres do BlueXP . Localize esse número no seu pedido de vendas ou entre em Contato com a equipe da conta para obter essas informações.
+
+*Adicione a licença à carteira digital BlueXP * depois de comprar uma licença de recuperação de desastres BlueXP , você precisa adicionar a licença à carteira digital BlueXP .
+
+. Depois de obter a licença, retorne à recuperação de desastres do BlueXP . Selecione a opção *Exibir métodos de pagamento* no canto superior direito. Ou, na mensagem de que a avaliação gratuita está expirando, selecione *Subscribe ou compre uma licença*.
++
+image:draas-license-subscribe2.png["A página de metodos de pagamento de recuperação de desastres do BlueXP "]
+
+. Selecione *Adicionar licença ao BlueXP *. Você será direcionado para a carteira digital BlueXP .
++
+image:digital-wallet-data-services-licenses-tab3.png["A guia licenças dos Serviços de dados da carteira digital BlueXP "]
+
+. Na carteira digital BlueXP , na guia *licenças de serviços de dados*, selecione *Adicionar licença*.
+. Na página Adicionar licença, insira o número de série e as informações da conta do site de suporte da NetApp.
++
+image:byol-digital-wallet-license-add2.png["A página Adicionar licença da carteira digital BlueXP "]
+
+. Selecione *Adicionar licença*.
+
+
+.Resultado
+A carteira digital BlueXP  agora mostra a recuperação de desastres com uma licença.
+
+image:byol-digital-wallet-licenses-added.png["Carteira digital NetApp BlueXP "]
+
+
+
+== Atualize sua licença BlueXP  quando ela expirar
+
+Se o seu prazo licenciado estiver próximo à data de expiração ou se a capacidade licenciada estiver atingindo o limite, você será notificado na IU de recuperação de desastres do BlueXP . Você pode atualizar sua licença de recuperação de desastres do BlueXP  antes que ela expire para que não haja interrupção na capacidade de acessar os dados digitalizados.
+
+
+TIP: Esta mensagem também aparece na carteira digital BlueXP  e na https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["Notificações"].
+
+.Passos
+. Selecione o ícone de bate-papo no canto inferior direito do BlueXP  para solicitar uma extensão para o seu termo ou capacidade adicional para a sua licença para o número de série específico. Você também pode enviar um e-mail para solicitar uma atualização para sua licença.
++
+Depois de pagar a licença e esta ser registada no Site de suporte da NetApp, a BlueXP  atualiza automaticamente a licença na carteira digital da BlueXP  e a página licenças dos Serviços de dados refletirá a alteração em 5 a 10 minutos.
+
+. Se o BlueXP  não puder atualizar automaticamente a licença (por exemplo, quando instalado em um site escuro), você precisará fazer o upload manual do arquivo de licença.
++
+.. Você pode obter o arquivo de licença no site de suporte da NetApp.
+.. Aceda à carteira digital BlueXP .
+.. Selecione a guia *Data dervices licenses*, selecione o ícone *ações ...* para o número de série do serviço que você está atualizando e selecione *Update License*.
+
+
+
+
+
+
+== Termine a avaliação gratuita
+
+Você pode parar o teste gratuito a qualquer momento ou você pode esperar até que ele expire.
+
+.Passos
+. Na recuperação de desastres do BlueXP , no canto superior direito, selecione *avaliação gratuita - Ver detalhes*.
+. Nos detalhes da lista suspensa, selecione *End free trial*.
++
+image:draas-trial-end3.png["Termine a página de avaliação gratuita"]
+
+. Se você quiser excluir todos os dados, marque *Excluir todos os dados quando minha avaliação terminar*.
++
+Isso excluirá todas as programações, planos de replicação, grupos de recursos, vCenters e sites. Os dados de auditoria, os logs de operação e o histórico de tarefas são mantidos até o final da vida útil do produto.
+
++
+
+NOTE: Se você terminar a avaliação gratuita e não pedir para excluir dados e você não comprar uma licença ou assinatura, 60 dias após o término da avaliação gratuita, a recuperação de desastres do BlueXP  excluirá todos os seus dados.
+
+. Digite "End trial" na caixa de texto.
+. Selecione *fim*.
+

@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-intro.html 
+keywords: how bluexp disaster recovery works, what is disaster recovery, bluexp, vmware, vcenter, draas, replicate, failover, failback, fail over, fail back 
+summary: A recuperação de desastres na nuvem é uma maneira resiliente e econômica de proteger workloads contra interrupções no local e eventos de corrupção de dados. Com a recuperação de desastres do BlueXP  para VMware, é possível replicar workloads da VMware no local que executam o storage ONTAP para um data center definido por software da VMware em uma nuvem pública usando o storage de nuvem NetApp ou para outro ambiente VMware no local, com storage ONTAP como local de recuperação de desastres. 
+---
+= Saiba mais sobre a recuperação de desastres do BlueXP  para VMware
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+A recuperação de desastres na nuvem é uma maneira resiliente e econômica de proteger workloads contra interrupções no local e eventos de corrupção de dados. Com a recuperação de desastres do BlueXP  para VMware, é possível replicar workloads da VMware no local que executam o storage ONTAP para um data center definido por software da VMware em uma nuvem pública usando o storage de nuvem NetApp ou para outro ambiente VMware no local, com storage ONTAP como local de recuperação de desastres.
+
+O BlueXP  Disaster Recovery é um serviço de recuperação de desastres baseado na nuvem que automatiza os workflows de recuperação de desastres. Com o serviço de recuperação de desastres da BlueXP , você pode proteger seus workloads locais baseados em NFS e armazenamentos de dados do sistema de arquivos de máquina virtual (VMFS) do VMware vSphere para iSCSI e FC executando storage NetApp em um dos seguintes casos:
+
+* VMware Cloud (VMC) na AWS com o Amazon FSX for NetApp ONTAP ou
+* Outro ambiente VMware no local, baseado em NFS, com storage ONTAP
+
+
+
+IMPORTANT: Com essa versão, a recuperação de desastres é suportada em uma prévia de tecnologia para cargas de trabalho VMware locais para ambientes VMware locais com armazenamentos de dados do VMware vSphere Virtual Machine File System (VMFS). A NetApp não cobra por nenhuma capacidade de workload visualizada.
+
+A recuperação de desastres da BlueXP  usa a tecnologia ONTAP SnapMirror como o transporte de replicação para o local de recuperação de desastres. Isso possibilita a melhor eficiência de storage do setor (compactação e deduplicação) em locais primários e secundários.
+
+image:draas-onprem-to-cloud-onprem.png["Diagrama mostrando os componentes da recuperação de desastres do BlueXP  para VMware"]
+
+
+
+== Benefícios de usar a recuperação de desastres do BlueXP  para VMware
+
+A recuperação de desastres da BlueXP  oferece os seguintes benefícios:
+
+* Experiência de usuário simplificada para descoberta e recuperação do vCenter de aplicações com várias operações de recuperação pontuais 
+* Menor custo total de propriedade com custo reduzido de operações e capacidade de criar e ajustar planos de recuperação de desastres com o mínimo de recursos
+* Prontidão de recuperação de desastres contínua com testes de failover virtual que não interrompem as operações
+* Retorno do investimento mais rápido com mudanças dinâmicas no ambiente DE TI e capacidade de lidar com isso em seus planos de recuperação de desastres
+
+
+
+
+== O que você pode fazer com a recuperação de desastres do BlueXP  para VMware
+
+A recuperação de desastres da BlueXP  fornece o uso completo de várias tecnologias NetApp para alcançar os seguintes objetivos:
+
+* Replique as aplicações da VMware no local de produção para um local remoto de recuperação de desastres na nuvem ou no local usando a replicação do SnapMirror.
+* Migre as cargas de trabalho da VMware do seu site original para outro local.
+* Realize um teste de failover; as máquinas virtuais são criadas temporariamente. A recuperação de desastres do BlueXP  faz um novo volume do FlexClone a partir do instantâneo selecionado e um datastore temporário que faz backup do volume do FlexClone é mapeado para os hosts ESXi. Esse processo não consome capacidade física adicional no armazenamento ONTAP no local ou no FSX for NetApp ONTAP na AWS. O volume de origem original não é modificado e os trabalhos de réplica podem continuar mesmo durante a recuperação de desastres.
+* Em caso de desastre, faça failover do seu local principal sob demanda para o local de recuperação de desastre, que pode ser o VMware Cloud no AWS com o FSX for NetApp ONTAP ou um ambiente VMware no local com o ONTAP.
+* Após a solução do desastre, faça o failback sob demanda do local de recuperação de desastre para o local principal.
+
+
+
+NOTE: A configuração do servidor vSphere é feita fora da recuperação de desastres do BlueXP  no vSphere Server.
+
+
+
+== Custo
+
+O NetApp não cobra por usar a versão de avaliação da recuperação de desastres do BlueXP .
+
+O serviço de recuperação de desastres do BlueXP  pode ser usado com uma licença do NetApp ou com um plano anual baseado em assinatura por meio do Amazon Web Services.
+
+
+IMPORTANT: Alguns lançamentos incluem uma prévia da tecnologia. A NetApp não cobra por nenhuma capacidade de workload visualizada. Consulte link:../release-notes/dr-whats-new.html["Novidades na recuperação de desastres do BlueXP "] para obter informações sobre as últimas pré-visualizações de tecnologia.
+
+
+
+== Licenciamento
+
+Você pode usar os seguintes tipos de licença:
+
+* Inscreva-se para uma avaliação gratuita de 90 dias.
+* Adquira uma assinatura PAYGO (pay-as-you-go) com o Amazon Web Services (AWS) Marketplace.
+* Traga sua própria licença (BYOL), que é um arquivo de licença NetApp (NLF) que você obtém de seu representante de vendas da NetApp Você pode usar o número de série da licença para ativar o BYOL na carteira digital BlueXP .
+
+
+As licenças para todos os serviços BlueXP  são gerenciadas pelo serviço de carteira digital da BlueXP . Depois de configurar seu BYOL, você poderá ver uma licença ativa para o serviço na carteira digital BlueXP .
+
+
+NOTE: As cobranças de recuperação de desastres do BlueXP  são baseadas na capacidade provisionada de armazenamentos de dados no local de origem quando há pelo menos uma VM com um plano de replicação. A capacidade de um armazenamento de dados com falha não está incluída no limite de capacidade. Para um BYOL, se os dados excederem a capacidade permitida, as operações no serviço serão limitadas até que você obtenha uma licença de capacidade adicional ou atualize a licença na carteira digital BlueXP .
+
+Para obter detalhes sobre como configurar o licenciamento para recuperação de desastres do BlueXP , link:../get-started/dr-licensing.html["Configurar o licenciamento de recuperação de desastres do BlueXP "]consulte .
+
+
+
+== teste gratuito de 90 dias
+
+Você pode experimentar a recuperação de desastres do BlueXP  usando uma avaliação gratuita de 90 dias.
+
+Para continuar após o período de avaliação de 90 dias, você precisará obter uma assinatura de pagamento conforme o uso (PAYGO) do seu provedor de nuvem ou comprar uma licença BYOL da NetApp.
+
+Você pode comprar uma licença a qualquer momento e você não será cobrado até que o teste de 90 dias termine.
+
+
+
+== Como funciona a recuperação de desastres do BlueXP 
+
+A recuperação de desastres do BlueXP  pode recuperar cargas de trabalho replicadas de um site no local para o Amazon FSX for ONTAP ou para outro local no local. Esse serviço automatiza a recuperação do nível SnapMirror, por meio do Registro de máquina virtual na nuvem de máquina virtual (VMC) e de mapeamentos de rede diretamente na plataforma de segurança e virtualização de rede da VMware, o NSX-T. esse recurso está incluído em todos os ambientes de nuvem de máquina virtual.
+
+A recuperação de desastres da BlueXP  usa a tecnologia ONTAP SnapMirror, que fornece replicação altamente eficiente e preserva a eficiência do Snapshot incremental da ONTAP. A replicação do SnapMirror garante que as cópias Snapshot consistentes com aplicações estejam sempre sincronizadas e os dados possam ser usados imediatamente após um failover.
+
+image:dr-architecture-diagram-70-2.png["Diagrama mostrando a arquitetura da recuperação de desastres do BlueXP  para a infraestrutura de serviços VMware"]
+
+O diagrama a seguir mostra a arquitetura dos planos de recuperação de desastres on-premises para no local.
+
+image:dr-architecture-diagram-onprem-to-onprem3.png["Diagrama mostrando a arquitetura da recuperação de desastres do BlueXP  para a infraestrutura de serviços VMware"]
+
+Quando ocorre um desastre, esse serviço ajuda a recuperar máquinas virtuais no outro ambiente VMware ou VMC local, quebrando os relacionamentos do SnapMirror e tornando o local de destino ativo.
+
+* O serviço também permite que as máquinas virtuais voltem a funcionar para o local de origem original.
+* Você pode testar o processo de failover de recuperação de desastres sem interromper as máquinas virtuais originais. O teste recupera máquinas virtuais para uma rede isolada criando um FlexClone do volume.
+* Para o processo de failover ou failover de teste, você pode escolher a Snapshot mais recente (padrão) ou selecionada para recuperar sua máquina virtual.
+
+
+
+
+== Termos que podem ajudá-lo com a recuperação de desastres do BlueXP 
+
+Você pode se beneficiar ao compreender alguma terminologia relacionada à recuperação de desastres.
+
+* *Site*: Um contentor lógico normalmente associado a um datacenter físico ou provedor de nuvem.
+* *Resource group*: Um contentor lógico que permite gerenciar várias VMs como uma única unidade.
+* *Plano de replicação*: Um conjunto de regras sobre a frequência com que os backups ocorrem e como lidar com eventos de failover. Os planos são atribuídos a um ou mais grupos de recursos.
+

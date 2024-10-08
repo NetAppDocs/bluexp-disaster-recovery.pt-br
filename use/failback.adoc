@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: use/failback.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: A recuperação de desastres do NetApp BlueXP  é um serviço de recuperação de desastres baseado na nuvem que automatiza os workflows de recuperação de desastres. 
+---
+= Falha de aplicativos para a fonte original
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+Depois que um desastre for resolvido, faça o failback do local de recuperação de desastre para o local de origem para retornar às operações normais. Você pode selecionar o instantâneo a partir do qual recuperar.
+
+Nesse fluxo de trabalho, a recuperação de desastres do BlueXP  replica (ressincrones) quaisquer alterações de volta à máquina virtual de origem original antes de reverter a direção de replicação. Este processo começa a partir de um relacionamento que concluiu o failover para um alvo e envolve as seguintes etapas:
+
+* No site de destino, as máquinas virtuais são desligadas e não registradas, e os volumes são desmontados.
+* O relacionamento SnapMirror na fonte original é quebrado para fazê-lo ler/escrever.
+* A relação SnapMirror é ressincronizada para reverter a replicação.
+* As máquinas virtuais de origem são ligadas e registradas, e os volumes são montados na fonte.
+
+
+.Passos
+. No sistema de navegação esquerdo do BlueXP , selecione *proteção* > *recuperação de desastres*.
+. No menu superior da recuperação de desastres do BlueXP , selecione *planos de replicação*.
+. Selecione o plano de replicação.
+. À direita, selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]e selecione *failback*.
+. Introduza o nome do plano de replicação para confirmar e iniciar o failback.
+. Escolha o Snapshot para o datastore a partir do qual se recuperar. O padrão é o mais recente.
+. Para verificar o progresso, no menu superior, selecione *Monitoramento de trabalho*.
+

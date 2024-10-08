@@ -1,0 +1,122 @@
+---
+sidebar: sidebar 
+permalink: use/manage.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, replication plans, resource groups 
+summary: Você pode obter uma visão geral rápida de todos os seus recursos de recuperação de desastres do BlueXP  e gerenciar vCenter Sites, grupos de recursos e planos de replicação. 
+---
+= Gerencie sites, grupos de recursos, planos de replicação, armazenamentos de dados e informações de máquinas virtuais
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+Você pode ver rapidamente todos os seus recursos de recuperação de desastres ou ver cada um deles em detalhes:
+
+* Locais
+* Grupos de recursos
+* Planos de replicação
+* Armazenamentos de dados
+* Máquinas virtuais
+
+
+
+
+== Gerenciar o vCenter Sites
+
+Você pode editar o nome do site do vCenter e o tipo de site (no local ou AWS).
+
+.Passos
+. No menu superior, selecione *Sites*.
+. Selecione a opção *ações* image:../use/icon-vertical-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]à direita do nome do vCenter e selecione *Editar*.
+. Edite o nome e a localização do site do vCenter.
+
+
+
+
+== Gerenciar grupos de recursos
+
+Embora seja possível adicionar um grupo de recursos como parte da criação de um plano de replicação, talvez seja mais conveniente adicionar os grupos separadamente e, posteriormente, usar esses grupos no plano.
+
+Você também pode editar e excluir grupos de recursos.
+
+.Passos
+. No menu superior, selecione *grupos de recursos*.
+. Para adicionar um grupo de recursos, selecione *Adicionar grupo*.
+. Para executar ações com o grupo de recursos, selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]à direita e selecione qualquer uma das opções, como *Editar grupo de recursos* ou *Excluir grupo de recursos*.
+
+
+
+
+== Gerenciar planos de replicação
+
+Pode desativar, ativar e eliminar planos de replicação. Você pode alterar horários.
+
+* Se você quiser pausar um plano de replicação temporariamente, você pode desativá-lo e ativá-lo posteriormente.
+* Se você não precisar mais do plano, você pode excluí-lo.
+
+
+.Passos
+. No menu superior, selecione *planos de replicação*.
++
+image:../use/dr-plan-list2.png["Lista de planos de replicação"]
+
+. Para visualizar os detalhes do plano, selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]e selecione *Ver detalhes do plano*.
+. Faça qualquer um dos seguintes procedimentos:
++
+** Para editar os detalhes do plano (alterar a recorrência), selecione a guia *Detalhes do plano* e selecione o ícone *Editar* à direita.
+** Para editar os mapeamentos de recursos, selecione a guia *Mapeamento de failover* e selecione o ícone *Editar*.
+** Para adicionar ou editar as máquinas virtuais, selecione a guia *máquinas virtuais* e selecione a opção *Adicionar VMs* ou o ícone *Editar*.
+
+
+. Retorne à lista de planos selecionando "planos de replicação" no breadcrumbs no canto superior esquerdo.
+. Para executar ações com o plano, na lista de planos de replicação, selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]à direita do plano e selecione qualquer uma das opções, como *Editar horários*, *failover de teste*, *failover*, *failback*, *Disable*, *Enable* ou *Delete*.
+. Para definir ou alterar uma programação de failover de teste ou definir a verificação de frequência de conformidade, selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]à direita do plano e selecione *Editar agendas*.
++
+.. Na página Editar agendas, insira com que frequência em minutos você deseja que a verificação de conformidade de failover ocorra.
+.. Marque *Executar failovers de teste em um horário*.
+.. Na opção Repetir, selecione a programação diária, semanal ou mensal.
+.. Selecione *Guardar*.
+
+
+
+
+
+
+=== Alterar a contagem de retenção para agendamentos de failover
+
+Você pode alterar quantos datastores são retidos.
+
+. No menu superior, selecione *planos de replicação*.
+. Selecione o plano de replicação, clique na guia *Mapeamento de failover* e clique no ícone de lápis *Editar*.
+. Clique na seta *datastores* para expandi-la.
++
+image:../use/dr-plan-failover-edit.png["Editar mapeamentos de failover página"]
+
+. Altere o valor da contagem de retenção no plano de replicação.
+
+
+
+
+== Exibir informações de datastores
+
+Você pode ver informações sobre quantos datastores existem na origem e no destino.
+
+. No menu superior, selecione *Painel*.
+. Selecione o vCenter na linha do site.
+. Selecione *datastores*.
+. Visualize as informações dos datastores.
+
+
+
+
+== Ver informações sobre máquinas virtuais
+
+Você pode ver informações sobre quantas máquinas virtuais existem na origem e no destino, juntamente com CPU, memória e capacidade disponível.
+
+. No menu superior, selecione *Painel*.
+. Selecione o vCenter na linha do site.
+. Selecione *máquinas virtuais*.
+. Veja as informações das máquinas virtuais.
+

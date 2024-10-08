@@ -1,0 +1,25 @@
+---
+section: use
+title: Use a recuperação de desastres do BlueXP 
+entries:
+- title: Use a visão geral da recuperação de desastres do BlueXP 
+  url: "/use/use-overview.html"
+- title: Veja a integridade dos seus planos de recuperação de desastres no Dashboard
+  url: "/use/dashboard-view.html"
+- title: Adicione o vCenter Sites
+  url: "/use/sites-add.html"
+- title: Crie um plano de replicação
+  url: "/use/drplan-create.html"
+- title: Replique para outro local
+  url: "/use/replicate.html"
+- title: Migrar para outro site
+  url: "/use/migrate.html"
+- title: Failover para um local remoto
+  url: "/use/failover.html"
+- title: Falha de aplicativos para o site de origem original
+  url: "/use/failback.html"
+- title: Gerencie sites, planos, armazenamentos de dados e informações de máquinas
+    virtuais
+  url: "/use/manage.html"
+- title: Monitorar trabalhos de recuperação de desastres
+  url: "/use/monitor-jobs.html"

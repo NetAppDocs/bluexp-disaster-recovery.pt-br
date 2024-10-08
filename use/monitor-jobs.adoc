@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: use/monitor-jobs.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, monitor, bluexp 
+summary: A recuperação de desastres do NetApp BlueXP  é um serviço de recuperação de desastres baseado na nuvem que automatiza os workflows de recuperação de desastres. Você pode monitorar todos os trabalhos de recuperação de desastres e determinar seu progresso. 
+---
+= Monitorar trabalhos de recuperação de desastres
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+Você pode monitorar todos os trabalhos de recuperação de desastres e determinar seu progresso.
+
+.Passos
+. No sistema de navegação esquerdo do BlueXP , selecione *proteção* > *recuperação de desastres*.
+. No menu superior, selecione *monitorização de trabalhos*.
+. Explore todos os trabalhos relacionados com operações e reveja os respetivos carimbos de data/hora e estado.
+. Para ver detalhes de um determinado trabalho, selecione essa linha.
+. Para atualizar informações, selecione *Atualizar*.
+
+
+
+
+== Cancelar um trabalho
+
+Se um trabalho estiver em andamento ou em um estado na fila e você não quiser continuar, você pode cancelá-lo. Pode pretender cancelar um trabalho se este estiver preso no mesmo estado e pretender libertar a próxima operação na fila de espera. Você pode querer cancelar um trabalho antes que ele acabe.
+
+.Passos
+. No sistema de navegação esquerdo do BlueXP , selecione *proteção* > *recuperação de desastres*.
+. No menu superior, selecione *monitorização de trabalhos*.
+. Na página Monitor de trabalhos, anote a ID do trabalho que pretende cancelar.
++
+O trabalho deve estar no estado "em andamento" ou "em fila".
+
+. Na coluna ações, selecione *Cancelar trabalho*.
+

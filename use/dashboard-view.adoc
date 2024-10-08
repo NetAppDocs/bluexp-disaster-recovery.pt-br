@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: use/dashboard-view.html 
+keywords: disaster recovery remediate, disaster recovery, failover, failback, replication 
+summary: O NetApp BlueXP  Disaster Recovery é um serviço de recuperação de desastres baseado na nuvem que automatiza os workflows de recuperação de desastres. 
+---
+= Veja a integridade dos seus planos de recuperação de desastres no Dashboard
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+Com o Dashboard de recuperação de desastres da BlueXP , você determina a integridade dos locais de recuperação de desastres e dos planos de replicação. Você pode verificar rapidamente quais sites e planos são saudáveis, desconetados ou degradados.
+
+.Passos
+. No sistema de navegação esquerdo do BlueXP , selecione *proteção* > *recuperação de desastres*.
+. No menu superior da recuperação de desastres do BlueXP , selecione *Painel*.
++
+image:dr-dashboard.png["Dashboard de recuperação de desastres do BlueXP "]
+
+. Reveja as seguintes informações no Painel de instrumentos:
++
+** *Sites*: Veja a saúde dos seus sites. Um site pode ter um dos seguintes status:
++
+*** *Running*: O vCenter está conetado, saudável e funcionando.
+*** *Para baixo*: O vCenter não está acessível ou tem problemas de conetividade.
+*** *Problema*: O vCenter não está acessível ou tem problemas de conetividade.
++
+Para ver os detalhes do site, selecione *Exibir todos* para obter um status ou *Exibir sites* para ver todos eles.
+
+
+
+** *Planos de replicação*: Veja a integridade dos seus planos. Um plano pode ter um dos seguintes Estados:
++
+*** *Pronto*
+*** *Falhou*
++
+Para revisar os detalhes do plano de replicação, selecione *Exibir todos* para obter um status ou *Exibir planos de replicação* para ver todos eles.
+
+
+
+** *Grupos de recursos*: Veja a integridade dos seus grupos de recursos. Um grupo de recursos pode ter um dos seguintes status:
+** *VMs protegidas*: As VMs fazem parte de um grupo de recursos.
+** *VMs desprotegidas*: As VMs não fazem parte de um grupo de recursos.
++
+Para rever detalhes, selecione o link *View* abaixo de cada um.
+
+** O número de failovers, failovers de teste e migrações. Por exemplo, se você criou dois planos e migrou para os destinos, a contagem de migração aparece como "2".
+
+
+. Reveja todas as operações no painel atividade. Para visualizar todas as operações no Monitor de trabalhos, selecione *Exibir todos os trabalhos*.
+

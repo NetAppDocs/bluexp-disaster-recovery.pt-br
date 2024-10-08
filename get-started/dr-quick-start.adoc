@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-quick-start.html 
+keywords: how to get started with bluexp disaster recovery, disaster recovery quick start, failover, failback 
+summary: Comece a usar o serviço de recuperação de desastres do NetApp BlueXP  em alguns passos. 
+---
+= Início rápido para recuperação de desastres do BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+Aqui está uma visão geral das etapas necessárias para começar a usar a recuperação de desastres do BlueXP . Os links em cada etapa levam você a uma página que fornece mais detalhes.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Reveja os pré-requisitos
+[role="quick-margin-para"]
+link:../get-started/dr-prerequisites.html["Certifique-se de que seu ambiente atenda a esses requisitos"].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Configure o serviço de recuperação de desastres do BlueXP 
+[role="quick-margin-list"]
+* link:../get-started/dr-setup.html["Configure a infraestrutura para o serviço"].
+* link:../get-started/dr-licensing.html["Configure o licenciamento"].
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] O que se segue?
+[role="quick-margin-para"]
+Depois de configurar o serviço, aqui está o que você pode fazer a seguir.
+
+[role="quick-margin-list"]
+* link:../use/sites-add.html["Adicione seu vCenter Sites à recuperação de desastres do BlueXP "].
+* link:../use/manage.html#manage-resource-groups["Crie seu primeiro grupo de recursos"].
+* link:../use/drplan-create.html["Crie seu primeiro plano de replicação"].
+* link:../use/replicate.html["Replique aplicações para outro local"].
+* link:../use/failover.html["Failover de aplicativos para um local remoto"].
+* link:../use/failback.html["Falha de aplicativos para o site de origem original"].
+* link:../use/manage.html["Gerencie sites, grupos de recursos e planos de replicação"].
+* link:../use/monitor-jobs.html["Monitorar operações de recuperação de desastres"].
+

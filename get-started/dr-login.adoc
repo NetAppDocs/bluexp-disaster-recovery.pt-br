@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-login.html 
+keywords: bluexp login, disaster recovery log in 
+summary: Comece a usar a recuperação de desastres do BlueXP  acessando o serviço no BlueXP . 
+---
+= Acesse a recuperação de desastres do BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+Você usa o NetApp BlueXP  para fazer login no serviço de recuperação de desastres do BlueXP .
+
+Para fazer login no BlueXP , você pode usar as credenciais do site de suporte da NetApp ou se inscrever para fazer login na nuvem do NetApp usando seu e-mail e uma senha. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Saiba mais sobre como fazer login"^].
+
+.Passos
+. Abra um navegador da Web e vá para o https://console.bluexp.netapp.com/["Consola BlueXP "^].
++
+É apresentada a página de início de sessão do NetApp BlueXP .
+
+. Inicie sessão no BlueXP .
+. Na navegação à esquerda do BlueXP , selecione *proteção* > *recuperação de desastres*.
++
+Se esta é a sua primeira vez que inicia sessão neste serviço, a página de destino aparece e pode inscrever-se para uma avaliação gratuita.
+
++
+image:draas-landing3-free-trial.png["Captura de tela da página inicial para recuperação de desastres do BlueXP "]
+
++
+Caso contrário, o Painel de recuperação de desastres do BlueXP  será exibido.
+
++
+** Se você ainda não adicionou um conetor BlueXP , precisará adicionar um conetor. Para adicionar um conetor, https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Saiba mais sobre conetores"^] consulte a .
+** Se você for um usuário do BlueXP  com um conetor existente, ao selecionar "recuperação de desastres", uma mensagem será exibida sobre a inscrição.
+** Se você já estiver usando o serviço, quando você selecionar "recuperação de desastres", o Dashboard será exibido.
+
+
++
+image:dr-dashboard.png["Dashboard de recuperação de desastres do BlueXP "]
+
+

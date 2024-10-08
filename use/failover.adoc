@@ -1,0 +1,97 @@
+---
+sidebar: sidebar 
+permalink: use/failover.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, replicate, fail over, vmware, vcenter 
+summary: A recuperação de desastres do NetApp BlueXP  é um serviço de recuperação de desastres baseado na nuvem que automatiza os workflows de recuperação de desastres. 
+---
+= Failover de aplicativos para um local remoto
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+Em caso de desastre, faça failover do seu site principal da VMware no local para outro site local ou VMware Cloud on AWS.
+
+Durante o failover, a cópia Snapshot mais recente do SnapMirror é usada. Ou, você pode selecionar uma cópia Snapshot específica em uma cópia Snapshot pontual (de acordo com a política de retenção do SnapMirror). A opção pontual pode ser útil se você estiver enfrentando um evento de corrupção, como ransomware, onde as réplicas mais recentes já estão comprometidas ou criptografadas. A recuperação de desastres do BlueXP  mostra todos os pontos disponíveis no tempo.
+
+Esse procedimento quebra a relação de replicação, coloca as VMs de origem do vCenter offline e permite a leitura/gravação no site de destino.
+
+Você pode incluir scripts personalizados nos formatos .sh, .bat ou .ps1 como processos de pós-failover. Com scripts personalizados, você pode fazer com que a recuperação de desastres do BlueXP  execute seu script após um processo de failover. Por exemplo, você pode usar um script personalizado para retomar todas as transações de banco de dados após a conclusão do failover.
+
+Antes de iniciar o failover, você pode testar o processo, garantindo o sucesso quando necessário. O teste não coloca as máquinas virtuais offline.
+
+
+
+== Teste o processo de failover
+
+Antes de iniciar um failover real, você deve testar o processo de failover.
+
+Durante um teste de failover, as máquinas virtuais são criadas temporariamente. A recuperação de desastres do BlueXP  não mapeia o volume de destino. Em vez disso, ele cria um novo volume FlexClone a partir do instantâneo selecionado e um datastore temporário que faz backup do volume FlexClone é mapeado para os hosts ESXi.
+
+Esse processo não consome capacidade física adicional no armazenamento ONTAP no local ou no FSX for NetApp ONTAP na AWS. O volume de origem original não é modificado e os trabalhos de réplica podem continuar mesmo durante a recuperação de desastres.
+
+Quando você terminar o teste, você deve redefinir as máquinas virtuais com a opção *Teste de limpeza*. Embora isso seja recomendado, não é necessário.
+
+Uma operação de failover de teste _não_ impacta as cargas de trabalho de produção, a relação SnapMirror usada no local de teste e as cargas de trabalho protegidas que devem continuar operando normalmente.
+
+.Passos
+. No sistema de navegação esquerdo do BlueXP , selecione *proteção* > *recuperação de desastres*.
+. No menu superior da recuperação de desastres do BlueXP , selecione *planos de replicação*.
+. Selecione o plano de replicação.
+. À direita, selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]e selecione *failover de teste*.
+. Na página failover de teste, digite "failover de teste" e selecione *failover de teste*.
+. Depois que o teste estiver concluído, limpe o ambiente de teste.
+
+
+
+
+== Limpe o ambiente de teste após um teste de failover
+
+Depois que o teste de failover for concluído, você deverá limpar o ambiente de teste. Esse processo remove as VMs temporárias do local de teste, do FlexClones e dos datastores temporários.
+
+.Passos
+. No menu superior da recuperação de desastres do BlueXP , selecione *planos de replicação*.
+. Selecione o plano de replicação.
+. À direita, selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]e selecione *Limpar teste de failover*.
+. Na página failover de teste, digite "Limpar failover" e selecione *Limpar teste de failover*.
+
+
+
+
+== Fazer failover do local de origem para um local de recuperação de desastre
+
+Em caso de desastre, faça failover do seu site VMware local sob demanda principal para outro site VMware local ou VMware Cloud no AWS com o FSX for NetApp ONTAP.
+
+O processo de failover envolve as seguintes operações:
+
+* Se você tiver selecionado a captura Instantânea mais recente, a atualização do SnapMirror será executada para replicar as alterações mais recentes.
+* As máquinas virtuais de origem são desativadas.
+* A relação SnapMirror está quebrada e o volume de destino é feito leitura/gravação.
+* Com base na seleção do instantâneo, o sistema de arquivos ativo é restaurado para o instantâneo especificado (mais recente ou selecionado)
+* Os datastores são criados e montados no cluster ou host VMware ou VMC com base nas informações capturadas no plano de replicação.
+* As máquinas virtuais de destino são registradas e ativadas com base na ordem capturada na página grupos de recursos.
+* A relação do SnapMirror é revertida de máquina virtual de destino para origem.
+
+
+
+TIP: Após o início do failover, as VMs recuperadas podem ser vistas no vCenter do site de recuperação de desastres (máquinas virtuais, redes e datastores). Por padrão, as máquinas virtuais são recuperadas para a pasta Workload.
+
+.Passos
+. No sistema de navegação esquerdo do BlueXP , selecione *proteção* > *recuperação de desastres*.
+. No menu superior da recuperação de desastres do BlueXP , selecione *planos de replicação*.
+. Selecione o plano de replicação.
+. À direita, selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]e selecione *failover*.
++
+image:dr-plan-failover2.png["Página de failover"]
+
+. Na página failover, inicie um snapshot agora ou escolha o snapshot para o armazenamento de dados a partir do qual será recuperado. O padrão é o mais recente.
++
+Um instantâneo da fonte atual será levado e replicado para o destino atual antes que o failover ocorra.
+
+. Opcionalmente, selecione *forçar failover* se quiser que o failover ocorra mesmo que seja detetado um erro que normalmente impeça a ocorrência do failover.
+. Digite "failover" na caixa.
+. Selecione *failover*.
+. Para verificar o progresso, no menu superior, selecione *Monitoramento de trabalho*.
+

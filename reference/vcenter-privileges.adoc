@@ -1,0 +1,153 @@
+---
+sidebar: sidebar 
+permalink: reference/vcenter-privileges.html 
+keywords: disaster recovery, bluexp, vcenter, 
+summary: 'A conta do vCenter precisa ter um conjunto mínimo de vCenter Privileges para permitir que a recuperação de desastres do BlueXP  execute seus serviços, como Registro e Registro de datastores, inicialização e interrupção de VMs e reconfiguração de máquinas virtuais (VMs). A tabela a seguir lista todos os Privileges necessários para a recuperação de desastres do BlueXP  para fazer a interface com um cluster do vCenter.' 
+---
+= O vCenter Privileges é necessário para a recuperação de desastres do BlueXP 
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+A conta do vCenter precisa ter um conjunto mínimo de vCenter Privileges para permitir que a recuperação de desastres do BlueXP  execute seus serviços, como Registro e Registro de datastores, inicialização e interrupção de VMs e reconfiguração de máquinas virtuais (VMs). A tabela a seguir lista todos os Privileges necessários para a recuperação de desastres do BlueXP  para fazer a interface com um cluster do vCenter.
+
+[cols="25,35a,40a"]
+|===
+| Tipo | Nome do privilégio | Descrição 
+
+
+| *Datastore*  a| 
+Datastore.Configure datastore
+ a| 
+Use para configurar um datastore.
+
+
+
+|   a| 
+Datastore.Remove datastore
+ a| 
+Use para remover um datastore.
+
+
+
+| *Máquina Virtual*  a| 
+Virtual machine.Configuration.Change Settings
+ a| 
+Use para alterar as configurações gerais da VM.
+
+
+
+|   a| 
+Máquina virtual.Configuração.Modificar configurações do dispositivo
+ a| 
+Utilize para alterar as propriedades de um dispositivo existente.
+
+
+
+|   a| 
+Máquina virtual.Configuration.Reload do caminho
+ a| 
+Use para alterar um patch de configuração da VM, preservando a identidade da VM. Soluções como o VMware vCenter Site Recovery Manager usam essa operação para manter a identificação da VM durante o failover e o failback.
+
+
+
+|   a| 
+Máquina virtual.Configuration.Rename
+ a| 
+Use para renomear uma VM ou modificar os nós associados de uma VM.
+
+
+
+|   a| 
+Virtual machine.Configuration.Reset informações do convidado
+ a| 
+Use para editar as informações do sistema operacional convidado para uma VM.
+
+
+
+|   a| 
+Máquina virtual.Configuração.alterar memória
+ a| 
+Use para alterar a quantidade de memória alocada à VM.
+
+
+
+|   a| 
+Máquina virtual.Configuração.alterar contagem de CPU
+ a| 
+Use para alterar o número de CPUs virtuais.
+
+
+
+| *Virtual Machine Guest*  a| 
+Virtual machine.Guest Operations.Guest Operation modificações
+ a| 
+Habilita operações de convidado de VM que envolvem alterações em um sistema operacional convidado em uma VM, como a transferência de um arquivo para a VM.
+
+
+
+| * Interação Máquina Virtual*  a| 
+Máquina virtual.interacção.Desligar
+ a| 
+Use para desligar uma VM ligada. Esta operação desliga o sistema operacional convidado.
+
+
+
+|   a| 
+Máquina virtual.interacção.ligar
+ a| 
+Use para ligar uma VM desligada e retomar uma VM suspensa.
+
+
+
+|   a| 
+Virtual machine.interaction.VMware Tools install
+ a| 
+Use para montar e desmontar o instalador do CD do VMware Tools como um CD-ROM para o sistema operacional convidado.
+
+
+
+| *Inventário de máquinas virtuais*  a| 
+Virtual machine.Inventory.Create new
+ a| 
+Use para criar uma VM e alocar recursos para sua execução.
+
+
+
+|   a| 
+Máquina virtual.Inventory.Register
+ a| 
+Use para adicionar uma VM existente a um inventário do vCenter Server ou host.
+
+
+
+|   a| 
+Máquina virtual.Inventory.Unregister
+ a| 
+Use para cancelar o Registro de uma VM de um inventário do vCenter Server ou do host.
+
+
+
+| *Estado da máquina virtual*  a| 
+Virtual machine.Snapshot Management.Create snapshot
+ a| 
+Use para criar um instantâneo a partir do estado atual da VM.
+
+
+
+|   a| 
+Virtual machine.Snapshot Management.Remove Snapshot
+ a| 
+Utilize para remover um instantâneo do histórico de instantâneos.
+
+
+
+|   a| 
+Virtual machine.Snapshot Management.Reverter para snapshot
+ a| 
+Use para definir a VM para o estado em que estava em um determinado snapshot.
+
+|===

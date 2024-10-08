@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: release-notes/dr-limitations.html 
+keywords: disaster recovery, bluexp 
+summary: As limitações conhecidas identificam plataformas, dispositivos ou funções que não são suportadas por esta versão do serviço ou que não interoperam corretamente com ele. 
+---
+= Limitações
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+As limitações conhecidas identificam plataformas, dispositivos ou funções que não são suportadas por esta versão do serviço ou que não interoperam corretamente com ele.
+
+
+
+== Aguarde até que o failback seja concluído antes de executar a descoberta
+
+Depois que um failover for concluído, não inicie a descoberta no vCenter de origem manualmente. Aguarde até que o failback tenha terminado e, em seguida, inicie a descoberta no vCenter de origem.
+
+
+
+== O BlueXP  pode não descobrir o Amazon FSX for NetApp ONTAP
+
+Às vezes, o BlueXP  não descobre clusters do Amazon FSX for NetApp ONTAP. Isso pode ser porque as credenciais do FSX não estavam corretas.
+
+*Solução alternativa*: Adicione o cluster do Amazon FSX for NetApp ONTAP no BlueXP  e atualize periodicamente o cluster para exibir quaisquer alterações.
+
+Se você precisar remover o cluster do ONTAP FSX do serviço de recuperação de desastres do BlueXP , siga estas etapas:
+
+. No BlueXP  Connector, use as opções de conetividade do seu provedor de nuvem, conete-se à VM Linux em que o conetor é executado, reinicie o serviço "occm" usando o `docker restart occm` comando.
++
+Consulte a https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["Gerenciar os conetores existentes"^].
+
+. No BlueXP  Canvas, adicione o ambiente do Amazon FSX for ONTAP novamente e forneça as credenciais do FSX.
++
+Consulte a https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["Crie um sistema de arquivos do Amazon FSX for NetApp ONTAP"^].
+
+. Na recuperação de desastres do BlueXP , selecione *sites*, na linha do vCenter selecione a opção *ações* image:../use/icon-vertical-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]e, no menu ações, selecione *Atualizar* para atualizar a descoberta do FSX na recuperação de desastres do BlueXP .
++
+Isso redescobre o datastore, suas máquinas virtuais e sua relação de destino.
+
+
