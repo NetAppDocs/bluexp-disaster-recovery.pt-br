@@ -26,8 +26,7 @@ O link Download é válido por seis horas.
 . Na parte superior da página, selecione *criar relatório*.
 . Selecione o tipo de formato de arquivo e o período de tempo nos últimos 7 dias.
 . Selecione *criar*.
-
-
++
 
 NOTE: O relatório pode levar alguns minutos para ser exibido.
 
