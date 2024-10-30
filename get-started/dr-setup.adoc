@@ -59,17 +59,3 @@ Configure o VMware Cloud para o data center definido por software (SDDC) da AWS.
 https://www.vmware.com/products/vmc-on-aws.html["VMware Cloud na AWS"^] Fornece uma experiência nativa em nuvem para workloads baseados em VMware no ecossistema AWS. Cada data center definido por software (SDDC) da VMware é executado em uma Amazon Virtual Private Cloud (VPC) e fornece uma pilha completa de VMware (incluindo vCenter Server), rede definida por software NSX-T, armazenamento definido por software VSAN e um ou mais hosts ESXi que fornecem recursos de computação e armazenamento para as cargas de trabalho.
 
 Para configurar um ambiente VMC na AWS, siga as etapas https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-setup.html["link"^] neste . Um cluster de luz piloto também pode ser usado para fins de recuperação de desastres.
-
-
-
-== Configure o licenciamento
-
-Com a recuperação de desastres do BlueXP , você pode se inscrever para uma avaliação gratuita de 90 dias.
-
-Você pode comprar um dos seguintes itens:
-
-* Uma assinatura PAYGO (pagamento conforme o uso) com o AWS Marketplace
-* Traga sua própria licença (BYOL), que é um arquivo de licença do NetApp (NLF).
-
-
-link:../get-started/dr-licensing.html["Configurar o licenciamento de recuperação de desastres do BlueXP "]Consulte a .

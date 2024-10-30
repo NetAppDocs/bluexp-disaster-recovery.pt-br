@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: use/drplan-create.html 
-keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, replication plan, protection, disaster, recovery 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, replication plan, protection, disaster, recovery, virtual machines, vm 
 summary: A recuperação de desastres do NetApp BlueXP  é um serviço de recuperação de desastres baseado na nuvem que automatiza os workflows de recuperação de desastres. Depois de adicionar o vCenter Sites, você estará pronto para criar um plano de recuperação de desastres ou replicação. 
 ---
 = Crie um plano de replicação
@@ -25,7 +25,7 @@ Você pode criar um plano de replicação e também editar programações para c
 Um assistente leva você através destes passos:
 
 * Selecione vCenter Servers.
-* Selecione as VMs que deseja replicar e atribuir grupos.
+* Selecione as máquinas virtuais (VMs) que você deseja replicar e atribuir grupos.
 * Mapear como os recursos do ambiente de origem são mapeados para o destino.
 * Identificar recorrência, executar um script Guest-hospedado, definir a ordem de inicialização e selecionar o objetivo do ponto de recuperação.
 * Reveja o plano.
@@ -34,7 +34,7 @@ Um assistente leva você através destes passos:
 Ao criar o plano de replicação, você pode definir a relação do SnapMirror entre os volumes de origem e destino em uma das seguintes configurações:
 
 * 1 a 1
-* 1 para muitos em uma arquitetura de fanout
+* 1 para muitos em uma arquitetura de fan-out
 * Muitos a 1 em um Grupo de consistência
 * Muitos a muitos
 
@@ -63,32 +63,33 @@ image:dr-plan-create-name.png["Captura de ecrã que mostra a página Adicionar p
 
 === Selecione aplicativos para replicar e atribuir grupos de recursos
 
-A próxima etapa é agrupar as máquinas virtuais necessárias em grupos de recursos funcionais. Os grupos de recursos permitem agrupar um conjunto de máquinas virtuais dependentes em grupos lógicos que atendam aos seus requisitos. Por exemplo, grupos podem conter ordens de inicialização atrasadas que podem ser executadas após a recuperação.
+A próxima etapa é agrupar as VMs necessárias em grupos de recursos funcionais. Os grupos de recursos permitem agrupar um conjunto de VMs dependentes em grupos lógicos que atendem aos seus requisitos. Por exemplo, grupos podem conter ordens de inicialização atrasadas que podem ser executadas após a recuperação.
+
+Quando você seleciona aplicativos no plano de replicação, é possível ver o sistema operacional de cada VM no plano. Isso é útil para decidir como agrupar VMs em um grupo de recursos.
 
 
-TIP: Cada grupo de recursos pode incluir uma ou mais máquinas virtuais. As máquinas virtuais serão ligadas com base na sequência em que as incluir aqui.
+TIP: Cada grupo de recursos pode incluir uma ou mais VMs. As VMs serão ligadas com base na sequência em que as incluir aqui.
 
 .Passos
-. No lado esquerdo da página aplicativos, opcionalmente, procure armazenamentos de dados.
-. No lado esquerdo da página aplicativos, selecione as máquinas virtuais que você deseja replicar e atribuir ao grupo selecionado.
+. Opcionalmente, no lado esquerdo da página aplicativos, filtre as VMs pelo datastore.
+. No lado esquerdo da página aplicativos, selecione as VMs que você deseja proteger e atribuir ao grupo selecionado.
 +
-A máquina virtual selecionada é adicionada automaticamente ao grupo 1 e um novo grupo 2 é iniciado. Cada vez que você adiciona uma máquina virtual ao último grupo, outro grupo é adicionado.
+A VM selecionada é adicionada automaticamente ao grupo 1 e um novo grupo 2 é iniciado. Cada vez que você adiciona uma VM ao último grupo, outro grupo é adicionado.
 
 +
-image:dr-plan-create-apps-vms4.png["Captura de ecrã que mostra a página Adicionar plano de replicação > aplicações a replicar"]
+image:dr-plan-create-apps-vms5.png["Captura de ecrã que mostra a página Adicionar plano de replicação > aplicações a replicar"]
 
 . Opcionalmente, faça um dos seguintes procedimentos:
 +
-** Para alterar grupos, clique no ícone *Edit* do grupoimage:icon-pencil.png["Ícone de lápis"].
-** Para remover uma máquina virtual de um grupo, selecione *X*.
-** Para mover uma máquina virtual para um grupo diferente, arraste e solte-a no novo grupo.
+** Para alterar o nome do grupo, clique no ícone *Edit* do grupoimage:icon-pencil.png["Ícone de lápis"].
+** Para remover uma VM de um grupo, selecione *X* ao lado da VM.
+** Para mover uma VM para um grupo diferente, arraste e solte-a no novo grupo.
 
 
 . Quando tiver vários grupos de recursos, certifique-se de que a sequência dos grupos corresponde à sequência operacional que deve ocorrer.
 +
-Cada máquina virtual dentro de um grupo é iniciada em sequência com base na ordem aqui. Dois grupos são iniciados em paralelo.
+Cada VM dentro de um grupo é iniciada em sequência com base na ordem aqui.
 
-. Opcionalmente, renomeie o grupo clicando no ícone *Editar*.
 . Selecione *seguinte*.
 
 
@@ -96,7 +97,7 @@ Cada máquina virtual dentro de um grupo é iniciada em sequência com base na o
 
 === Mapeie os recursos de origem para o destino
 
-Na etapa de mapeamento de recursos, especifique como os recursos do ambiente de origem devem ser mapeados para o destino.
+Na etapa de mapeamento de recursos, especifique como os recursos do ambiente de origem devem ser mapeados para o destino. Ao criar um plano de replicação, você pode definir um atraso de inicialização e ordem para cada VM no plano. Isso permite que você defina uma sequência para as VMs iniciarem.
 
 .Antes de começar
 Se você quiser criar um relacionamento SnapMirror nesse serviço, o cluster e seu peering SVM já devem ter sido configurados fora da recuperação de desastres do BlueXP .
@@ -108,22 +109,33 @@ image:dr-plan-resource-mapping2.png["Plano de replicação, separador Mapeamento
 
 . Na guia Mapeamentos de failover, selecione a seta para baixo à direita de cada recurso e mapeie os recursos em cada um.
 . *Recursos de computação*: Selecione a seta para baixo ao lado de *recursos de computação*.
-. *Redes virtuais*: Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *redes virtuais*. Introduza ou selecione a LAN virtual de origem e o segmento de destino.
++
+** *Datacenters de origem e destino*
+** *Cluster de destino*
+** *Target host* (opcional): Depois de selecionar o cluster, você pode então definir essas informações.
++
+
+TIP: Se um vCenter tiver um DRS (Distributed Resource Scheduler) configurado para gerenciar vários hosts em um cluster, você não precisará selecionar um host. Se você selecionar um host, a recuperação de desastres do BlueXP  colocará todas as VMs no host selecionado.
+
+** *Target VM folder* (opcional): Crie uma nova pasta raiz para armazenar as VMs selecionadas.
+
+
+. *Redes virtuais*: Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *redes virtuais*. Selecione a LAN virtual de origem e o segmento de destino.
 . *Máquinas virtuais*: Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *máquinas virtuais*.
++
+Se você fizer quaisquer alterações a partir das configurações padrão, precisará fornecer credenciais.
+
 +
 Selecione o mapeamento de rede para o segmento apropriado. Os segmentos já devem ser provisionados, então selecione o segmento apropriado para mapear a máquina virtual.
 
 +
-Esta secção pode estar ativada ou desativada dependendo da sua seleção.
-
-+
-O SnapMirror está no nível do volume. Assim, todas as máquinas virtuais são replicadas para o destino de replicação. Certifique-se de selecionar todas as máquinas virtuais que fazem parte do datastore. Se não estiverem selecionadas, apenas as máquinas virtuais que fazem parte do plano de replicação serão processadas.
+Esta seção pode exibir campos diferentes dependendo da sua seleção.
 
 +
 ** *Tipo de endereço IP*: Quando você está mapeando redes entre locais de origem e destino na seção máquinas virtuais do plano de replicação, a recuperação de desastres do BlueXP  oferece duas opções: DHCP ou IP estático. Para IPs estáticos, configure os servidores de sub-rede, gateway e DNS. Além disso, insira credenciais para máquinas virtuais.
 +
-*** *DHCP*: Se você escolher essa opção, você fornecerá apenas as credenciais para a VM.
-*** *Static IP*: Você pode selecionar a mesma informação ou informações diferentes da VM de origem. Se você escolher o mesmo que a origem, não precisará inserir credenciais. Por outro lado, se você optar por usar informações diferentes da origem, poderá fornecer as credenciais, o endereço IP da VM, a máscara de sub-rede, o DNS e as informações do gateway. As credenciais do sistema operacional convidado VM devem ser fornecidas para o nível global ou para cada nível de VM.
+*** *DHCP*: Selecione esta definição se pretender que as suas VMs obtenham informações de configuração de rede a partir de um servidor DHCP. Se você escolher essa opção, você fornecerá apenas as credenciais para a VM.
+*** *IP estático*: Selecione esta configuração se desejar especificar as informações de configuração IP manualmente. Você pode selecionar as mesmas informações ou informações diferentes da VM de origem. Se você escolher o mesmo que a origem, não precisará inserir credenciais. Por outro lado, se você optar por usar informações diferentes da origem, poderá fornecer as credenciais, o endereço IP da VM, a máscara de sub-rede, o DNS e as informações do gateway. As credenciais do sistema operacional convidado VM devem ser fornecidas para o nível global ou para cada nível de VM.
 +
 Isso pode ser muito útil ao recuperar ambientes grandes para clusters de destino menores ou para realizar testes de recuperação de desastres sem precisar provisionar uma infraestrutura VMware física um-para-um.
 
@@ -132,9 +144,26 @@ image:dr-plan-create-mapping-vms2.png["Captura de ecrã mostrando Adicionar plan
 
 
 
+** * Prefixo e sufixo da VM de destino*: Sob os detalhes das máquinas virtuais, você pode opcionalmente adicionar um prefixo e sufixo ao nome da VM.
 ** *Source VM CPU e RAM*: Sob os detalhes das máquinas virtuais, você pode redimensionar opcionalmente os parâmetros CPU e RAM da VM.
-** *Atraso de inicialização*: Você pode modificar a ordem de inicialização para todas as máquinas virtuais selecionadas nos grupos de recursos. Por padrão, a ordem de inicialização selecionada durante a seleção do grupo de recursos é usada; no entanto, você pode fazer alterações nesta etapa. Com este campo, você pode ajustar o atraso em minutos da ação de inicialização.
-** *Criar réplicas consistentes com aplicativos*: Indique se deseja criar cópias Snapshot consistentes com aplicativos. O serviço desativará o aplicativo e, em seguida, fará uma captura Instantânea para obter um estado consistente do aplicativo.
++
+image:dr-plan-resource-mapping-vm-boot-order.png["Captura de ecrã mostrando Adicionar plano de replicação > Mapeamento de recursos > máquinas virtuais"]
+
+** *Ordem de inicialização*: Você pode modificar a ordem de inicialização após um failover para todas as máquinas virtuais selecionadas nos grupos de recursos. Por padrão, a ordem de inicialização selecionada durante a seleção do grupo de recursos é usada; no entanto, você pode fazer alterações nesta etapa. Isso é útil para garantir que todas as VMs de prioridade 1 estejam sendo executadas antes que as VMs de prioridade subsequentes sejam iniciadas.
++
+Os números de ordem de inicialização se aplicam somente dentro de um grupo de recursos. Se você tiver um "2" em um grupo e um "2" em outro grupo, as VMs no primeiro grupo começam em sua ordem e as VMs no segundo grupo começam em sua ordem.
+
++
+*** Inicialização sequencial: Atribua a cada VM um número exclusivo para inicializar o na ordem atribuída, por exemplo, 1,2,3,4,5
+*** Inicialização simultânea: Atribua o mesmo número a todas as VMs para iniciá-las ao mesmo tempo, por exemplo, 1,1,1,1,2,2,3,4,4.
+
+
+** *Atraso de inicialização*: Ajuste o atraso em minutos da ação de inicialização.
++
+
+TIP: Para redefinir a ordem de inicialização para o padrão, selecione *Redefinir as configurações da VM como padrão* e escolha quais configurações você deseja alterar de volta para o padrão.
+
+** *Criar réplicas consistentes com aplicativos*: Indique se deseja criar cópias Snapshot consistentes com aplicativos. O serviço silenciará o aplicativo e, em seguida, fará um snapshot para obter um estado consistente do aplicativo. Esse recurso é compatível com Oracle em execução no Windows e Linux e SQL Server em execução no Windows.
 
 
 . *Datastores*: Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *datastores*. Com base na seleção de máquinas virtuais, mapeamentos de datastore são selecionados automaticamente.
@@ -193,15 +222,15 @@ image:dr-plan-create-recurrence.png["Captura de ecrã que mostra Adicionar plano
 
 
 
-=== Confirme o plano de replicação
+=== Reveja o plano de replicação
 
-Por fim, dedique alguns momentos para confirmar o plano de replicação.
+Por fim, dedique alguns momentos para rever o plano de replicação.
 
 
 TIP: Mais tarde, pode desativar ou eliminar o plano de replicação.
 
 .Passos
-. Revise as informações em cada guia: Detalhes do plano, Mapeamento de failover, VMs.
+. Revise as informações em cada guia: Detalhes do Plano, Mapeamento de failover e VMs.
 . Selecione *Adicionar plano*.
 +
 O plano é adicionado à lista de planos.

@@ -72,7 +72,7 @@ IMPORTANT: Alguns lançamentos incluem uma prévia da tecnologia. A NetApp não 
 
 Você pode usar os seguintes tipos de licença:
 
-* Inscreva-se para uma avaliação gratuita de 90 dias.
+* Inscreva-se para uma avaliação gratuita de 30 dias.
 * Adquira uma assinatura PAYGO (pay-as-you-go) com o Amazon Web Services (AWS) Marketplace.
 * Traga sua própria licença (BYOL), que é um arquivo de licença NetApp (NLF) que você obtém de seu representante de vendas da NetApp Você pode usar o número de série da licença para ativar o BYOL na carteira digital BlueXP .
 
@@ -86,13 +86,13 @@ Para obter detalhes sobre como configurar o licenciamento para recuperação de 
 
 
 
-== teste gratuito de 90 dias
+== teste gratuito de 30 dias
 
-Você pode experimentar a recuperação de desastres do BlueXP  usando uma avaliação gratuita de 90 dias.
+Você pode experimentar a recuperação de desastres do BlueXP  usando uma avaliação gratuita de 30 dias.
 
-Para continuar após o período de avaliação de 90 dias, você precisará obter uma assinatura de pagamento conforme o uso (PAYGO) do seu provedor de nuvem ou comprar uma licença BYOL da NetApp.
+Para continuar após o período de avaliação de 30 dias, você precisará obter uma assinatura de pagamento conforme o uso (PAYGO) do seu provedor de nuvem ou comprar uma licença BYOL da NetApp.
 
-Você pode comprar uma licença a qualquer momento e você não será cobrado até que o teste de 90 dias termine.
+Você pode comprar uma licença a qualquer momento e você não será cobrado até que o teste de 30 dias termine.
 
 
 

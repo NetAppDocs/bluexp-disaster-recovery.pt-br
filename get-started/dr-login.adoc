@@ -27,7 +27,7 @@ Para fazer login no BlueXP , você pode usar as credenciais do site de suporte 
 Se esta é a sua primeira vez que inicia sessão neste serviço, a página de destino aparece e pode inscrever-se para uma avaliação gratuita.
 
 +
-image:draas-landing3-free-trial.png["Captura de tela da página inicial para recuperação de desastres do BlueXP "]
+image:draas-landing4-free-trial.png["Captura de tela da página inicial para recuperação de desastres do BlueXP "]
 
 +
 Caso contrário, o Painel de recuperação de desastres do BlueXP  será exibido.

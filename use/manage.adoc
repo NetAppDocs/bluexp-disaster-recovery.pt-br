@@ -71,7 +71,7 @@ image:../use/dr-plan-list2.png["Lista de planos de replicação"]
 
 
 . Retorne à lista de planos selecionando "planos de replicação" no breadcrumbs no canto superior esquerdo.
-. Para executar ações com o plano, na lista de planos de replicação, selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]à direita do plano e selecione qualquer uma das opções, como *Editar horários*, *failover de teste*, *failover*, *failback*, *Disable*, *Enable* ou *Delete*.
+. Para executar ações com o plano, na lista de planos de replicação, selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]à direita do plano e selecione qualquer uma das opções, como *Editar horários*, *failover de teste*, *failover*, *failback*, *Migrate*, *Take snapshot now*, *Clean up old snapshots*, *Disable*, *Enable* ou *Delete*.
 . Para definir ou alterar uma programação de failover de teste ou definir a verificação de frequência de conformidade, selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]à direita do plano e selecione *Editar agendas*.
 +
 .. Na página Editar agendas, insira com que frequência em minutos você deseja que a verificação de conformidade de failover ocorra.
@@ -80,6 +80,39 @@ image:../use/dr-plan-list2.png["Lista de planos de replicação"]
 .. Selecione *Guardar*.
 
 
+
+
+
+
+=== Reconciliar instantâneos a pedido
+
+É possível reconciliar instantâneos que estão fora de sincronia entre a origem e o destino. Isso pode ocorrer se os snapshots forem excluídos em um destino fora da recuperação de desastres do BlueXP . O serviço exclui automaticamente o instantâneo na origem a cada 24 horas. No entanto, você pode executar isso sob demanda. Esse recurso permite que você garanta que os snapshots sejam consistentes em todos os sites.
+
+.Passos
+. No menu superior, selecione *planos de replicação*.
++
+image:../use/dr-plan-list2.png["Lista de planos de replicação"]
+
+. Na lista de planos de replicação, selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]à direita do plano e selecione *reconciliar instantâneos*.
+. Reveja as informações de reconciliação.
+. Selecione *reconciliar*.
+
+
+
+
+=== Eliminar um plano de replicação
+
+Você pode excluir um plano de replicação se não precisar mais dele. Se você excluir um plano de replicação, também poderá excluir os snapshots primários e secundários criados pelo plano.
+
+.Passos
+. No menu superior, selecione *planos de replicação*.
++
+image:../use/dr-plan-list2.png["Lista de planos de replicação"]
+
+. Selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]à direita do plano e selecione *Excluir*.
+. Selecione se deseja excluir os snapshots primários, os snapshots secundários ou apenas os metadados criados pelo plano.
+. Digite "delete" para confirmar a exclusão.
+. Selecione *Eliminar*.
 
 
 
@@ -95,6 +128,7 @@ Você pode alterar quantos datastores são retidos.
 image:../use/dr-plan-failover-edit.png["Editar mapeamentos de failover página"]
 
 . Altere o valor da contagem de retenção no plano de replicação.
+. Com o plano de replicação selecionado, selecione o menu ações, selecione *Limpar instantâneos antigos" para remover instantâneos antigos no destino para corresponder à nova contagem de retenção.
 
 
 

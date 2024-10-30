@@ -39,15 +39,10 @@
   <block id="66a7384fcc7d6c71e8da6dc152b82593" category="admonition">Alguns lançamentos incluem uma prévia da tecnologia. A NetApp não cobra por nenhuma capacidade de workload visualizada. Consulte <block ref="431ce6b88c6d5399033553c1891688aa" category="inline-link-macro-rx"></block> para obter informações sobre as últimas pré-visualizações de tecnologia.</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">Licenciamento</block>
   <block id="924cc6eaf82618251de609e2689ed733" category="paragraph">Você pode usar os seguintes tipos de licença:</block>
-  <block id="06cda8527230b64a09b1c568fbd2a80e" category="list-text">Inscreva-se para uma avaliação gratuita de 90 dias.</block>
   <block id="7cc1b1d71d565ea421a16ed9422fe6c2" category="list-text">Adquira uma assinatura PAYGO (pay-as-you-go) com o Amazon Web Services (AWS) Marketplace.</block>
   <block id="2caf85d76a31b7bef7132937ff28e9dc" category="list-text">Traga sua própria licença (BYOL), que é um arquivo de licença NetApp (NLF) que você obtém de seu representante de vendas da NetApp Você pode usar o número de série da licença para ativar o BYOL na carteira digital BlueXP .</block>
   <block id="c809a23426c6fb72cef75816c461ade9" category="paragraph">As licenças para todos os serviços BlueXP  são gerenciadas pelo serviço de carteira digital da BlueXP . Depois de configurar seu BYOL, você poderá ver uma licença ativa para o serviço na carteira digital BlueXP .</block>
   <block id="8eb586b1b79ddd3ae7c3123b39d4420e" category="admonition">As cobranças de recuperação de desastres do BlueXP  são baseadas na capacidade provisionada de armazenamentos de dados no local de origem quando há pelo menos uma VM com um plano de replicação. A capacidade de um armazenamento de dados com falha não está incluída no limite de capacidade. Para um BYOL, se os dados excederem a capacidade permitida, as operações no serviço serão limitadas até que você obtenha uma licença de capacidade adicional ou atualize a licença na carteira digital BlueXP .</block>
-  <block id="81a21047304ceb1b7bc762627cb29998" category="section-title">teste gratuito de 90 dias</block>
-  <block id="c26aa1f4734bee87e527e8b6fd399ff1" category="paragraph">Você pode experimentar a recuperação de desastres do BlueXP  usando uma avaliação gratuita de 90 dias.</block>
-  <block id="577219605d1e6146de9dc5b1e218ce65" category="paragraph">Para continuar após o período de avaliação de 90 dias, você precisará obter uma assinatura de pagamento conforme o uso (PAYGO) do seu provedor de nuvem ou comprar uma licença BYOL da NetApp.</block>
-  <block id="27be91c80d5e97799bb6e73e37370e5d" category="paragraph">Você pode comprar uma licença a qualquer momento e você não será cobrado até que o teste de 90 dias termine.</block>
   <block id="49cc6e59fe89d60aa8a69d475908ad17" category="section-title">Como funciona a recuperação de desastres do BlueXP </block>
   <block id="53bb415fa5ffe0063bff5bf128aceea8" category="paragraph">A recuperação de desastres do BlueXP  pode recuperar cargas de trabalho replicadas de um site no local para o Amazon FSX for ONTAP ou para outro local no local. Esse serviço automatiza a recuperação do nível SnapMirror, por meio do Registro de máquina virtual na nuvem de máquina virtual (VMC) e de mapeamentos de rede diretamente na plataforma de segurança e virtualização de rede da VMware, o NSX-T. esse recurso está incluído em todos os ambientes de nuvem de máquina virtual.</block>
   <block id="79121a92993faaa181b6eb7b104f73ea" category="paragraph">A recuperação de desastres da BlueXP  usa a tecnologia ONTAP SnapMirror, que fornece replicação altamente eficiente e preserva a eficiência do Snapshot incremental da ONTAP. A replicação do SnapMirror garante que as cópias Snapshot consistentes com aplicações estejam sempre sincronizadas e os dados possam ser usados imediatamente após um failover.</block>
@@ -71,10 +66,7 @@
   <block id="9a0514da0283645471837a7dd9cdd00a" category="list-text">Visualize qualquer recurso, como um workload ou plano de replicação.</block>
   <block id="1868701c43ed8ccfa46dc8fe93f4252f" category="list-text">Exclua qualquer recurso, como uma carga de trabalho ou plano de replicação.</block>
   <block id="1594f78ebbb281f7b5359eb6d2b89912" category="list-text">Execute todas as operações agendadas que foram criadas durante o período de teste ou sob a licença.</block>
-  <block id="d687b9bb1fc0385150b07b1a9aaae7d3" category="section-title">Experimente-o usando um teste gratuito de 90 dias</block>
-  <block id="1863514dc4e2f913207e4b5eacc1a0a8" category="paragraph">Você pode experimentar a recuperação de desastres do BlueXP  usando uma avaliação gratuita de 90 dias.</block>
   <block id="88c474e49a0cbbc7ef17d052040cd008" category="admonition">Não são aplicados limites de capacidade durante o teste.</block>
-  <block id="a14b332e4d6b9ee17b484a7fb805179f" category="paragraph">Você pode obter uma licença a qualquer momento e você não será cobrado até que o teste de 90 dias termine. Para continuar após o teste de 90 dias, você precisará comprar uma licença BYOL.</block>
   <block id="f37d436fdc8600ce24709a8f4435ec79" category="paragraph">Durante o teste, você tem funcionalidade completa.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Passos</block>
   <block id="5975f7e9036c78e6217b16f295f0ca75" category="inline-link">Consola BlueXP </block>
@@ -150,7 +142,6 @@
   <block id="d2dadcd80abef33f02b8317102f819f0" category="list-text">Abra um navegador da Web e vá para o<block ref="4d9841a08a6f1c082f5ba73c5d87fcc1" category="inline-link-rx"></block>.</block>
   <block id="753e3c2055278365db83b605f29d4860" category="paragraph">É apresentada a página de início de sessão do NetApp BlueXP .</block>
   <block id="8deb19747c06e3643bab5716cb645635" category="paragraph">Se esta é a sua primeira vez que inicia sessão neste serviço, a página de destino aparece e pode inscrever-se para uma avaliação gratuita.</block>
-  <block id="ac3c6e071ee2b6acd7920433ae08c475" category="paragraph"><block ref="ac3c6e071ee2b6acd7920433ae08c475" category="inline-image-macro-rx" type="image"></block></block>
   <block id="674a6bb0fdee8ed1d2d68faddc33d5e6" category="paragraph">Caso contrário, o Painel de recuperação de desastres do BlueXP  será exibido.</block>
   <block id="dd1ef091f49695b9c14e0e34da748ab7" category="list-text">Se você ainda não adicionou um conetor BlueXP , precisará adicionar um conetor. Para adicionar um conetor,<block ref="d6df7dcc2fc3105e10967a9194806ce5" category="inline-link-rx"></block> consulte a .</block>
   <block id="9aea41391b3a188365a351addd6cf6fc" category="list-text">Se você for um usuário do BlueXP  com um conetor existente, ao selecionar "recuperação de desastres", uma mensagem será exibida sobre a inscrição.</block>
@@ -266,11 +257,6 @@
   <block id="4dab2f9796b0af6304d00e21e2b9dfb4" category="inline-link">VMware Cloud na AWS</block>
   <block id="1b38656c5ec12ea70e00624b8b3d9551" category="paragraph"><block ref="aa736dbc3fc450bce1fb1f5726a687eb" category="inline-link-rx"></block> Fornece uma experiência nativa em nuvem para workloads baseados em VMware no ecossistema AWS. Cada data center definido por software (SDDC) da VMware é executado em uma Amazon Virtual Private Cloud (VPC) e fornece uma pilha completa de VMware (incluindo vCenter Server), rede definida por software NSX-T, armazenamento definido por software VSAN e um ou mais hosts ESXi que fornecem recursos de computação e armazenamento para as cargas de trabalho.</block>
   <block id="fd14ed73e21c2af5ff119a635c30df95" category="paragraph">Para configurar um ambiente VMC na AWS, siga as etapas<block ref="2482e32457e6109d0aff0016bbcce7d1" category="inline-link-rx"></block> neste . Um cluster de luz piloto também pode ser usado para fins de recuperação de desastres.</block>
-  <block id="64f8f55f5eb85f10374cb9251379aa7d" category="paragraph">Com a recuperação de desastres do BlueXP , você pode se inscrever para uma avaliação gratuita de 90 dias.</block>
-  <block id="23b186d0b29dfdb5e0e175ad6de4147e" category="paragraph">Você pode comprar um dos seguintes itens:</block>
-  <block id="e5cadf619f38981c2b6059a9e6577ec3" category="list-text">Uma assinatura PAYGO (pagamento conforme o uso) com o AWS Marketplace</block>
-  <block id="90d5e71753c6b7ee358df340daa5fe4c" category="list-text">Traga sua própria licença (BYOL), que é um arquivo de licença do NetApp (NLF).</block>
-  <block id="8e794011cc1f1c5c04b70473672767c4" category="paragraph"><block ref="0ba47d7cccc1dc28f47670d48274167c" category="inline-link-macro-rx"></block>Consulte a .</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Avisos legais</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">Avisos legais fornecem acesso a declarações de direitos autorais, marcas registradas, patentes e muito mais.</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Direitos de autor</block>
@@ -357,7 +343,6 @@
   <block id="4d77d74745ed3cdc84af5ddf8b6f4a2e" category="list-text">Na recuperação de desastres do BlueXP , selecione *sites*, na linha do vCenter selecione a opção *ações* <block ref="e282bbe0f95615c6416d0f1c92efdcdd" category="inline-image-macro-rx" type="image"></block>e, no menu ações, selecione *Atualizar* para atualizar a descoberta do FSX na recuperação de desastres do BlueXP .</block>
   <block id="97f038e2f4284e7bd85ce8986351f37a" category="paragraph">Isso redescobre o datastore, suas máquinas virtuais e sua relação de destino.</block>
   <block id="610937dc327c640656a75f6464a91433" category="summary">O BlueXP  Disaster Recovery é um serviço de recuperação de desastres baseado na nuvem que automatiza os workflows de recuperação de desastres. Com a recuperação de desastres do BlueXP  para VMware, é possível replicar workloads da VMware no local que executam o storage ONTAP para um data center definido por software da VMware em nuvens públicas como um local de recuperação de desastres que usa o storage de nuvem da NetApp.</block>
-  <block id="490414e0366b091220802d406e52c076" category="doc">O que há de novo</block>
   <block id="4d519f9cb24d082270f8f88ccccd42e3" category="paragraph">Saiba o que há de novo na recuperação de desastres do BlueXP .</block>
   <block id="eaecda6db64f5346d5c63bfe0094e040" category="section-title">20 de setembro de 2024</block>
   <block id="ee811bd919a27bd2eb705f65ed45e4f6" category="paragraph">Esta versão de recuperação de desastres do BlueXP  inclui a seguinte atualização.</block>
@@ -384,7 +369,6 @@
   <block id="3d3e2652059a9417e7a9b8801e83b99d" category="list-text">Selecione o plano de replicação, clique na guia *Mapeamento de failover* e clique no ícone de lápis *Editar*.</block>
   <block id="f05351f8a712da4ff1e724d342c4670b" category="list-text">Clique na seta *datastores* para expandi-la.</block>
   <block id="ee9e0fb0a09a468f33fa6f2dabc4ff49" category="inline-image-macro">Editar mapeamentos de failover página</block>
-  <block id="7cbc4647aa042fa4dbc711ee9aa94612" category="paragraph"><block ref="7cbc4647aa042fa4dbc711ee9aa94612" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0d59b78804ed5feec9399254629a60f1" category="list-text">Observe o valor da contagem de retenção no plano de replicação. Você precisará restaurar esse valor original quando terminar de executar estas etapas.</block>
   <block id="e9c686cd7f0fc0f9a24375142cf2639b" category="list-text">Reduza a contagem para 1.</block>
   <block id="94eec0eecc897e0613b4dca05f1db3b5" category="list-text">Inicie um snapshot sob demanda. Para fazer isso, na página Plano de replicação, selecione o plano, clique no ícone ações e selecione *tirar instantâneo agora*.</block>
@@ -655,7 +639,6 @@
   <block id="89dd75b1f79276c7e30e794e1c739f04" category="section-title">Crie o plano</block>
   <block id="4f27ef77939e5393adc6b44aec83a6b7" category="paragraph">Um assistente leva você através destes passos:</block>
   <block id="3baff38a392d31950fc8d4d62ea2adc0" category="list-text">Selecione vCenter Servers.</block>
-  <block id="cfb3b856fe141dd537038393a8052d33" category="list-text">Selecione as VMs que deseja replicar e atribuir grupos.</block>
   <block id="d813bc25d25a7f816dde51c17f6c6ba0" category="list-text">Mapear como os recursos do ambiente de origem são mapeados para o destino.</block>
   <block id="8e635b1aadad234871ba0e012309361f" category="list-text">Identificar recorrência, executar um script Guest-hospedado, definir a ordem de inicialização e selecionar o objetivo do ponto de recuperação.</block>
   <block id="1c10305a999dce53cb52dd4f6b8d89ff" category="list-text">Reveja o plano.</block>
@@ -671,42 +654,23 @@
   <block id="466ea193e548e9ef8d853f2da4829a3e" category="list-text">Crie um nome para o plano de replicação.</block>
   <block id="ad05d9be76290e8ea731306ed4911c41" category="list-text">Selecione os vCenters de origem e destino nas listas vCenter de origem e destino.</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">Selecione *seguinte*.</block>
-  <block id="2c1f345ff21d3c1b339c0919d325adfc" category="paragraph">A próxima etapa é agrupar as máquinas virtuais necessárias em grupos de recursos funcionais. Os grupos de recursos permitem agrupar um conjunto de máquinas virtuais dependentes em grupos lógicos que atendam aos seus requisitos. Por exemplo, grupos podem conter ordens de inicialização atrasadas que podem ser executadas após a recuperação.</block>
-  <block id="e8116ba94e27bac1f555b5e19aa9832f" category="admonition">Cada grupo de recursos pode incluir uma ou mais máquinas virtuais. As máquinas virtuais serão ligadas com base na sequência em que as incluir aqui.</block>
-  <block id="2e57ab34890abd985ae5cff7c16db6f6" category="list-text">No lado esquerdo da página aplicativos, opcionalmente, procure armazenamentos de dados.</block>
-  <block id="c34daecc192d502d04e27e0d11bc8acd" category="list-text">No lado esquerdo da página aplicativos, selecione as máquinas virtuais que você deseja replicar e atribuir ao grupo selecionado.</block>
-  <block id="deea58ba2c2a385f7b93c144b2d694e1" category="paragraph">A máquina virtual selecionada é adicionada automaticamente ao grupo 1 e um novo grupo 2 é iniciado. Cada vez que você adiciona uma máquina virtual ao último grupo, outro grupo é adicionado.</block>
   <block id="4039eb9aa82f9a49f8096e652825e9c9" category="inline-image-macro">Captura de ecrã que mostra a página Adicionar plano de replicação &amp;gt; aplicações a replicar</block>
-  <block id="eb77d8ecba8e316a4e630e7bf375a3a8" category="paragraph"><block ref="5e75e554f1dcac67727f8f9c18b64267" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f60de6a7e37982bbcf6e675308bbbeb8" category="list-text">Opcionalmente, faça um dos seguintes procedimentos:</block>
   <block id="caa1e25984e775c1ab44cfd42620d720" category="inline-image-macro">Ícone de lápis</block>
-  <block id="5b7027891924f15fc8ce9c7972c44183" category="list-text">Para alterar grupos, clique no ícone *Edit* do grupo<block ref="8254d7ced29032ec76a59e7648759881" category="inline-image-macro-rx" type="image"></block>.</block>
-  <block id="20b76027356378e48612a50cf35cca8a" category="list-text">Para remover uma máquina virtual de um grupo, selecione *X*.</block>
-  <block id="d2423d65cf9bb1427253eab5f5a436be" category="list-text">Para mover uma máquina virtual para um grupo diferente, arraste e solte-a no novo grupo.</block>
   <block id="84ffccfa6f5368695a086e51333e6494" category="list-text">Quando tiver vários grupos de recursos, certifique-se de que a sequência dos grupos corresponde à sequência operacional que deve ocorrer.</block>
-  <block id="878f58d3a7fbed70b83e44701e315e44" category="paragraph">Cada máquina virtual dentro de um grupo é iniciada em sequência com base na ordem aqui. Dois grupos são iniciados em paralelo.</block>
-  <block id="6dbf7ac6599ff616bd2b944224978963" category="list-text">Opcionalmente, renomeie o grupo clicando no ícone *Editar*.</block>
   <block id="94884044f731a17cf6d266f3acc71d30" category="section-title">Mapeie os recursos de origem para o destino</block>
-  <block id="3fcacb0423fe728907bf295cee2250ca" category="paragraph">Na etapa de mapeamento de recursos, especifique como os recursos do ambiente de origem devem ser mapeados para o destino.</block>
   <block id="15be2bc9d482c70a11a63e89eada5ce4" category="list-text">Na página Mapeamento de recursos, para usar os mesmos mapeamentos para operações de failover e teste, marque a caixa .</block>
   <block id="8020af4fa709c3156161baa6bf00e88a" category="inline-image-macro">Plano de replicação, separador Mapeamento de recursos</block>
   <block id="7906e2e007c3bad108fcd7ed7311a131" category="paragraph"><block ref="7906e2e007c3bad108fcd7ed7311a131" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6dbc81f47f4a822cd11ce7c8403756ed" category="list-text">Na guia Mapeamentos de failover, selecione a seta para baixo à direita de cada recurso e mapeie os recursos em cada um.</block>
   <block id="022ab008c31f5588f9d15da4dc3439fb" category="list-text">*Recursos de computação*: Selecione a seta para baixo ao lado de *recursos de computação*.</block>
-  <block id="5bfe17be68350c18dc777bcfabdd7a8f" category="list-text">*Redes virtuais*: Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *redes virtuais*. Introduza ou selecione a LAN virtual de origem e o segmento de destino.</block>
   <block id="a358a5c755a9f869690207e2a0726737" category="list-text">*Máquinas virtuais*: Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *máquinas virtuais*.</block>
   <block id="909f84e264f0200a692127b28fbdbaaf" category="paragraph">Selecione o mapeamento de rede para o segmento apropriado. Os segmentos já devem ser provisionados, então selecione o segmento apropriado para mapear a máquina virtual.</block>
   <block id="210dfd955522333f74e13d0843ab02ff" category="paragraph">Esta secção pode estar ativada ou desativada dependendo da sua seleção.</block>
-  <block id="cb095b2d36014cd7a8ae2363f8694981" category="paragraph">O SnapMirror está no nível do volume. Assim, todas as máquinas virtuais são replicadas para o destino de replicação. Certifique-se de selecionar todas as máquinas virtuais que fazem parte do datastore. Se não estiverem selecionadas, apenas as máquinas virtuais que fazem parte do plano de replicação serão processadas.</block>
   <block id="298abc17ab4bb709de80b68dc38dde2a" category="list-text">*Tipo de endereço IP*: Quando você está mapeando redes entre locais de origem e destino na seção máquinas virtuais do plano de replicação, a recuperação de desastres do BlueXP  oferece duas opções: DHCP ou IP estático. Para IPs estáticos, configure os servidores de sub-rede, gateway e DNS. Além disso, insira credenciais para máquinas virtuais.</block>
-  <block id="dc304d3d6524acb70870c5c55a21ebb9" category="list-text">*DHCP*: Se você escolher essa opção, você fornecerá apenas as credenciais para a VM.</block>
-  <block id="13c796f8f63d49fc45ecbb42db3b6868" category="list-text">*Static IP*: Você pode selecionar a mesma informação ou informações diferentes da VM de origem. Se você escolher o mesmo que a origem, não precisará inserir credenciais. Por outro lado, se você optar por usar informações diferentes da origem, poderá fornecer as credenciais, o endereço IP da VM, a máscara de sub-rede, o DNS e as informações do gateway. As credenciais do sistema operacional convidado VM devem ser fornecidas para o nível global ou para cada nível de VM.</block>
   <block id="13f51fa84ff64a1c633957d1dcf01637" category="paragraph">Isso pode ser muito útil ao recuperar ambientes grandes para clusters de destino menores ou para realizar testes de recuperação de desastres sem precisar provisionar uma infraestrutura VMware física um-para-um.</block>
   <block id="27469d5f3bff97989e2a320de315084a" category="inline-image-macro">Captura de ecrã mostrando Adicionar plano de replicação &amp;gt; Mapeamento de recursos &amp;gt; máquinas virtuais</block>
   <block id="c28e8a3b83f3f2cce376fe3daa7ad95d" category="paragraph"><block ref="64eb1ec301597178e47fa7deed0121dc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3512b090e0a9611bcc510311033bd346" category="list-text">*Source VM CPU e RAM*: Sob os detalhes das máquinas virtuais, você pode redimensionar opcionalmente os parâmetros CPU e RAM da VM.</block>
-  <block id="f11e7e84949ffa34e841d9d0b17d1d5d" category="list-text">*Atraso de inicialização*: Você pode modificar a ordem de inicialização para todas as máquinas virtuais selecionadas nos grupos de recursos. Por padrão, a ordem de inicialização selecionada durante a seleção do grupo de recursos é usada; no entanto, você pode fazer alterações nesta etapa. Com este campo, você pode ajustar o atraso em minutos da ação de inicialização.</block>
-  <block id="c9d8e0d238ab275582f95ccf81088af0" category="list-text">*Criar réplicas consistentes com aplicativos*: Indique se deseja criar cópias Snapshot consistentes com aplicativos. O serviço desativará o aplicativo e, em seguida, fará uma captura Instantânea para obter um estado consistente do aplicativo.</block>
   <block id="453e68e2eb0de34242ac9895a818d82a" category="list-text">*Datastores*: Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *datastores*. Com base na seleção de máquinas virtuais, mapeamentos de datastore são selecionados automaticamente.</block>
   <block id="d5033e157b5ff5f902d411ea87245351" category="list-text">*RPO*: Digite o objetivo do ponto de recuperação (RPO) para indicar a quantidade de dados a serem recuperados (medido no tempo). Por exemplo, se você inserir um RPO de 60 minutos, a recuperação precisará ter dados que não tenham mais de 60 minutos o tempo todo. Se houver um desastre, você estará permitindo a perda de até 60 minutos de dados. Insira também o número de cópias Snapshot a serem mantidas em todos os datastores.</block>
   <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*Contagem de retenção*: Insira o número de instantâneos que deseja reter.</block>
@@ -728,10 +692,7 @@
   <block id="061664c141fcaa8d32bae574640392e5" category="list-text">*Replicate*: Mantenha a cópia de destino atualizada com as alterações da cópia de origem em uma replicação recorrente.</block>
   <block id="a807f56da9b717d84bb632ebfde49e6e" category="inline-image-macro">Captura de ecrã que mostra Adicionar plano de replicação &amp;gt; recorrência</block>
   <block id="b6b37c618f509f4cd72b3116ce0f0a69" category="paragraph"><block ref="b647bf0b099c797a2c2c6a3a40882045" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e0623856c2a2db53c0560ff5b20115df" category="section-title">Confirme o plano de replicação</block>
-  <block id="a879d1d71a73bdb6127bcb571303177d" category="paragraph">Por fim, dedique alguns momentos para confirmar o plano de replicação.</block>
   <block id="26ff2655fb5643a3e76370d9248a31df" category="admonition">Mais tarde, pode desativar ou eliminar o plano de replicação.</block>
-  <block id="ebcc6bc6ad0c177b30c661fc23c0f951" category="list-text">Revise as informações em cada guia: Detalhes do plano, Mapeamento de failover, VMs.</block>
   <block id="47324a4e5509aeccc192aa7b07cbcac7" category="list-text">Selecione *Adicionar plano*.</block>
   <block id="a9980df200522b9bbaa257521bc396fe" category="paragraph">O plano é adicionado à lista de planos.</block>
   <block id="d97200be5ae32d344d6cc35c5789517d" category="section-title">Edite programações para testar a conformidade e garantir que os testes de failover funcionem</block>
@@ -835,7 +796,6 @@
   <block id="843b9bb43d8bfd905c71d66766381bb3" category="list-text">Para editar os mapeamentos de recursos, selecione a guia *Mapeamento de failover* e selecione o ícone *Editar*.</block>
   <block id="fa62d17ad222d305b611f8c161aab288" category="list-text">Para adicionar ou editar as máquinas virtuais, selecione a guia *máquinas virtuais* e selecione a opção *Adicionar VMs* ou o ícone *Editar*.</block>
   <block id="48b7a229446624a8bba6bae8e801d0ab" category="list-text">Retorne à lista de planos selecionando "planos de replicação" no breadcrumbs no canto superior esquerdo.</block>
-  <block id="2ebea8fe68e78bc0ff591a0dfab2033d" category="list-text">Para executar ações com o plano, na lista de planos de replicação, selecione a opção *ações* <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>à direita do plano e selecione qualquer uma das opções, como *Editar horários*, *failover de teste*, *failover*, *failback*, *Disable*, *Enable* ou *Delete*.</block>
   <block id="714c8620cd504e0c90291fad7b5c119f" category="list-text">Para definir ou alterar uma programação de failover de teste ou definir a verificação de frequência de conformidade, selecione a opção *ações* <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>à direita do plano e selecione *Editar agendas*.</block>
   <block id="6774836d1489d59b22c26b6c62f0749c" category="list-text">Na página Editar agendas, insira com que frequência em minutos você deseja que a verificação de conformidade de failover ocorra.</block>
   <block id="919f04c7393ca337da4d5ecf62b924fc" category="list-text">Marque *Executar failovers de teste em um horário*.</block>
@@ -875,29 +835,6 @@
   <block id="dd6963ed0ddd7c005bc031c271ee4ef9" category="paragraph">Antes de iniciar a replicação, você deve ter criado um plano de replicação e selecionado para replicar os aplicativos. Em seguida, a opção *replicate* aparece no menu ações.</block>
   <block id="d88f9a7fc239e91ef7446fdd0e2c26a4" category="list-text">À direita, selecione a opção *ações* <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>e selecione *replicar*.</block>
   <block id="054b753af44fc4eeee43c9ba6037caaa" category="doc">Criar relatórios de recuperação de desastres</block>
-  <block id="282dfbc5927b79619ad76e7f3cbfe3c6" category="paragraph">A revisão dos relatórios de recuperação de desastres pode ajudá-lo a analisar sua preparação para recuperação de desastres. Os relatórios pré-projetados incluem um resumo de failovers e failbacks, detalhes de replicação em todos os locais e detalhes da tarefa do ano passado. Você também pode criar relatórios personalizados.</block>
-  <block id="08efd64e87408e4769275d6a11482ddf" category="paragraph">Você pode baixar relatórios em formato PDF.</block>
-  <block id="b775ae7fb34855ffeede56666da9a15c" category="list-text">No menu superior, selecione *relatórios*.</block>
-  <block id="44f0d43cd92781ec793d9ba50c2d422e" category="inline-image-macro">Página de relatórios</block>
-  <block id="a73757daae33bff01ded292e39f3ddaf" category="paragraph"><block ref="a73757daae33bff01ded292e39f3ddaf" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3ccbbafbdd477e2f028bfd34e03f436b" category="list-text">Antes de criar ou baixar um relatório, atualize os dados clicando na opção *Atualizar*.</block>
-  <block id="c83e2a522238e98593e337bd5a7311b5" category="list-text">Selecione um relatório na guia *Pronto* ou crie seu próprio relatório na guia *Personalizado*.</block>
-  <block id="70db9063910acf1265d5a518168c69cd" category="list-text">Faça o download de um relatório clicando em *Download*.</block>
-  <block id="0656a1b7f286656b2fc85b91fe54f0dd" category="section-title">Crie seu próprio relatório de recuperação de desastres</block>
-  <block id="8eaafa07b3ff6e9aa5dbe62e7cc8c77c" category="paragraph">Você pode criar um relatório personalizado onde você pode especificar os sites, os planos de replicação e os dados. Você pode especificar se deve incluir resumos de failover e failback para o ano passado, detalhes da VM para cada plano de replicação e detalhes da tarefa para cada plano de replicação para o ano passado.</block>
-  <block id="036f7e4b10d318ae312cdfbb79a225fe" category="list-text">Antes de criar um relatório, atualize os dados clicando na opção *Atualizar*.</block>
-  <block id="27c38bec0a8c0321e9a3236a8a9d4e76" category="list-text">Selecione a guia *Custom*.</block>
-  <block id="c3c616a8c2970d4d1156559952705700" category="list-text">Selecione *Adicionar* para adicionar um novo relatório.</block>
-  <block id="402199b58c216d8c9be526288150639b" category="inline-image-macro">Adicionar caixa de diálogo de relatório personalizado</block>
-  <block id="8224443416aacfdb9c8d006355a8489a" category="paragraph"><block ref="8224443416aacfdb9c8d006355a8489a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="4d6c444c23609646be63340436709d5f" category="list-text">Selecione as opções para personalizar o relatório:</block>
-  <block id="f6068daa29dbb05a7ead1e3b5a48bbee" category="list-text">Dados</block>
-  <block id="478109b22c544f0e3bed80d9622cc572" category="list-text">Resumo de failover e failback do último ano</block>
-  <block id="d9848020098abdd6a6adf5b664e0a02c" category="list-text">Detalhes da VM para cada plano de replicação</block>
-  <block id="2eac16c021d7f4e2d342be672e454649" category="list-text">Detalhes da tarefa para cada plano de replicação para o ano passado</block>
-  <block id="65db0a5300ccaa6099d24aaf16150200" category="paragraph">Seu relatório personalizado é exibido na lista de relatórios personalizados.</block>
-  <block id="b7a41431aa1eee1607db390ac47d2a65" category="admonition">Para ver todos os sites ou planos incluídos no relatório, clique no número à direita do nome do relatório ou dos nomes do plano.</block>
-  <block id="a99780537c030fe162f59c129be8e471" category="list-text">Faça o download do seu relatório personalizado clicando em *Download*.</block>
   <block id="a9233ff25d3c8ffa3e005e6e453381fc" category="paragraph">Antes de criar um plano de recuperação de desastres, você precisa adicionar um site do vCenter primário e um site de recuperação de desastres do vCenter de destino no BlueXP .</block>
   <block id="9809a26603cc2fbdd8049c848bf77835" category="paragraph">Depois que eles são adicionados, a recuperação de desastres do BlueXP  realiza uma descoberta profunda dos ambientes do vCenter, incluindo clusters do vCenter, hosts ESXi, datastores, impressão de pé de armazenamento, detalhes da máquina virtual, réplicas do SnapMirror e redes de máquinas virtuais.</block>
   <block id="6df4f43f22118c6a361990f481e6ed83" category="list-text">Inicie sessão no BlueXP  e selecione *proteção* &gt; *recuperação de desastres* no nav esquerdo.</block>
@@ -954,7 +891,6 @@
   <block id="b45dfe874eaba6a97e58e0436eba2402" category="sidebar">Primeiros passos com a recuperação de desastres do BlueXP  como um laboratório de serviços sob demanda</block>
   <block id="554cfab3938e21d9270bd6b75931f96f" category="sidebar">Vídeos</block>
   <block id="c84c0f6820fdd01db35db56ad7a4fe6c" category="sidebar">Documentos de recuperação de desastres do BlueXP </block>
-  <block id="7b6761de8fbe584a66fa50ad6fa3dd19" category="sidebar">Configurar a recuperação de desastres do BlueXP </block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">Referência</block>
   <block id="b80f9ccd1ed052ae2d1a95c50bd37d8b" category="sidebar">O vCenter Privileges é necessário para a recuperação de desastres do BlueXP </block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Notas de lançamento</block>
@@ -963,4 +899,91 @@
   <block id="a900cb57c651ef75881dfa4543e4701d" category="sidebar">Replique para outro local</block>
   <block id="ad80d6168dc288f4361413eeca80dc5f" category="sidebar">Migrar para outro site</block>
   <block id="b7cd69eed80f723036ef0a99b8bb375e" category="sidebar">Gerencie sites, planos, armazenamentos de dados e informações de máquinas virtuais</block>
+  <block id="63f202b7fcd80e9277a9e585cd35c7ae" category="list-text">Inscreva-se para uma avaliação gratuita de 30 dias.</block>
+  <block id="5ef05167488611c5bd4ff0f410595ce4" category="section-title">teste gratuito de 30 dias</block>
+  <block id="fcb9470411433141a8e2828e6e6743a1" category="paragraph">Você pode experimentar a recuperação de desastres do BlueXP  usando uma avaliação gratuita de 30 dias.</block>
+  <block id="2653bc3ce497c58d463194da74daede0" category="paragraph">Para continuar após o período de avaliação de 30 dias, você precisará obter uma assinatura de pagamento conforme o uso (PAYGO) do seu provedor de nuvem ou comprar uma licença BYOL da NetApp.</block>
+  <block id="5ea3b0a3d2edc96d5ac390dd8d481432" category="paragraph">Você pode comprar uma licença a qualquer momento e você não será cobrado até que o teste de 30 dias termine.</block>
+  <block id="b22e0a0c145eff4bd34bc6c46894b2a1" category="section-title">Experimente-o usando um teste gratuito de 30 dias</block>
+  <block id="039ed52e082d57c29ee6dcf82a85a0e7" category="paragraph">Você pode experimentar a recuperação de desastres do BlueXP  usando uma avaliação gratuita de 30 dias.</block>
+  <block id="dd8751ceddb247aced4307ca6fddff51" category="paragraph">Para continuar após o teste, você precisará comprar uma licença BYOL ou uma assinatura PAYGO AWS. Você pode obter uma licença a qualquer momento e você não será cobrado até que o teste termine.</block>
+  <block id="58e6ab5634cec392e37e4f0d5f8f8db8" category="paragraph"><block ref="58e6ab5634cec392e37e4f0d5f8f8db8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6339437d88aaa794dbaa48ee62597c24" category="doc">Novidades na recuperação de desastres do BlueXP </block>
+  <block id="1992f2f9fa5c0cbd3b61255b9dd507bd" category="section-title">30 de outubro de 2024</block>
+  <block id="51ca1579fc5d4f066bdbf640a4814d76" category="list-text">*Relatórios*: Com esta versão, agora você pode gerar e baixar relatórios para ajudá-lo a analisar seu cenário. Os relatórios pré-projetados resumem failovers e failbacks, mostram detalhes de replicação em todos os locais e mostram os detalhes da tarefa nos últimos sete dias.</block>
+  <block id="023cf8170104660fc796a64fdad98afa" category="paragraph">Consulte a<block ref="cca93cc3cfc082fe882eefc731706487" category="inline-link-rx"></block>.</block>
+  <block id="978337672bd8dff65bfbecb42cf21f9d" category="list-text">*Avaliação gratuita de 30 dias*: Com esta versão, agora você pode se inscrever para uma avaliação gratuita de 30 dias da recuperação de desastres do BlueXP . Anteriormente, as avaliações gratuitas duravam 90 dias.</block>
+  <block id="1cb57fbf1f1452e87f62dd668ea03759" category="paragraph">Consulte a<block ref="7585b54fad00f1219b8233730153156f" category="inline-link-rx"></block>.</block>
+  <block id="7c63c33c2146d3ce95c7487c1ebbe27e" category="list-text">*Desativar e ativar planos de replicação*: Uma versão anterior incluiu atualizações para a estrutura de agendamento de teste de failover, que era necessária para suportar programações diárias e semanais. Esta atualização exigiu que você desabilite e reative todos os planos de replicação existentes para que você possa usar as novas programações de teste de failover diárias e semanais. Este é um requisito único.</block>
+  <block id="128ecd2ba12e92192724c8e3ed360ffc" category="list-text">*Mapeamento de pastas*: Quando você cria um plano de replicação e mapeia recursos de computação, agora você pode mapear pastas para que as VMs sejam recuperadas em uma pasta especificada para datacenter, cluster e host.</block>
+  <block id="b7d245c9fa7100d1b04bb8e37530f630" category="list-text">*Detalhes da VM disponíveis para failover, failback e failover de teste*: Quando uma falha ocorre e você está iniciando um failover, executando um failback ou testando o failover, agora você pode ver detalhes das VMs e identificar quais VMs não reiniciaram.</block>
+  <block id="5b7e4b08598b495e5e802015cfda0817" category="list-text">*Atraso de inicialização da VM com sequência de inicialização ordenada*: Quando você cria um plano de replicação, agora você pode definir um atraso de inicialização para cada VM no plano. Isso permite que você defina uma sequência para que as VMs comecem a garantir que todas as VMs prioritárias One estejam sendo executadas antes que as VMs prioritárias subsequentes sejam iniciadas.</block>
+  <block id="6bf75b2b973c4e4b2e97cb286b4a0b22" category="list-text">*Informações do sistema operacional da VM*: Quando você cria um plano de replicação, agora você pode ver o sistema operacional de cada VM no plano. Isso é útil para decidir como agrupar VMs em um grupo de recursos.</block>
+  <block id="c216ae779db45238ce5f187a4e9efc0e" category="list-text">*Alias de nome da VM*: Quando você cria um plano de replicação, agora você pode adicionar um prefixo e sufixo aos nomes da VM no SIT de recuperação de desastres. Isso permite que você use um nome mais descritivo para as VMs no plano.</block>
+  <block id="0b0c4a58a22974b8eb46383cdfabf354" category="list-text">*Limpar snapshots antigos*: Com esta versão, você pode excluir todos os snapshots que não são mais necessários além da sua contagem de retenção especificada. Os snapshots podem se acumular ao longo do tempo quando você diminui a contagem de retenção de snapshots, e agora você pode removê-los para liberar espaço. Você pode fazer isso a qualquer momento sob demanda ou quando você excluir um plano de replicação.</block>
+  <block id="3eddfb488d257605e7713c24d210beee" category="inline-link">Gerencie sites, grupos de recursos, planos de replicação, armazenamentos de dados e informações de máquinas virtuais</block>
+  <block id="310c40c0ef022c90f1370d1fe91ca720" category="paragraph">Para obter detalhes,<block ref="db7c318fcbcad8cfb9a44ac897b870b2" category="inline-link-rx"></block> consulte .</block>
+  <block id="718c1087c683dccc1ea79ed6fa0fd10b" category="list-text">*Reconciliar instantâneos*: Com esta versão, agora você pode reconciliar instantâneos que estão fora de sincronia entre a origem e o destino. Isso pode ocorrer se os snapshots forem excluídos em um destino fora da recuperação de desastres do BlueXP . O serviço exclui o instantâneo na origem automaticamente a cada 24 horas. No entanto, você pode executar isso sob demanda. Esse recurso permite que você garanta que os snapshots sejam consistentes em todos os sites.</block>
+  <block id="9a3a6422d384602f3e19e123263dc99f" category="paragraph">Para obter detalhes,<block ref="59c3623215c45197e971057378c86d42" category="inline-link-rx"></block> consulte .</block>
+  <block id="21045c570180940ef07c18bb23d0427d" category="list-text">Selecione as máquinas virtuais (VMs) que você deseja replicar e atribuir grupos.</block>
+  <block id="220cf85b4d919dc13e0c6317aa2e2b17" category="list-text">1 para muitos em uma arquitetura de fan-out</block>
+  <block id="f2cdd0bbe9f89ecac35fe20b5c70e9fb" category="paragraph">A próxima etapa é agrupar as VMs necessárias em grupos de recursos funcionais. Os grupos de recursos permitem agrupar um conjunto de VMs dependentes em grupos lógicos que atendem aos seus requisitos. Por exemplo, grupos podem conter ordens de inicialização atrasadas que podem ser executadas após a recuperação.</block>
+  <block id="4d179ba15a8047d595a41bbd6175c3be" category="paragraph">Quando você seleciona aplicativos no plano de replicação, é possível ver o sistema operacional de cada VM no plano. Isso é útil para decidir como agrupar VMs em um grupo de recursos.</block>
+  <block id="7eb18c1801bc45dc00317e09e6cc2211" category="admonition">Cada grupo de recursos pode incluir uma ou mais VMs. As VMs serão ligadas com base na sequência em que as incluir aqui.</block>
+  <block id="236861b5b0d7380c86b58343dda04a42" category="list-text">Opcionalmente, no lado esquerdo da página aplicativos, filtre as VMs pelo datastore.</block>
+  <block id="794c0f8f77c0af0e4613492580e6d7ab" category="list-text">No lado esquerdo da página aplicativos, selecione as VMs que você deseja proteger e atribuir ao grupo selecionado.</block>
+  <block id="87661bcc452e9da5afed70a3b9cf3e39" category="paragraph">A VM selecionada é adicionada automaticamente ao grupo 1 e um novo grupo 2 é iniciado. Cada vez que você adiciona uma VM ao último grupo, outro grupo é adicionado.</block>
+  <block id="81c61db52db9a56a1819f55910f10afa" category="paragraph"><block ref="37056fc036b85c73069e7f1371212abb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bcc94af8bc9c7e6ef8fd57214884e7f1" category="list-text">Para alterar o nome do grupo, clique no ícone *Edit* do grupo<block ref="8254d7ced29032ec76a59e7648759881" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="a218e8ce5f9879c5e643831c2aa0e36a" category="list-text">Para remover uma VM de um grupo, selecione *X* ao lado da VM.</block>
+  <block id="a63398300e6fbe20dc11a32121bd6bfa" category="list-text">Para mover uma VM para um grupo diferente, arraste e solte-a no novo grupo.</block>
+  <block id="86cbb58fb6d06cab306fbf4379c5c40e" category="paragraph">Cada VM dentro de um grupo é iniciada em sequência com base na ordem aqui.</block>
+  <block id="b09b7f24f5b2d0187b19263b47fb2cdf" category="paragraph">Na etapa de mapeamento de recursos, especifique como os recursos do ambiente de origem devem ser mapeados para o destino. Ao criar um plano de replicação, você pode definir um atraso de inicialização e ordem para cada VM no plano. Isso permite que você defina uma sequência para as VMs iniciarem.</block>
+  <block id="da06c5c1d28e308403236438dda209dc" category="list-text">*Datacenters de origem e destino*</block>
+  <block id="7067fdfe055fabd950bd45a1a17e1642" category="list-text">*Cluster de destino*</block>
+  <block id="2c0a2cae30cf923c64bbed704e923521" category="list-text">*Target host* (opcional): Depois de selecionar o cluster, você pode então definir essas informações.</block>
+  <block id="6d9f48430941cb04802ac18d9c695e65" category="admonition">Se um vCenter tiver um DRS (Distributed Resource Scheduler) configurado para gerenciar vários hosts em um cluster, você não precisará selecionar um host. Se você selecionar um host, a recuperação de desastres do BlueXP  colocará todas as VMs no host selecionado.</block>
+  <block id="999becf997185f87ea1b5bd029bf5b34" category="list-text">*Target VM folder* (opcional): Crie uma nova pasta raiz para armazenar as VMs selecionadas.</block>
+  <block id="b309697bdbe88c0e59d4f6201fe75801" category="list-text">*Redes virtuais*: Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *redes virtuais*. Selecione a LAN virtual de origem e o segmento de destino.</block>
+  <block id="59b1abd434d2a560773c9f089cc8679a" category="paragraph">Se você fizer quaisquer alterações a partir das configurações padrão, precisará fornecer credenciais.</block>
+  <block id="0a8bc9b2bb8f581fa27738fc437d64b3" category="paragraph">Esta seção pode exibir campos diferentes dependendo da sua seleção.</block>
+  <block id="25f9829876988ad5a8f8d2b64655ff19" category="list-text">*DHCP*: Selecione esta definição se pretender que as suas VMs obtenham informações de configuração de rede a partir de um servidor DHCP. Se você escolher essa opção, você fornecerá apenas as credenciais para a VM.</block>
+  <block id="16bd7bddefb51b87ff4fbcf4c8831a1d" category="list-text">*IP estático*: Selecione esta configuração se desejar especificar as informações de configuração IP manualmente. Você pode selecionar as mesmas informações ou informações diferentes da VM de origem. Se você escolher o mesmo que a origem, não precisará inserir credenciais. Por outro lado, se você optar por usar informações diferentes da origem, poderá fornecer as credenciais, o endereço IP da VM, a máscara de sub-rede, o DNS e as informações do gateway. As credenciais do sistema operacional convidado VM devem ser fornecidas para o nível global ou para cada nível de VM.</block>
+  <block id="7b2b025be41dbbc4cda9601c1b5523a5" category="list-text">* Prefixo e sufixo da VM de destino*: Sob os detalhes das máquinas virtuais, você pode opcionalmente adicionar um prefixo e sufixo ao nome da VM.</block>
+  <block id="230dc85a08275a2466390ae799703f92" category="list-text">*Source VM CPU e RAM*: Sob os detalhes das máquinas virtuais, você pode redimensionar opcionalmente os parâmetros CPU e RAM da VM.</block>
+  <block id="97bbe2658500151382594a4fae0afc57" category="paragraph"><block ref="1dcb46a6f5cf6fb93122072f061a9e9e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="77506f26f3b4a989168bfd6da6435808" category="list-text">*Ordem de inicialização*: Você pode modificar a ordem de inicialização após um failover para todas as máquinas virtuais selecionadas nos grupos de recursos. Por padrão, a ordem de inicialização selecionada durante a seleção do grupo de recursos é usada; no entanto, você pode fazer alterações nesta etapa. Isso é útil para garantir que todas as VMs de prioridade 1 estejam sendo executadas antes que as VMs de prioridade subsequentes sejam iniciadas.</block>
+  <block id="f4acab8352ab5ba21dd2d6ce32fc9f2a" category="paragraph">Os números de ordem de inicialização se aplicam somente dentro de um grupo de recursos. Se você tiver um "2" em um grupo e um "2" em outro grupo, as VMs no primeiro grupo começam em sua ordem e as VMs no segundo grupo começam em sua ordem.</block>
+  <block id="8cad29fca944093d9257fcd28c5a17d5" category="list-text">Inicialização sequencial: Atribua a cada VM um número exclusivo para inicializar o na ordem atribuída, por exemplo, 1,2,3,4,5</block>
+  <block id="8043065a3a1affdc7e75a0083d3349b1" category="list-text">Inicialização simultânea: Atribua o mesmo número a todas as VMs para iniciá-las ao mesmo tempo, por exemplo, 1,1,1,1,2,2,3,4,4.</block>
+  <block id="aa54fb3621577f63cab9b508032a995d" category="list-text">*Atraso de inicialização*: Ajuste o atraso em minutos da ação de inicialização.</block>
+  <block id="517ed43dc67f057cadcb1c29ecbd75ef" category="admonition">Para redefinir a ordem de inicialização para o padrão, selecione *Redefinir as configurações da VM como padrão* e escolha quais configurações você deseja alterar de volta para o padrão.</block>
+  <block id="739e8f4c4549d6d4a7768c6850d47495" category="list-text">*Criar réplicas consistentes com aplicativos*: Indique se deseja criar cópias Snapshot consistentes com aplicativos. O serviço silenciará o aplicativo e, em seguida, fará um snapshot para obter um estado consistente do aplicativo. Esse recurso é compatível com Oracle em execução no Windows e Linux e SQL Server em execução no Windows.</block>
+  <block id="2a4ddf396205dca12c00a6eb7e16285a" category="section-title">Reveja o plano de replicação</block>
+  <block id="f7056dbdafc88dd1c68fb0eec6b47aac" category="paragraph">Por fim, dedique alguns momentos para rever o plano de replicação.</block>
+  <block id="6662bb47d30d156ce5604e1d8adf7ae1" category="list-text">Revise as informações em cada guia: Detalhes do Plano, Mapeamento de failover e VMs.</block>
+  <block id="09ae37e8df35c2c5f71701a8407cc944" category="list-text">Para executar ações com o plano, na lista de planos de replicação, selecione a opção *ações* <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>à direita do plano e selecione qualquer uma das opções, como *Editar horários*, *failover de teste*, *failover*, *failback*, *Migrate*, *Take snapshot now*, *Clean up old snapshots*, *Disable*, *Enable* ou *Delete*.</block>
+  <block id="ed5712a5338a0cddb9b90afe427576e5" category="section-title">Reconciliar instantâneos a pedido</block>
+  <block id="1a9494ac0598f12cb8f1849630ab6e42" category="paragraph">É possível reconciliar instantâneos que estão fora de sincronia entre a origem e o destino. Isso pode ocorrer se os snapshots forem excluídos em um destino fora da recuperação de desastres do BlueXP . O serviço exclui automaticamente o instantâneo na origem a cada 24 horas. No entanto, você pode executar isso sob demanda. Esse recurso permite que você garanta que os snapshots sejam consistentes em todos os sites.</block>
+  <block id="2cf81891cc338c800419b4136c4ad8f4" category="list-text">Na lista de planos de replicação, selecione a opção *ações* <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>à direita do plano e selecione *reconciliar instantâneos*.</block>
+  <block id="08bb8fbd3da836cf3622737c948a4ede" category="list-text">Reveja as informações de reconciliação.</block>
+  <block id="571a21bebeed1a6e73b024d56871482d" category="list-text">Selecione *reconciliar*.</block>
+  <block id="2dcc77d52e005461a9eab86fef63c3f9" category="section-title">Eliminar um plano de replicação</block>
+  <block id="0f6c94cfa5509a16442ca505884acf3e" category="paragraph">Você pode excluir um plano de replicação se não precisar mais dele. Se você excluir um plano de replicação, também poderá excluir os snapshots primários e secundários criados pelo plano.</block>
+  <block id="f9f0145001aafc948bb966c2faef499c" category="list-text">Selecione a opção *ações* <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>à direita do plano e selecione *Excluir*.</block>
+  <block id="e28e746e68d02b24d2750571a0776bd0" category="list-text">Selecione se deseja excluir os snapshots primários, os snapshots secundários ou apenas os metadados criados pelo plano.</block>
+  <block id="90486e8ee3ac6fe6a17dab32429bf3ee" category="list-text">Digite "delete" para confirmar a exclusão.</block>
+  <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">Selecione *Eliminar*.</block>
+  <block id="835e92deb53775d3ce75f1bab2ff7fe5" category="list-text">Com o plano de replicação selecionado, selecione o menu ações, selecione *Limpar instantâneos antigos" para remover instantâneos antigos no destino para corresponder à nova contagem de retenção.</block>
+  <block id="4fcb591c27b70823ff71112c0db6af4f" category="summary">A revisão dos relatórios de recuperação de desastres pode ajudá-lo a analisar sua preparação para recuperação de desastres. Os relatórios pré-projetados incluem um resumo de failovers e failbacks, detalhes de replicação em todos os locais e detalhes da tarefa do ano passado.</block>
+  <block id="8c909df77f7b5e2e6b77ff66ee6bd3e7" category="paragraph">A revisão dos relatórios de recuperação de desastres pode ajudá-lo a analisar sua preparação para recuperação de desastres. Os relatórios pré-projetados incluem um resumo de failovers de teste, detalhes do plano de replicação e detalhes da tarefa em todos os sites de uma conta nos últimos sete dias.</block>
+  <block id="50772b7f62153c22aff0a022f47038ef" category="paragraph">Você pode baixar relatórios em formato HTML ou JSON.</block>
+  <block id="a023ebf9b7aa4bcf4be9bcca1ad988b9" category="admonition">Você pode converter a página HTML em um PDF usando as opções do seu navegador.</block>
+  <block id="cd463f7ca5dbc8268a82ea8d8f5e4281" category="paragraph">O link Download é válido por seis horas.</block>
+  <block id="5e521694fac83ef0acfcb6f722d2b3cf" category="list-text">No navegador esquerdo do BlueXP , selecione *proteção* &gt; *recuperação de desastres* &gt; *planos de replicação*.</block>
+  <block id="40f8ac7caaab02ab3b9834517b54c7a4" category="list-text">Na parte superior da página, selecione *criar relatório*.</block>
+  <block id="32e3f74f58555c69fe922de2e2c5a1fb" category="list-text">Selecione o tipo de formato de arquivo e o período de tempo nos últimos 7 dias.</block>
+  <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">Selecione *criar*.</block>
+  <block id="5da6bcdd6ceb1c5910fb17277177402d" category="admonition">O relatório pode levar alguns minutos para ser exibido.</block>
+  <block id="ab6b0c72784c216662673e59f1357cc1" category="list-text">Para fazer o download de um relatório, selecione *Baixar relatório* e selecione-o na pasta Download do administrador.</block>
 </blocks>

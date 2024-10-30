@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: use/reports.html 
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, monitor, bluexp, protection, reports 
-summary: A recuperação de desastres do NetApp BlueXP  é um serviço de recuperação de desastres baseado na nuvem que automatiza os workflows de recuperação de desastres. Você pode monitorar todos os trabalhos de recuperação de desastres e determinar seu progresso. 
+summary: A revisão dos relatórios de recuperação de desastres pode ajudá-lo a analisar sua preparação para recuperação de desastres. Os relatórios pré-projetados incluem um resumo de failovers e failbacks, detalhes de replicação em todos os locais e detalhes da tarefa do ano passado. 
 ---
 = Criar relatórios de recuperação de desastres
 :hardbreaks:
@@ -12,54 +12,24 @@ summary: A recuperação de desastres do NetApp BlueXP  é um serviço de recup
 
 
 [role="lead"]
-A revisão dos relatórios de recuperação de desastres pode ajudá-lo a analisar sua preparação para recuperação de desastres. Os relatórios pré-projetados incluem um resumo de failovers e failbacks, detalhes de replicação em todos os locais e detalhes da tarefa do ano passado. Você também pode criar relatórios personalizados.
+A revisão dos relatórios de recuperação de desastres pode ajudá-lo a analisar sua preparação para recuperação de desastres. Os relatórios pré-projetados incluem um resumo de failovers de teste, detalhes do plano de replicação e detalhes da tarefa em todos os sites de uma conta nos últimos sete dias.
 
-Você pode baixar relatórios em formato PDF.
+Você pode baixar relatórios em formato HTML ou JSON.
+
+
+TIP: Você pode converter a página HTML em um PDF usando as opções do seu navegador.
+
+O link Download é válido por seis horas.
 
 .Passos
-. No sistema de navegação esquerdo do BlueXP , selecione *proteção* > *recuperação de desastres*.
-. No menu superior, selecione *relatórios*.
-+
-image:dr-reports.png["Página de relatórios"]
-
-. Antes de criar ou baixar um relatório, atualize os dados clicando na opção *Atualizar*.
-. Selecione um relatório na guia *Pronto* ou crie seu próprio relatório na guia *Personalizado*.
-. Faça o download de um relatório clicando em *Download*.
+. No navegador esquerdo do BlueXP , selecione *proteção* > *recuperação de desastres* > *planos de replicação*.
+. Na parte superior da página, selecione *criar relatório*.
+. Selecione o tipo de formato de arquivo e o período de tempo nos últimos 7 dias.
+. Selecione *criar*.
 
 
 
+NOTE: O relatório pode levar alguns minutos para ser exibido.
 
-== Crie seu próprio relatório de recuperação de desastres
-
-Você pode criar um relatório personalizado onde você pode especificar os sites, os planos de replicação e os dados. Você pode especificar se deve incluir resumos de failover e failback para o ano passado, detalhes da VM para cada plano de replicação e detalhes da tarefa para cada plano de replicação para o ano passado.
-
-. No menu superior, selecione *relatórios*.
-. Antes de criar um relatório, atualize os dados clicando na opção *Atualizar*.
-. Selecione a guia *Custom*.
-. Selecione *Adicionar* para adicionar um novo relatório.
-+
-image:dr-reports-add.png["Adicionar caixa de diálogo de relatório personalizado"]
-
-. Selecione as opções para personalizar o relatório:
-+
-** Locais
-** Planos de replicação
-** Dados
-+
-*** Resumo de failover e failback do último ano
-*** Detalhes da VM para cada plano de replicação
-*** Detalhes da tarefa para cada plano de replicação para o ano passado
-
-
-
-
-. Selecione *Adicionar* para adicionar um novo relatório.
-+
-Seu relatório personalizado é exibido na lista de relatórios personalizados.
-
-+
-
-TIP: Para ver todos os sites ou planos incluídos no relatório, clique no número à direita do nome do relatório ou dos nomes do plano.
-
-. Faça o download do seu relatório personalizado clicando em *Download*.
+. Para fazer o download de um relatório, selecione *Baixar relatório* e selecione-o na pasta Download do administrador.
 

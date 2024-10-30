@@ -23,3 +23,5 @@ entries:
   url: "/use/manage.html"
 - title: Monitorar trabalhos de recuperação de desastres
   url: "/use/monitor-jobs.html"
+- title: Criar relatórios de recuperação de desastres
+  url: "/use/reports.html"

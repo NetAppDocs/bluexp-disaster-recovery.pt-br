@@ -16,7 +16,7 @@ Com a recuperação de desastres do BlueXP , você pode usar diferentes planos 
 
 Você pode usar os seguintes tipos de licença:
 
-* Inscreva-se para uma avaliação gratuita de 90 dias.
+* Inscreva-se para uma avaliação gratuita de 30 dias.
 * Adquira uma assinatura PAYGO (pay-as-you-go) com o Amazon Web Services (AWS) Marketplace.
 * Traga sua própria licença (BYOL), que é um arquivo de licença NetApp (NLF) que você obtém de seu representante de vendas da NetApp Você pode usar o número de série da licença para ativar o BYOL na carteira digital BlueXP .
 
@@ -35,14 +35,14 @@ Depois que a avaliação gratuita terminar ou a licença expirar, você ainda po
 
 
 
-== Experimente-o usando um teste gratuito de 90 dias
+== Experimente-o usando um teste gratuito de 30 dias
 
-Você pode experimentar a recuperação de desastres do BlueXP  usando uma avaliação gratuita de 90 dias.
+Você pode experimentar a recuperação de desastres do BlueXP  usando uma avaliação gratuita de 30 dias.
 
 
 NOTE: Não são aplicados limites de capacidade durante o teste.
 
-Você pode obter uma licença a qualquer momento e você não será cobrado até que o teste de 90 dias termine. Para continuar após o teste de 90 dias, você precisará comprar uma licença BYOL.
+Para continuar após o teste, você precisará comprar uma licença BYOL ou uma assinatura PAYGO AWS. Você pode obter uma licença a qualquer momento e você não será cobrado até que o teste termine.
 
 Durante o teste, você tem funcionalidade completa.
 
