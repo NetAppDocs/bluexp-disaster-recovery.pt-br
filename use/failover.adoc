@@ -12,23 +12,25 @@ summary: A recuperação de desastres do NetApp BlueXP  é um serviço de recup
 
 
 [role="lead"]
-Em caso de desastre, faça failover do seu site principal da VMware no local para outro site local ou VMware Cloud on AWS.
+Em caso de desastre, faça failover do seu site principal da VMware no local para outro site local ou VMware Cloud on AWS. Você pode testar o processo de failover para garantir o sucesso quando necessário.
 
-Durante o failover, a cópia Snapshot mais recente do SnapMirror é usada. Ou, você pode selecionar uma cópia Snapshot específica em uma cópia Snapshot pontual (de acordo com a política de retenção do SnapMirror). A opção pontual pode ser útil se você estiver enfrentando um evento de corrupção, como ransomware, onde as réplicas mais recentes já estão comprometidas ou criptografadas. A recuperação de desastres do BlueXP  mostra todos os pontos disponíveis no tempo.
+Durante um failover, a cópia snapshot mais recente do SnapMirror é usada. Ou, você pode selecionar um snapshot específico de um snapshot pontual (de acordo com a política de retenção do SnapMirror). A opção pontual pode ser útil se você estiver enfrentando um evento de corrupção, como ransomware, onde as réplicas mais recentes já estão comprometidas ou criptografadas. A recuperação de desastres do BlueXP  mostra todos os pontos disponíveis no tempo.
 
-Esse procedimento quebra a relação de replicação, coloca as VMs de origem do vCenter offline e permite a leitura/gravação no site de destino.
+Esse processo difere dependendo se o local de produção está íntegro e você está executando um failover para o local de recuperação de desastres por motivos diferentes de uma falha crítica na infraestrutura:
 
-Você pode incluir scripts personalizados nos formatos .sh, .bat ou .ps1 como processos de pós-failover. Com scripts personalizados, você pode fazer com que a recuperação de desastres do BlueXP  execute seu script após um processo de failover. Por exemplo, você pode usar um script personalizado para retomar todas as transações de banco de dados após a conclusão do failover.
+* Falha crítica no local de produção em que o cluster de origem vCenter ou ONTAP não está acessível: A recuperação de desastres do BlueXP  permite selecionar qualquer snapshot disponível a partir do qual será restaurado.
+* O ambiente de produção está saudável: Você pode "tirar um instantâneo agora" ou selecionar um instantâneo criado anteriormente.
 
-Antes de iniciar o failover, você pode testar o processo, garantindo o sucesso quando necessário. O teste não coloca as máquinas virtuais offline.
+
+Esse procedimento quebra a relação de replicação, coloca as VMs de origem do vCenter offline, Registra os volumes como armazenamentos de dados no vCenter de recuperação de desastres, reinicia as VMs protegidas usando as regras de failover no plano e permite a leitura/gravação no site de destino.
 
 
 
 == Teste o processo de failover
 
-Antes de iniciar um failover real, você deve testar o processo de failover.
+Antes de iniciar o failover, você pode testar o processo. O teste não coloca as máquinas virtuais offline.
 
-Durante um teste de failover, as máquinas virtuais são criadas temporariamente. A recuperação de desastres do BlueXP  não mapeia o volume de destino. Em vez disso, ele cria um novo volume FlexClone a partir do instantâneo selecionado e um datastore temporário que faz backup do volume FlexClone é mapeado para os hosts ESXi.
+Durante um teste de failover, as máquinas virtuais são criadas temporariamente. A recuperação de desastres do BlueXP  não mapeia o volume de destino. Em vez disso, ele cria um novo volume FlexClone a partir do snapshot selecionado e um datastore temporário que faz backup do volume FlexClone é mapeado para os hosts ESXi.
 
 Esse processo não consome capacidade física adicional no armazenamento ONTAP no local ou no FSX for NetApp ONTAP na AWS. O volume de origem original não é modificado e os trabalhos de réplica podem continuar mesmo durante a recuperação de desastres.
 
