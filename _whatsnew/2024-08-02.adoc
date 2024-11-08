@@ -1,0 +1,20 @@
+= Suporte para armazenamentos de dados VMware VMFS on-premises para FC
+:allow-uri-read: 
+
+
+
+
+=== Suporte para armazenamentos de dados VMware VMFS on-premises para FC
+
+Esta versão inclui uma visualização de _tecnologia_ do suporte a VMs montadas nos armazenamentos de dados do sistema de arquivos de máquina virtual (VMFS) do VMware vSphere para FC protegido no storage local. Anteriormente, o serviço forneceu uma visualização de tecnologia com suporte aos datastores VMFS para iSCSI.
+
+
+NOTE: A NetApp não cobra por nenhuma capacidade de workload visualizada.
+
+
+
+=== Cancelar trabalho
+
+Com esta versão, agora você pode cancelar um trabalho na IU do Monitor de trabalhos.
+
+Consulte a https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/monitor-jobs.html["Monitorizar trabalhos"].

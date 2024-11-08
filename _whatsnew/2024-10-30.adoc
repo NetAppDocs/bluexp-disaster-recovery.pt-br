@@ -1,0 +1,89 @@
+= Relatórios
+:allow-uri-read: 
+
+
+
+
+=== Relatórios
+
+Agora você pode gerar e baixar relatórios para ajudá-lo a analisar seu cenário. Os relatórios pré-projetados resumem failovers e failbacks, mostram detalhes de replicação em todos os locais e mostram os detalhes da tarefa nos últimos sete dias.
+
+Consulte a https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/reports.html["Criar relatórios de recuperação de desastres"].
+
+
+
+=== teste gratuito de 30 dias
+
+Agora você pode se inscrever para uma avaliação gratuita de 30 dias da recuperação de desastres do BlueXP . Anteriormente, as avaliações gratuitas duravam 90 dias.
+
+Consulte a https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html["Configure o licenciamento"].
+
+
+
+=== Desativar e ativar planos de replicação
+
+Uma versão anterior incluiu atualizações da estrutura de agendamento de teste de failover, que era necessária para dar suporte a programações diárias e semanais. Esta atualização exigiu que você desabilite e reative todos os planos de replicação existentes para que você possa usar as novas programações de teste de failover diárias e semanais. Este é um requisito único.
+
+Veja como:
+
+. No menu superior, selecione *planos de replicação*.
+. Selecione um plano e selecione o ícone ações para exibir o menu suspenso.
+. Selecione *Desativar*.
+. Após alguns minutos, selecione *Enable* (Ativar).
+
+
+
+
+=== Mapeamento de pastas
+
+Quando você cria um plano de replicação e mapeia recursos de computação, agora é possível mapear pastas para que as VMs sejam recuperadas em uma pasta especificada para datacenter, cluster e host.
+
+Para obter detalhes, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["Crie um plano de replicação"] consulte .
+
+
+
+=== Detalhes da VM disponíveis para failover, failback e failover de teste
+
+Quando uma falha ocorre e você está iniciando um failover, executando um failback ou testando o failover, agora você pode ver detalhes das VMs e identificar quais VMs não reiniciaram.
+
+Consulte a https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["Failover de aplicativos para um local remoto"].
+
+
+
+=== Atraso de inicialização da VM com sequência de inicialização ordenada
+
+Quando você cria um plano de replicação, agora você pode definir um atraso de inicialização para cada VM no plano. Isso permite que você defina uma sequência para que as VMs comecem a garantir que todas as VMs prioritárias One estejam sendo executadas antes que as VMs prioritárias subsequentes sejam iniciadas.
+
+Para obter detalhes, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["Crie um plano de replicação"] consulte .
+
+
+
+=== Informações do sistema operacional da VM
+
+Quando você cria um plano de replicação, agora você pode ver o sistema operacional de cada VM no plano. Isso é útil para decidir como agrupar VMs em um grupo de recursos.
+
+Para obter detalhes, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["Crie um plano de replicação"] consulte .
+
+
+
+=== Alias de nome da VM
+
+Quando você cria um plano de replicação, agora é possível adicionar um prefixo e sufixo aos nomes da VM no SIT de recuperação de desastres. Isso permite que você use um nome mais descritivo para as VMs no plano.
+
+Para obter detalhes, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["Crie um plano de replicação"] consulte .
+
+
+
+=== Limpe os instantâneos antigos
+
+Você pode excluir todos os snapshots que não forem mais necessários além da contagem de retenção especificada. Os snapshots podem se acumular ao longo do tempo quando você diminui a contagem de retenção de snapshots, e agora você pode removê-los para liberar espaço. Você pode fazer isso a qualquer momento sob demanda ou quando você excluir um plano de replicação.
+
+Para obter detalhes, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["Gerencie sites, grupos de recursos, planos de replicação, armazenamentos de dados e informações de máquinas virtuais"] consulte .
+
+
+
+=== Reconciliar instantâneos
+
+Agora você pode reconciliar snapshots que estão fora de sincronia entre a origem e o destino. Isso pode ocorrer se os snapshots forem excluídos em um destino fora da recuperação de desastres do BlueXP . O serviço exclui o instantâneo na origem automaticamente a cada 24 horas. No entanto, você pode executar isso sob demanda. Esse recurso permite que você garanta que os snapshots sejam consistentes em todos os sites.
+
+Para obter detalhes, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["Gerenciar planos de replicação"] consulte .

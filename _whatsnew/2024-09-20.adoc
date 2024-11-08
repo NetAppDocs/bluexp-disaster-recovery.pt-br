@@ -1,0 +1,16 @@
+= Suporte para datastores VMware VMFS on-premises para locais
+:allow-uri-read: 
+
+
+
+
+=== Suporte para datastores VMware VMFS on-premises para locais
+
+Esta versão inclui suporte para VMs montadas em armazenamentos de dados do sistema de arquivos de máquina virtual (VMFS) do VMware vSphere para iSCSI e FC protegidos para storage no local. Anteriormente, o serviço fornecia uma _visualização de tecnologia_ com suporte a armazenamentos de dados VMFS para iSCSI e FC.
+
+Aqui estão algumas considerações adicionais sobre os protocolos iSCSI e FC:
+
+* O suporte FC é para protocolos de front-end do cliente, não para replicação.
+* A recuperação de desastres do BlueXP  oferece suporte a apenas um LUN por volume de ONTAP. O volume não deve ter vários LUNs.
+* Para qualquer plano de replicação, o volume ONTAP de destino deve usar os mesmos protocolos que o volume ONTAP de origem que hospeda as VMs protegidas. Por exemplo, se a origem usar um protocolo FC, o destino também deve usar FC.
+
