@@ -18,6 +18,8 @@ Tais planos são às vezes chamados _blueprints_.
 
 Você pode criar um plano de replicação e também editar programações para conformidade e teste.
 
+Você pode proteger várias VMs em vários datastores. A recuperação de desastres do BlueXP  cria grupos de consistência do ONTAP para todos os volumes do ONTAP que hospedam datastores VM protegidos.
+
 
 
 == Crie o plano
@@ -29,14 +31,6 @@ Um assistente leva você através destes passos:
 * Mapear como os recursos do ambiente de origem são mapeados para o destino.
 * Identificar recorrência, executar um script Guest-hospedado, definir a ordem de inicialização e selecionar o objetivo do ponto de recuperação.
 * Reveja o plano.
-
-
-Ao criar o plano de replicação, você pode definir a relação do SnapMirror entre os volumes de origem e destino em uma das seguintes configurações:
-
-* 1 a 1
-* 1 para muitos em uma arquitetura de fan-out
-* Muitos a 1 em um Grupo de consistência
-* Muitos a muitos
 
 
 Ao criar o plano, você deve seguir estas diretrizes:
@@ -127,16 +121,20 @@ TIP: Se um vCenter tiver um DRS (Distributed Resource Scheduler) configurado par
 ** *Target VM folder* (opcional): Crie uma nova pasta raiz para armazenar as VMs selecionadas.
 
 
-. *Redes virtuais*: Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *redes virtuais*. Selecione a LAN virtual de origem e o segmento de destino.
+. *Redes virtuais*: Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *redes virtuais*. Selecione a LAN virtual de origem e a LAN virtual de destino.
++
+Selecione o mapeamento de rede para a LAN virtual apropriada. As LANs virtuais já devem ser provisionadas, então selecione a LAN virtual apropriada para mapear a VM.
+
 . *Máquinas virtuais*: Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *máquinas virtuais*.
 +
-Se você fizer quaisquer alterações a partir das configurações padrão, precisará fornecer credenciais.
+O padrão para as VMs é mapeado. O mapeamento padrão usa as mesmas configurações que as VMs usam no ambiente de produção (mesmo endereço IP, máscara de sub-rede e gateway).
 
 +
-O padrão para as VMs é mapeado. O mapeamento usa as mesmas configurações que as VMs usam no ambiente de produção (mesmo endereço IP, máscara de sub-rede e gateway).
+Se você fizer alterações a partir das configurações padrão, você deve alterar o campo IP de destino para "diferente da origem".
 
 +
-Selecione o mapeamento de rede para o segmento apropriado. Os segmentos já devem ser provisionados, então selecione o segmento apropriado para mapear a VM.
+
+NOTE: Se você alterar as configurações para "diferente da origem", você precisará fornecer credenciais do sistema operacional convidado VM.
 
 +
 Esta seção pode exibir campos diferentes dependendo da sua seleção.
