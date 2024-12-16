@@ -80,7 +80,7 @@ Você pode usar os seguintes tipos de licença:
 As licenças para todos os serviços BlueXP  são gerenciadas pelo serviço de carteira digital da BlueXP . Depois de configurar seu BYOL, você poderá ver uma licença ativa para o serviço na carteira digital BlueXP .
 
 
-NOTE: As cobranças de recuperação de desastres do BlueXP  são baseadas na capacidade provisionada de armazenamentos de dados no local de origem quando há pelo menos uma VM com um plano de replicação. A capacidade de um armazenamento de dados com falha não está incluída no limite de capacidade. Para um BYOL, se os dados excederem a capacidade permitida, as operações no serviço serão limitadas até que você obtenha uma licença de capacidade adicional ou atualize a licença na carteira digital BlueXP .
+NOTE: As cobranças de recuperação de desastres do BlueXP  são baseadas na capacidade usada de datastores no local de origem quando há pelo menos uma VM com um plano de replicação. A capacidade de um armazenamento de dados com falha não está incluída no limite de capacidade. Para um BYOL, se os dados excederem a capacidade permitida, as operações no serviço serão limitadas até que você obtenha uma licença de capacidade adicional ou atualize a licença na carteira digital BlueXP .
 
 Para obter detalhes sobre como configurar o licenciamento para recuperação de desastres do BlueXP , link:../get-started/dr-licensing.html["Configurar o licenciamento de recuperação de desastres do BlueXP "]consulte .
 
