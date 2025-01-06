@@ -47,6 +47,7 @@ Esses pré-requisitos se aplicam aos clusters do vCenter no local e ao VMware Cl
 ** VMFS usando o protocolo iSCSI ou FC
 
 
+* VMware vSphere versão 7,0 Update 3 (7.0v3) ou posterior
 * Se você estiver usando o VMware Cloud SDDC, esses pré-requisitos se aplicam.
 +
 ** No Console do VMware Cloud, use as funções de serviço de Administrador e Administrador do NSX Cloud. Use também o proprietário da organização para a função Organização. Consulte a https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["Usando o VMware Cloud Foundations com a documentação do AWS FSX for NetApp ONTAP"^].

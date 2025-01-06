@@ -6,7 +6,7 @@ entries:
   url: "/use/use-overview.html"
 - title: Veja a integridade dos seus planos de recuperação de desastres no Dashboard
   url: "/use/dashboard-view.html"
-- title: Adicione o vCenter Sites
+- title: Adicione vCenters a um site
   url: "/use/sites-add.html"
 - title: Crie um plano de replicação
   url: "/use/drplan-create.html"
