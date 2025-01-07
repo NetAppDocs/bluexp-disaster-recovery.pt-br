@@ -40,8 +40,6 @@ image:vcenter-add.png["Adicione captura de tela do vCenter Server"]
 
 NOTE: Os certificados auto-assinados não são tão seguros como outros certificados. Se o vCenter estiver configurado com certificados de autoridade de certificação (CA), marque essa caixa; caso contrário, a conexão com o vCenter não funcionará.
 
-** (Aplica-se apenas a sites na nuvem) *token de API*: Insira o token de API para autorizar o acesso ao serviço para sua organização. Crie o token da API fornecendo funções específicas de organização e serviço.
-** (Aplica-se apenas a sites na nuvem) *ID de organização longa*: Insira o ID exclusivo da organização. Você pode identificar esse ID clicando no nome de usuário na seção conta do console do BlueXP .
 
 
 . Selecione *Adicionar*.
@@ -51,14 +49,19 @@ Em seguida, você adicionará um vCenter de destino.
 . *Alvo*:
 +
 .. Escolha o local de destino e o local. Se o destino for a nuvem, selecione *AWS*.
++
+*** (Aplica-se apenas a sites na nuvem) *token de API*: Insira o token de API para autorizar o acesso ao serviço para sua organização. Crie o token da API fornecendo funções específicas de organização e serviço.
+*** (Aplica-se apenas a sites na nuvem) *ID de organização longa*: Insira o ID exclusivo da organização. Você pode identificar esse ID clicando no nome de usuário na seção conta do console do BlueXP .
+
+
 .. Selecione *Adicionar*.
 +
 Os vCenters de origem e destino aparecem na lista de sites.
 
-
-
 +
-image:sites-list.png["Captura de tela da página de sites"]
+image:sites-list2.png["Captura de tela da página de sites"]
+
+
 
 . Para ver o andamento da operação, no menu superior, selecione *Monitoramento de trabalho*.
 

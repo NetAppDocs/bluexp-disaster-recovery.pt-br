@@ -780,7 +780,6 @@
   <block id="95a18472ce7b663d2c8fc430738919b9" category="list-text">Escolha o local de destino e o local. Se o destino for a nuvem, selecione *AWS*.</block>
   <block id="df06aa418d44ef8725ac68927671ed66" category="paragraph">Os vCenters de origem e destino aparecem na lista de sites.</block>
   <block id="d23a9d83c87c6eacef309f00a2beb5d3" category="inline-image-macro">Captura de tela da página de sites</block>
-  <block id="28f8c0c78028f2e899f7af50ce138e1b" category="paragraph"><block ref="28f8c0c78028f2e899f7af50ce138e1b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="70536defad0e93353b2ee45a9eba84b0" category="list-text">Para ver o andamento da operação, no menu superior, selecione *Monitoramento de trabalho*.</block>
   <block id="ea58b12500b984d81cc4acbd842abf4b" category="doc">Use a visão geral da recuperação de desastres do BlueXP </block>
   <block id="7575e174dc260d92f2d1d339e047dce2" category="paragraph">Ao usar a recuperação de desastres do BlueXP , você pode atingir as seguintes metas:</block>
@@ -1043,4 +1042,5 @@
   <block id="7dbf01d6d33098287eb82c71ea10ea1e" category="list-text">(Aplica-se apenas a sites locais) para aceitar certificados autoassinados para o vCenter de origem, marque a caixa.</block>
   <block id="c2a573f83674b01d424b4f0c10fdc5f1" category="list-text">(Aplica-se apenas a sites na nuvem) *token de API*: Insira o token de API para autorizar o acesso ao serviço para sua organização. Crie o token da API fornecendo funções específicas de organização e serviço.</block>
   <block id="92d0331e97c92cd07178f7a7c2ab56da" category="list-text">(Aplica-se apenas a sites na nuvem) *ID de organização longa*: Insira o ID exclusivo da organização. Você pode identificar esse ID clicando no nome de usuário na seção conta do console do BlueXP .</block>
+  <block id="15a58a3d11cafa89812a0ab9b55e93b0" category="paragraph"><block ref="15a58a3d11cafa89812a0ab9b55e93b0" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
