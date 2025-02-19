@@ -47,7 +47,7 @@ A recuperação de desastres da BlueXP  fornece o uso completo de várias tecno
 
 * Replique as aplicações da VMware no local de produção para um local remoto de recuperação de desastres na nuvem ou no local usando a replicação do SnapMirror.
 * Migre as cargas de trabalho da VMware do seu site original para outro local.
-* Realize um teste de failover; as máquinas virtuais são criadas temporariamente. A recuperação de desastres do BlueXP  faz um novo volume do FlexClone a partir do instantâneo selecionado e um datastore temporário que faz backup do volume do FlexClone é mapeado para os hosts ESXi. Esse processo não consome capacidade física adicional no armazenamento ONTAP no local ou no FSX for NetApp ONTAP na AWS. O volume de origem original não é modificado e os trabalhos de réplica podem continuar mesmo durante a recuperação de desastres.
+* Realize um teste de failover; as máquinas virtuais são criadas temporariamente. A recuperação de desastres do BlueXP  faz um novo volume do FlexClone a partir do snapshot selecionado e um datastore temporário que faz backup do volume FlexClone é mapeado para os hosts ESXi. Esse processo não consome capacidade física adicional no armazenamento ONTAP no local ou no FSX for NetApp ONTAP na AWS. O volume de origem original não é modificado e os trabalhos de réplica podem continuar mesmo durante a recuperação de desastres.
 * Em caso de desastre, faça failover do seu local principal sob demanda para o local de recuperação de desastre, que pode ser o VMware Cloud no AWS com o FSX for NetApp ONTAP ou um ambiente VMware no local com o ONTAP.
 * Após a solução do desastre, faça o failback sob demanda do local de recuperação de desastre para o local principal.
 
@@ -100,7 +100,7 @@ Você pode comprar uma licença a qualquer momento e você não será cobrado at
 
 A recuperação de desastres do BlueXP  pode recuperar cargas de trabalho replicadas de um site no local para o Amazon FSX for ONTAP ou para outro local no local. Esse serviço automatiza a recuperação do nível SnapMirror, por meio do Registro de máquina virtual na nuvem de máquina virtual (VMC) e de mapeamentos de rede diretamente na plataforma de segurança e virtualização de rede da VMware, o NSX-T. esse recurso está incluído em todos os ambientes de nuvem de máquina virtual.
 
-A recuperação de desastres da BlueXP  usa a tecnologia ONTAP SnapMirror, que fornece replicação altamente eficiente e preserva a eficiência do Snapshot incremental da ONTAP. A replicação do SnapMirror garante que as cópias Snapshot consistentes com aplicações estejam sempre sincronizadas e os dados possam ser usados imediatamente após um failover.
+A recuperação de desastres da BlueXP  usa a tecnologia ONTAP SnapMirror, que fornece replicação altamente eficiente e preserva as eficiências de snapshot incrementais do ONTAP. A replicação do SnapMirror garante que as cópias snapshot consistentes com aplicações estejam sempre sincronizadas e os dados possam ser usados imediatamente após um failover.
 
 image:dr-architecture-diagram-70-2.png["Diagrama mostrando a arquitetura da recuperação de desastres do BlueXP  para a infraestrutura de serviços VMware"]
 
@@ -112,7 +112,7 @@ Quando ocorre um desastre, esse serviço ajuda a recuperar máquinas virtuais no
 
 * O serviço também permite que as máquinas virtuais voltem a funcionar para o local de origem original.
 * Você pode testar o processo de failover de recuperação de desastres sem interromper as máquinas virtuais originais. O teste recupera máquinas virtuais para uma rede isolada criando um FlexClone do volume.
-* Para o processo de failover ou failover de teste, você pode escolher a Snapshot mais recente (padrão) ou selecionada para recuperar sua máquina virtual.
+* Para o processo de failover ou failover de teste, você pode escolher o snapshot mais recente (padrão) ou selecionado para recuperar sua máquina virtual.
 
 
 

@@ -68,10 +68,10 @@ Em caso de desastre, faça failover do seu site VMware local sob demanda princip
 
 O processo de failover envolve as seguintes operações:
 
-* Se você tiver selecionado a captura Instantânea mais recente, a atualização do SnapMirror será executada para replicar as alterações mais recentes.
+* Se você selecionou o snapshot mais recente, a atualização do SnapMirror será executada para replicar as alterações mais recentes.
 * As máquinas virtuais de origem são desativadas.
 * A relação SnapMirror está quebrada e o volume de destino é feito leitura/gravação.
-* Com base na seleção do instantâneo, o sistema de arquivos ativo é restaurado para o instantâneo especificado (mais recente ou selecionado)
+* Com base na seleção do instantâneo, o sistema de ficheiros ativo é restaurado para o instantâneo especificado (mais recente ou selecionado)
 * Os datastores são criados e montados no cluster ou host VMware ou VMC com base nas informações capturadas no plano de replicação.
 * As máquinas virtuais de destino são registradas e ativadas com base na ordem capturada na página grupos de recursos.
 * A relação do SnapMirror é revertida de máquina virtual de destino para origem.
@@ -88,7 +88,7 @@ TIP: Após o início do failover, as VMs recuperadas podem ser vistas no vCenter
 +
 image:dr-plan-failover2.png["Página de failover"]
 
-. Na página failover, inicie um snapshot agora ou escolha o snapshot para o armazenamento de dados a partir do qual será recuperado. O padrão é o mais recente.
+. Na página failover, inicie um snapshot agora ou escolha o snapshot para o datastore a partir do qual será recuperado. O padrão é o mais recente.
 +
 Um instantâneo da fonte atual será levado e replicado para o destino atual antes que o failover ocorra.
 

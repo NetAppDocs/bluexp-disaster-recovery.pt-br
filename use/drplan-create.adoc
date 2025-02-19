@@ -191,7 +191,7 @@ NOTE: Se você quiser criar um relacionamento SnapMirror nesse serviço, o clust
 ** Se as VMs forem do mesmo volume e do mesmo SVM, o serviço executará um snapshot ONTAP padrão e atualizará os destinos secundários.
 ** Se as VMs forem de volume diferente e mesmo SVM, o serviço criará um snapshot de grupo de consistência, incluindo todos os volumes e atualizará os destinos secundários.
 ** Se as VMs forem de volume diferente e SVM diferente, o serviço executará uma fase de início de grupo de consistência e snapshot de fase de confirmação, incluindo todos os volumes no mesmo cluster ou diferente, além de atualizar os destinos secundários.
-** Durante o failover, você pode selecionar qualquer snapshot. Se você selecionar a Snapshot mais recente, o serviço criará backup sob demanda, atualizará o destino e usará essa Snapshot para o failover.
+** Durante o failover, você pode selecionar qualquer snapshot. Se você selecionar o snapshot mais recente, o serviço criará backup sob demanda, atualizará o destino e usará esse snapshot para o failover.
 
 
 

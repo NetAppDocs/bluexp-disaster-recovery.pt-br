@@ -28,6 +28,6 @@ Nesse fluxo de trabalho, a recuperação de desastres do BlueXP  replica (ressi
 . Selecione o plano de replicação.
 . À direita, selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]e selecione *failback*.
 . Introduza o nome do plano de replicação para confirmar e iniciar o failback.
-. Escolha o Snapshot para o datastore a partir do qual se recuperar. O padrão é o mais recente.
+. Escolha o snapshot para o datastore a partir do qual será recuperado. O padrão é o mais recente.
 . Para verificar o progresso, no menu superior, selecione *Monitoramento de trabalho*.
 
