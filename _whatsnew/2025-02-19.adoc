@@ -1,0 +1,19 @@
+= Suporte ao ASA R2 para VMs e armazenamentos de dados no storage VMFS
+:allow-uri-read: 
+
+
+
+
+=== Suporte ao ASA R2 para VMs e armazenamentos de dados no storage VMFS
+
+Essa versão da recuperação de desastres do BlueXP  oferece suporte ao ASA R2 para VMs e armazenamentos de dados no storage VMFS. Em um sistema ASA R2, o software ONTAP oferece suporte à funcionalidade essencial de SAN e remove recursos não suportados em ambientes SAN.
+
+Esta versão suporta os seguintes recursos para o ASA R2:
+
+* Provisionamento de grupo de consistência para armazenamento primário (apenas grupo de consistência plana, ou seja, apenas um nível sem estrutura hierárquica)
+* Operações de backup (grupo de consistência), incluindo automação de SnapMirror
+
+
+O suporte ao ASA R2 na recuperação de desastres do BlueXP  usa o ONTAP 9.16.1.
+
+Embora os datastores possam ser montados em um volume ONTAP ou em uma unidade de armazenamento ASA R2, um grupo de recursos na recuperação de desastres do BlueXP  não pode incluir um datastore do ONTAP e um do ASA R2. Você pode selecionar um datastore do ONTAP ou um datastore do ASA R2 em um grupo de recursos.
