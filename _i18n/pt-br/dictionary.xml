@@ -57,7 +57,6 @@
   <block id="01f306e8e2e64b0a1d39d18d7594ecf5" category="list-text">*Plano de replicação*: Um conjunto de regras sobre a frequência com que os backups ocorrem e como lidar com eventos de failover. Os planos são atribuídos a um ou mais grupos de recursos.</block>
   <block id="7fda53563ff8ebfe855a3a79f568f396" category="summary">Com a recuperação de desastres do BlueXP , você pode usar diferentes planos de licenciamento, incluindo uma avaliação gratuita, uma assinatura paga conforme o uso ou trazer sua própria licença.</block>
   <block id="a7193edb26a4b1bca4b7b82254e6dd4b" category="doc">Configurar o licenciamento para recuperação de desastres do BlueXP </block>
-  <block id="23c019f17394a366e5bf51ef8a23b0a8" category="paragraph">Depois de configurar seu BYOL, você poderá ver a licença na guia carteira digital do BlueXP  *licenças de serviço de dados*.</block>
   <block id="e23539b066371b4dcfdd50b7d80417d8" category="paragraph">Depois que a avaliação gratuita terminar ou a licença expirar, você ainda pode fazer o seguinte no serviço:</block>
   <block id="9a0514da0283645471837a7dd9cdd00a" category="list-text">Visualize qualquer recurso, como um workload ou plano de replicação.</block>
   <block id="1868701c43ed8ccfa46dc8fe93f4252f" category="list-text">Exclua qualquer recurso, como uma carga de trabalho ou plano de replicação.</block>
@@ -85,40 +84,13 @@
   <block id="584a50ae29d097d233ebd86ad952d305" category="list-text">Selecione *Inscrever-se no AWS Marketplace*.</block>
   <block id="cb29907626b2fabe5961e9265140cc76" category="list-text">No AWS Marketplace, selecione *Exibir opções de compra*. Use o AWS Marketplace para assinar a recuperação de desastres do BlueXP .</block>
   <block id="717132172ed170ccb94cc8674c35dfbd" category="list-text">Quando você retorna à recuperação de desastres do BlueXP , uma mensagem indica que você está inscrito.</block>
-  <block id="6678054c83157276d9287735dd3e1d92" category="paragraph">Para ver os detalhes da subscrição na carteira digital BlueXP , selecione *Ver detalhes da subscrição* e veja a subscrição ativa na página *Subscrições*.</block>
-  <block id="0a504e78221db1ccaf51b7ad21bc16ce" category="inline-image-macro">O separador assinaturas da carteira digital BlueXP </block>
-  <block id="f3688cd67baeb83949d8b3d8688cda8b" category="paragraph"><block ref="f3688cd67baeb83949d8b3d8688cda8b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ee6d03e51dd7b0fc10c6b3c8fcab3718" category="section-title">Após o término da avaliação, compre uma licença BYOL por meio do NetApp</block>
   <block id="b9ef842238fa8d82db6b7559f33adc6c" category="paragraph">Após o término da avaliação, você pode comprar uma licença por meio de seu representante de vendas da NetApp</block>
   <block id="3906249fde1cef9339402436007bb4f7" category="paragraph">Se você trazer sua própria licença (BYOL), a configuração inclui a compra da licença, obter o arquivo de licença NetApp (NLF) e adicionar a licença à carteira digital BlueXP .</block>
-  <block id="4052ab6997dacca028b4d726754818d5" category="paragraph">*Ative a licença* depois de adquirir a licença de recuperação de desastres do BlueXP  do seu representante de vendas da NetApp, ative a licença inserindo o número de série da recuperação de desastres do BlueXP  e as informações da conta do site de suporte da NetApp (NSS).</block>
-  <block id="fca90381d84b0e9a022fdeac2012d4ab" category="paragraph">Você precisará do número de série da recuperação de desastres do BlueXP . Localize esse número no seu pedido de vendas ou entre em Contato com a equipe da conta para obter essas informações.</block>
-  <block id="20efb062527877ed8fd82ba191b8951b" category="paragraph">*Adicione a licença à carteira digital BlueXP * depois de comprar uma licença de recuperação de desastres BlueXP , você precisa adicionar a licença à carteira digital BlueXP .</block>
-  <block id="9bdfa376bcb2fa79aff92c39d0b24fcd" category="list-text">Depois de obter a licença, retorne à recuperação de desastres do BlueXP . Selecione a opção *Exibir métodos de pagamento* no canto superior direito. Ou, na mensagem de que a avaliação gratuita está expirando, selecione *Subscribe ou compre uma licença*.</block>
-  <block id="e4822c1e77f0d7746ffdde4c031a2109" category="inline-image-macro">A página de metodos de pagamento de recuperação de desastres do BlueXP </block>
-  <block id="5646d601e859bd392516de29f6a97047" category="paragraph"><block ref="5646d601e859bd392516de29f6a97047" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b11106bafac141be455d28549bfe177d" category="list-text">Selecione *Adicionar licença ao BlueXP *. Você será direcionado para a carteira digital BlueXP .</block>
-  <block id="d2a39678e393e2b473354681a2c1e5f4" category="inline-image-macro">A guia licenças dos Serviços de dados da carteira digital BlueXP </block>
-  <block id="595da0c0edf936a84fa3d6a69bbbb4e5" category="paragraph"><block ref="595da0c0edf936a84fa3d6a69bbbb4e5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5d50de45dd75ac0ea74e9c427687d113" category="list-text">Na carteira digital BlueXP , na guia *licenças de serviços de dados*, selecione *Adicionar licença*.</block>
-  <block id="7578ebad24c71aee2f2992e5efe1118d" category="list-text">Na página Adicionar licença, insira o número de série e as informações da conta do site de suporte da NetApp.</block>
-  <block id="d2ec998008b95e1189b9d8f3dbc6ed64" category="inline-image-macro">A página Adicionar licença da carteira digital BlueXP </block>
-  <block id="c6711fc66daa9915490ca9f9bdc7f08f" category="paragraph"><block ref="c6711fc66daa9915490ca9f9bdc7f08f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c8508c0ce4da6dc634b7c66b1df15681" category="list-text">Selecione *Adicionar licença*.</block>
-  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Resultado</block>
-  <block id="7c8c5dfa7e1cbe0ce55b88149d634d69" category="paragraph">A carteira digital BlueXP  agora mostra a recuperação de desastres com uma licença.</block>
-  <block id="72e3dbb78819e204c1d67c9aaba1d190" category="inline-image-macro">Carteira digital NetApp BlueXP </block>
-  <block id="0cc39117ac352982de03de8143c8e3f5" category="paragraph"><block ref="0cc39117ac352982de03de8143c8e3f5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="53ea2f641b462d658be2f78d3070c4e8" category="section-title">Atualize sua licença BlueXP  quando ela expirar</block>
   <block id="847676092f852cc523c768a478d757f1" category="paragraph">Se o seu prazo licenciado estiver próximo à data de expiração ou se a capacidade licenciada estiver atingindo o limite, você será notificado na IU de recuperação de desastres do BlueXP . Você pode atualizar sua licença de recuperação de desastres do BlueXP  antes que ela expire para que não haja interrupção na capacidade de acessar os dados digitalizados.</block>
   <block id="a274f4d4670213a9045ce258c6c56b80" category="inline-link">Notificações</block>
   <block id="9cb535dcfcda2b04cab5b48ce4b5044b" category="admonition">Esta mensagem também aparece na carteira digital BlueXP  e na<block ref="b553b83f4f3ab8ad7adf12f36cefd6a6" category="inline-link-rx"></block>.</block>
-  <block id="2f3cc4968532c87cc8b40e840f800717" category="list-text">Selecione o ícone de bate-papo no canto inferior direito do BlueXP  para solicitar uma extensão para o seu termo ou capacidade adicional para a sua licença para o número de série específico. Você também pode enviar um e-mail para solicitar uma atualização para sua licença.</block>
-  <block id="b23b97d3c26b0f7e2265329756cea9ca" category="paragraph">Depois de pagar a licença e esta ser registada no Site de suporte da NetApp, a BlueXP  atualiza automaticamente a licença na carteira digital da BlueXP  e a página licenças dos Serviços de dados refletirá a alteração em 5 a 10 minutos.</block>
-  <block id="5810a6765696da7b12979cf90b9b287c" category="list-text">Se o BlueXP  não puder atualizar automaticamente a licença (por exemplo, quando instalado em um site escuro), você precisará fazer o upload manual do arquivo de licença.</block>
-  <block id="147b35ab5352426bba38d99d810db4ed" category="list-text">Você pode obter o arquivo de licença no site de suporte da NetApp.</block>
-  <block id="9fc7e8cb24850b1f0912cebc8da32620" category="list-text">Aceda à carteira digital BlueXP .</block>
-  <block id="7744384d0e7b78819bc53ca36ef36369" category="list-text">Selecione a guia *Data dervices licenses*, selecione o ícone *ações ...* para o número de série do serviço que você está atualizando e selecione *Update License*.</block>
   <block id="8d4d6551ee286317b2a4f297766952f5" category="section-title">Termine a avaliação gratuita</block>
   <block id="859b0ef2563ddd8c6712d419656bde38" category="paragraph">Você pode parar o teste gratuito a qualquer momento ou você pode esperar até que ele expire.</block>
   <block id="d940bc2868fa1d10a5c804aa0df8fd1b" category="list-text">Na recuperação de desastres do BlueXP , no canto superior direito, selecione *avaliação gratuita - Ver detalhes*.</block>
@@ -1052,4 +1024,13 @@
   <block id="2b56dea239dc4c074a14290431d91d6a" category="list-text">Se você selecionou o snapshot mais recente, a atualização do SnapMirror será executada para replicar as alterações mais recentes.</block>
   <block id="380342b2d65f473fe650200caef78e53" category="list-text">Com base na seleção do instantâneo, o sistema de ficheiros ativo é restaurado para o instantâneo especificado (mais recente ou selecionado)</block>
   <block id="c05fbe62f8e4ec67f1b21ca8610fda50" category="list-text">Na página failover, inicie um snapshot agora ou escolha o snapshot para o datastore a partir do qual será recuperado. O padrão é o mais recente.</block>
+  <block id="2847599cd91bec7d486721243d329494" category="inline-link-macro">Saiba mais sobre a carteira digital</block>
+  <block id="2b04b3177ca047bdf9530f96b48dc58a" category="paragraph"><block ref="177b16e5e66adf0c0c4922a109055a31" category="inline-link-macro-rx"></block>.</block>
+  <block id="9e8edb5d154a8f2c2ab3efde5a90b95d" category="inline-link-macro">Saiba mais gerir subscrições com carteira digital</block>
+  <block id="61ebc53e0bf68b97af4405116db69639" category="paragraph">Pode ver os detalhes da subscrição na carteira digital BlueXP . <block ref="c076e949682edba51af0e34c4227dbba" category="inline-link-macro-rx"></block>.</block>
+  <block id="745499562c1b6475b616a3cdf246c3d8" category="paragraph">*Adicione a licença à carteira digital da BlueXP ** depois de adquirir a licença de recuperação de desastres da BlueXP  do seu representante de vendas da NetApp, você pode gerenciar a licença em carteira digital.</block>
+  <block id="2fb18b7eb7edfd6ac0fa8586ecbd9a12" category="inline-link">Saiba mais sobre como adicionar licenças com carteira digital</block>
+  <block id="e2a36029181f04d6208811edf66b0c62" category="paragraph"><block ref="039fd09b60dad6f86188402eac2ef738" category="inline-link-rx"></block>.</block>
+  <block id="5d3579189b9441a8b42010228d169cbc" category="inline-link">Saiba mais sobre como atualizar licenças com carteira digital</block>
+  <block id="597c7a7ee6e647859f8aa98b20be3cb0" category="paragraph"><block ref="1180f9bbf40cd0c05f379b347ef1d8f9" category="inline-link-rx"></block>.</block>
 </blocks>

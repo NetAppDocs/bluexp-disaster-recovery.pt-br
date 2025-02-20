@@ -24,7 +24,7 @@ Você pode usar os seguintes tipos de licença:
 
 NOTE: As cobranças de recuperação de desastres do BlueXP  são baseadas na capacidade usada de datastores no local de origem quando há pelo menos uma VM com um plano de replicação. A capacidade de um armazenamento de dados com falha não está incluída no limite de capacidade. Para um BYOL, se os dados excederem a capacidade permitida, as operações no serviço serão limitadas até que você obtenha uma licença de capacidade adicional ou atualize a licença na carteira digital BlueXP .
 
-Depois de configurar seu BYOL, você poderá ver a licença na guia carteira digital do BlueXP  *licenças de serviço de dados*.
+link:https://docs.netapp.com/us-en/bluexp-digital-wallet/concept-digital-wallet.html["Saiba mais sobre a carteira digital"^].
 
 Depois que a avaliação gratuita terminar ou a licença expirar, você ainda pode fazer o seguinte no serviço:
 
@@ -79,10 +79,7 @@ Após o término da avaliação gratuita, você pode comprar uma licença da Net
 . No AWS Marketplace, selecione *Exibir opções de compra*. Use o AWS Marketplace para assinar a recuperação de desastres do BlueXP .
 . Quando você retorna à recuperação de desastres do BlueXP , uma mensagem indica que você está inscrito.
 +
-Para ver os detalhes da subscrição na carteira digital BlueXP , selecione *Ver detalhes da subscrição* e veja a subscrição ativa na página *Subscrições*.
-
-+
-image:digital-wallet-subscriptions2.png["O separador assinaturas da carteira digital BlueXP "]
+Pode ver os detalhes da subscrição na carteira digital BlueXP . link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-homepage.html["Saiba mais gerir subscrições com carteira digital"^].
 
 
 
@@ -94,32 +91,9 @@ Após o término da avaliação, você pode comprar uma licença por meio de seu
 
 Se você trazer sua própria licença (BYOL), a configuração inclui a compra da licença, obter o arquivo de licença NetApp (NLF) e adicionar a licença à carteira digital BlueXP .
 
-*Ative a licença* depois de adquirir a licença de recuperação de desastres do BlueXP  do seu representante de vendas da NetApp, ative a licença inserindo o número de série da recuperação de desastres do BlueXP  e as informações da conta do site de suporte da NetApp (NSS).
+*Adicione a licença à carteira digital da BlueXP ** depois de adquirir a licença de recuperação de desastres da BlueXP  do seu representante de vendas da NetApp, você pode gerenciar a licença em carteira digital.
 
-Você precisará do número de série da recuperação de desastres do BlueXP . Localize esse número no seu pedido de vendas ou entre em Contato com a equipe da conta para obter essas informações.
-
-*Adicione a licença à carteira digital BlueXP * depois de comprar uma licença de recuperação de desastres BlueXP , você precisa adicionar a licença à carteira digital BlueXP .
-
-. Depois de obter a licença, retorne à recuperação de desastres do BlueXP . Selecione a opção *Exibir métodos de pagamento* no canto superior direito. Ou, na mensagem de que a avaliação gratuita está expirando, selecione *Subscribe ou compre uma licença*.
-+
-image:draas-license-subscribe2.png["A página de metodos de pagamento de recuperação de desastres do BlueXP "]
-
-. Selecione *Adicionar licença ao BlueXP *. Você será direcionado para a carteira digital BlueXP .
-+
-image:digital-wallet-data-services-licenses-tab3.png["A guia licenças dos Serviços de dados da carteira digital BlueXP "]
-
-. Na carteira digital BlueXP , na guia *licenças de serviços de dados*, selecione *Adicionar licença*.
-. Na página Adicionar licença, insira o número de série e as informações da conta do site de suporte da NetApp.
-+
-image:byol-digital-wallet-license-add2.png["A página Adicionar licença da carteira digital BlueXP "]
-
-. Selecione *Adicionar licença*.
-
-
-.Resultado
-A carteira digital BlueXP  agora mostra a recuperação de desastres com uma licença.
-
-image:byol-digital-wallet-licenses-added.png["Carteira digital NetApp BlueXP "]
+https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["Saiba mais sobre como adicionar licenças com carteira digital"^].
 
 
 
@@ -130,19 +104,7 @@ Se o seu prazo licenciado estiver próximo à data de expiração ou se a capaci
 
 TIP: Esta mensagem também aparece na carteira digital BlueXP  e na https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["Notificações"].
 
-.Passos
-. Selecione o ícone de bate-papo no canto inferior direito do BlueXP  para solicitar uma extensão para o seu termo ou capacidade adicional para a sua licença para o número de série específico. Você também pode enviar um e-mail para solicitar uma atualização para sua licença.
-+
-Depois de pagar a licença e esta ser registada no Site de suporte da NetApp, a BlueXP  atualiza automaticamente a licença na carteira digital da BlueXP  e a página licenças dos Serviços de dados refletirá a alteração em 5 a 10 minutos.
-
-. Se o BlueXP  não puder atualizar automaticamente a licença (por exemplo, quando instalado em um site escuro), você precisará fazer o upload manual do arquivo de licença.
-+
-.. Você pode obter o arquivo de licença no site de suporte da NetApp.
-.. Aceda à carteira digital BlueXP .
-.. Selecione a guia *Data dervices licenses*, selecione o ícone *ações ...* para o número de série do serviço que você está atualizando e selecione *Update License*.
-
-
-
+https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["Saiba mais sobre como atualizar licenças com carteira digital"^].
 
 
 
