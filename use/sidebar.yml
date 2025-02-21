@@ -8,6 +8,8 @@ entries:
   url: "/use/dashboard-view.html"
 - title: Adicione vCenters a um site
   url: "/use/sites-add.html"
+- title: Crie um grupo de recursos
+  url: "/use/resource-group.html"
 - title: Crie um plano de replicação
   url: "/use/drplan-create.html"
 - title: Replique para outro local
