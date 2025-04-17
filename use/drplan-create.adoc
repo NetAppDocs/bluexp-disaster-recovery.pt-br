@@ -20,6 +20,13 @@ Você pode criar um plano de replicação e também editar programações para c
 
 Você pode proteger várias VMs em vários datastores. A recuperação de desastres do BlueXP  cria grupos de consistência do ONTAP para todos os volumes do ONTAP que hospedam datastores VM protegidos.
 
+As VMs só podem ser protegidas se o plano de replicação estiver em um dos seguintes estados:
+
+* Pronto
+* Failback cometido
+* Failover de teste cometido
+
+
 
 
 == Crie o plano
@@ -27,7 +34,7 @@ Você pode proteger várias VMs em vários datastores. A recuperação de desast
 Um assistente leva você através destes passos:
 
 * Selecione vCenter Servers.
-* Selecione as VMs que deseja replicar e atribuir grupos.
+* Selecione as VMs ou armazenamentos de dados que você deseja replicar e atribuir grupos de recursos.
 * Mapear como os recursos do ambiente de origem são mapeados para o destino.
 * Identificar recorrência, executar um script Guest-hospedado, definir a ordem de inicialização e selecionar o objetivo do ponto de recuperação.
 * Reveja o plano.
@@ -64,27 +71,54 @@ image:dr-plan-create-name.png["Captura de ecrã que mostra a página Adicionar p
 
 === Selecione aplicativos para replicar e atribuir grupos de recursos
 
-A próxima etapa é agrupar as VMs necessárias em grupos de recursos funcionais. Os grupos de recursos permitem agrupar um conjunto de VMs dependentes em grupos lógicos que atendem aos seus requisitos. Por exemplo, grupos podem conter ordens de inicialização atrasadas que podem ser executadas após a recuperação.
+A próxima etapa é agrupar as VMs ou armazenamentos de dados necessários em grupos de recursos funcionais. Os grupos de recursos permitem agrupar um conjunto de VMs ou armazenamentos de dados dependentes em grupos lógicos que atendem aos seus requisitos. Por exemplo, grupos podem conter ordens de inicialização atrasadas que podem ser executadas após a recuperação.
 
-Quando você seleciona aplicativos no plano de replicação, é possível ver o sistema operacional de cada VM no plano. Isso é útil para decidir como agrupar VMs em um grupo de recursos.
+Quando você seleciona aplicativos no plano de replicação, é possível ver o sistema operacional de cada VM ou datastore no plano. Isso é útil para decidir como agrupar VMs ou armazenamentos de dados em um grupo de recursos.
 
 
-TIP: Cada grupo de recursos pode incluir uma ou mais VMs. As VMs serão ligadas com base na sequência em que as incluir aqui.
+TIP: Cada grupo de recursos pode incluir uma ou mais VMs ou datastores. As VMs serão ligadas com base na sequência em que as incluir aqui.
+
+Ao criar grupos de recursos, considere os seguintes problemas:
+
+* Antes de adicionar datastores a grupos de recursos, inicie primeiro uma descoberta manual ou uma descoberta agendada das VMs. Isso garante que as VMs sejam descobertas e listadas no grupo de recursos. Se você não acionar uma descoberta manual, as VMs podem não estar listadas no grupo de recursos.
+* Verifique se há pelo menos uma VM no datastore. Se não houver VMs no datastore, o datastore não será descoberto.
+* Um único datastore não deve hospedar VMs protegidas por mais de um plano de replicação.
+* Não hospede VMs protegidas e desprotegidas no mesmo datastore. Se VMs protegidas e desprotegidas estiverem hospedadas no mesmo datastore, os seguintes problemas poderão surgir:
++
+** Como a recuperação de desastres do BlueXP  usa o SnapMirror e o sistema replica volumes ONTAP inteiros, a capacidade usada desse volume é usada em considerações de licenciamento. Nesse caso, o espaço de volume consumido por VMs protegidas e desprotegidas seria incluído neste cálculo.
+** Se o grupo de recursos e seus datastores associados precisarem ser repassados para o local de recuperação de desastres, quaisquer VMs desprotegidas (VMs que não fazem parte do grupo de recursos, mas hospedadas no volume ONTAP) não existirão mais no local de origem a partir do processo de failover, resultando em falha de VMs desprotegidas no local de origem. Além disso, a recuperação de desastres do BlueXP  não iniciará as VMs desprotegidas no local do failover vCenter.
+
+
+* Para ter uma VM protegida, ela deve ser incluída em um grupo de recursos.
+
+
+*PRÁTICA recomendada*: Organize suas VMs antes de implantar a recuperação de desastres do BlueXP  para minimizar a "proliferação de datastores". Coloque as VMs que precisam de proteção em um subconjunto de datastores e coloque as VMs que não serão protegidas em um subconjunto diferente de datastores. Certifique-se de que as VMs em um determinado datastore não estejam protegidas por diferentes planos de replicação.
 
 .Passos
-. Opcionalmente, no lado esquerdo da página aplicativos, filtre as VMs pelo datastore. Você também pode pesquisar VMs específicas por nome.
-. No lado esquerdo da página aplicativos, selecione as VMs que você deseja proteger e atribuir ao grupo selecionado.
+. Selecione *máquinas virtuais* ou *datastores*.
+. Opcionalmente, procure por VM ou datastore específicos por nome.
+. No lado esquerdo da página aplicativos, selecione as VMs ou armazenamentos de dados que você deseja proteger e atribuir ao grupo selecionado.
 +
-A VM selecionada é adicionada automaticamente ao grupo 1 e um novo grupo 2 é iniciado. Cada vez que você adiciona uma VM ao último grupo, outro grupo é adicionado.
+O recurso selecionado é adicionado automaticamente ao grupo 1 e um novo grupo 2 é iniciado. Cada vez que você adiciona um recurso ao último grupo, outro grupo é adicionado.
 
 +
-image:dr-plan-create-apps-vms5.png["Captura de ecrã que mostra a página Adicionar plano de replicação > aplicações a replicar"]
+image:dr-plan-create-apps-vms6.png["Captura de ecrã que mostra a página Adicionar plano de replicação > aplicações a replicar"]
+
++
+Ou, para datastores:
+
++
+image:dr-plan-create-apps-datastores.png["Captura de ecrã que mostra a página Adicionar plano de replicação > aplicações a replicar"]
 
 . Opcionalmente, faça um dos seguintes procedimentos:
 +
 ** Para alterar o nome do grupo, clique no ícone *Edit* do grupoimage:icon-pencil.png["Ícone de lápis"].
-** Para remover uma VM de um grupo, selecione *X* ao lado da VM.
-** Para mover uma VM para um grupo diferente, arraste e solte-a no novo grupo.
+** Para remover um recurso de um grupo, selecione *X* ao lado do recurso.
+** Para mover um recurso para um grupo diferente, arraste e solte-o no novo grupo.
++
+
+TIP: Para mover um datastore para um grupo de recursos diferente, desmarque o datastore indesejado e envie o plano de replicação. Em seguida, crie ou edite o outro plano de replicação e selecione novamente o datastore.
+
 
 
 . Quando tiver vários grupos de recursos, certifique-se de que a sequência dos grupos corresponde à sequência operacional que deve ocorrer.

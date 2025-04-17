@@ -118,13 +118,13 @@ Você pode parar o teste gratuito a qualquer momento ou você pode esperar até 
 +
 image:draas-trial-end3.png["Termine a página de avaliação gratuita"]
 
-. Se você quiser excluir todos os dados, marque *Excluir todos os dados quando minha avaliação terminar*.
+. Se você quiser excluir todos os dados, marque *Excluir dados imediatamente após terminar minha avaliação gratuita*.
 +
 Isso excluirá todas as programações, planos de replicação, grupos de recursos, vCenters e sites. Os dados de auditoria, os logs de operação e o histórico de tarefas são mantidos até o final da vida útil do produto.
 
 +
 
-NOTE: Se você terminar a avaliação gratuita e não pedir para excluir dados e você não comprar uma licença ou assinatura, 60 dias após o término da avaliação gratuita, a recuperação de desastres do BlueXP  excluirá todos os seus dados.
+NOTE: Se você terminar a avaliação gratuita, não solicitar a exclusão de dados e não comprar uma licença ou assinatura, a recuperação de desastres do BlueXP  excluirá todos os seus dados 60 dias após o término da avaliação gratuita.
 
 . Digite "End trial" na caixa de texto.
 . Selecione *fim*.

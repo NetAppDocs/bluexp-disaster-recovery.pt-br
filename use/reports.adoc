@@ -14,10 +14,7 @@ summary: A revisão dos relatórios de recuperação de desastres pode ajudá-lo
 [role="lead"]
 A revisão dos relatórios de recuperação de desastres pode ajudá-lo a analisar sua preparação para recuperação de desastres. Os relatórios pré-projetados incluem um resumo de failovers de teste, detalhes do plano de replicação e detalhes da tarefa em todos os sites de uma conta nos últimos sete dias.
 
-Você pode baixar relatórios em formato HTML ou JSON.
-
-
-TIP: Você pode converter a página HTML em um PDF usando as opções do seu navegador.
+Você pode baixar relatórios em formato PDF, HTML ou JSON.
 
 O link Download é válido por seis horas.
 

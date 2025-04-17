@@ -16,6 +16,48 @@ Saiba o que há de novo na recuperação de desastres do BlueXP .
 
 
 
+== 16 de abril de 2025
+
+Versão 4,3
+
+
+
+=== Detecção programada para VMs
+
+A recuperação de desastres do BlueXP  realiza a descoberta a cada 24 horas. Com esta versão, agora você pode personalizar o cronograma de descoberta para atender às suas necessidades e reduzir o impactos no desempenho quando necessário. Por exemplo, se você tiver um grande número de VMs, poderá definir a programação de descoberta para ser executada a cada 48 horas. Se você tiver um pequeno número de VMs, poderá definir o agendamento de descoberta para ser executado a cada 12 horas.
+
+Se você não deseja agendar a descoberta, você pode desativar a opção de descoberta agendada e atualizar a descoberta manualmente a qualquer momento.
+
+Para obter detalhes, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/sites-add.html["Adicione sites do vCenter Server"] consulte .
+
+
+
+=== Suporte ao datastore do grupo de recursos
+
+Anteriormente, você poderia criar grupos de recursos apenas por VMs. Com essa versão, você pode criar um grupo de recursos por datastores. Quando você estiver criando um plano de replicação e criando um grupo de recursos para esse plano, todas as VMs em um datastore serão listadas. Isso é útil se você tiver um grande número de VMs e quiser agrupá-las por datastore.
+
+Você pode criar um grupo de recursos com um datastore das seguintes maneiras:
+
+* Ao adicionar um grupo de recursos usando datastores, você pode ver uma lista de datastores. Você pode selecionar um ou mais datastores para criar um grupo de recursos.
+* Ao criar um plano de replicação e criar um grupo de recursos dentro do plano, você pode ver as VMs nos datastores.
+
+
+Para obter detalhes, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["Crie um plano de replicação"] consulte .
+
+
+
+=== Notificações de avaliação gratuita ou expiração de licença
+
+Esta versão fornece notificações de que o teste gratuito expirará em 60 dias para garantir que você tenha tempo para obter uma licença. Esta versão também fornece notificações no dia em que a licença expira.
+
+
+
+=== Notificação de atualizações de serviço
+
+Com esta versão, um banner aparece na parte superior para indicar que os serviços estão sendo atualizados e que o serviço é colocado no modo de manutenção. O banner aparece quando o serviço está sendo atualizado e desaparece quando a atualização é concluída. Embora possa continuar a trabalhar na IU enquanto a atualização estiver em curso, não é possível enviar novos trabalhos. Os trabalhos agendados serão executados após a conclusão da atualização e o serviço retornará ao modo de produção.
+
+
+
 == 19 de fevereiro de 2025
 
 Versão 4,2

@@ -12,7 +12,7 @@ summary: A recuperação de desastres na nuvem é uma maneira resiliente e econ�
 
 
 [role="lead"]
-A recuperação de desastres na nuvem é uma maneira resiliente e econômica de proteger workloads contra interrupções no local e eventos de corrupção de dados. Com a recuperação de desastres do BlueXP  para VMware, é possível replicar workloads da VMware no local que executam o storage ONTAP para um data center definido por software da VMware em uma nuvem pública usando o storage de nuvem NetApp ou para outro ambiente VMware no local, com storage ONTAP como local de recuperação de desastres.
+A recuperação de desastres na nuvem é uma maneira resiliente e econômica de proteger workloads contra interrupções no local e eventos de corrupção de dados. Com a recuperação de desastres do BlueXP  para VMware, é possível replicar workloads da VMware VM ou do datastore no local que executam o storage ONTAP em um data center definido por software da VMware em uma nuvem pública usando o storage de nuvem NetApp ou em outro ambiente VMware local com storage ONTAP como local de recuperação de desastre.
 
 O BlueXP  Disaster Recovery é um serviço de recuperação de desastres baseado na nuvem que automatiza os workflows de recuperação de desastres. Com o serviço de recuperação de desastres da BlueXP , você pode proteger seus workloads locais baseados em NFS e armazenamentos de dados do sistema de arquivos de máquina virtual (VMFS) do VMware vSphere para iSCSI e FC executando storage NetApp em um dos seguintes casos:
 
@@ -48,8 +48,8 @@ A recuperação de desastres da BlueXP  fornece o uso completo de várias tecno
 * Replique as aplicações da VMware no local de produção para um local remoto de recuperação de desastres na nuvem ou no local usando a replicação do SnapMirror.
 * Migre as cargas de trabalho da VMware do seu site original para outro local.
 * Realize um teste de failover; as máquinas virtuais são criadas temporariamente. A recuperação de desastres do BlueXP  faz um novo volume do FlexClone a partir do snapshot selecionado e um datastore temporário que faz backup do volume FlexClone é mapeado para os hosts ESXi. Esse processo não consome capacidade física adicional no armazenamento ONTAP no local ou no FSX for NetApp ONTAP na AWS. O volume de origem original não é modificado e os trabalhos de réplica podem continuar mesmo durante a recuperação de desastres.
-* Em caso de desastre, faça failover do seu local principal sob demanda para o local de recuperação de desastre, que pode ser o VMware Cloud no AWS com o FSX for NetApp ONTAP ou um ambiente VMware no local com o ONTAP.
-* Após a solução do desastre, faça o failback sob demanda do local de recuperação de desastre para o local principal.
+* Em caso de desastre, faça failover do seu local principal sob demanda para o local de recuperação de desastre, que pode ser o VMware Cloud no AWS com o Amazon FSX for NetApp ONTAP ou um ambiente VMware no local com o ONTAP.
+* Após a solução do desastre, faça o failback sob demanda do local de recuperação de desastre para o local principal. *Agrupe VMs ou armazenamentos de dados em grupos de recursos lógicos para um gerenciamento eficiente.
 
 
 

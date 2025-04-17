@@ -14,7 +14,23 @@ summary: Antes de criar um plano de recuperação de desastres, é necessário a
 [role="lead"]
 Antes de criar um plano de recuperação de desastres, é necessário adicionar um servidor vCenter primário a um site e um site de recuperação de desastres do vCenter de destino no BlueXP .
 
-Depois que eles são adicionados, a recuperação de desastres do BlueXP  realiza uma descoberta profunda dos ambientes do vCenter, incluindo clusters do vCenter, hosts ESXi, datastores, impressão de pé de armazenamento, detalhes da máquina virtual, réplicas do SnapMirror e redes de máquinas virtuais.
+Depois que os vCenters forem adicionados, a recuperação de desastres do BlueXP  realiza uma descoberta profunda dos ambientes do vCenter, incluindo clusters do vCenter, hosts ESXi, datastores, impressão de pé de armazenamento, detalhes da máquina virtual, réplicas do SnapMirror e redes de máquinas virtuais.
+
+Se você tiver adicionado vCenters em versões anteriores e quiser personalizar a programação de descoberta, edite o site do servidor vCenter e defina a programação.
+
+
+TIP: A recuperação de desastres do BlueXP  realiza a descoberta a cada 24 horas. Depois de configurar um site, você poderá editar o vCenter posteriormente para personalizar o cronograma de descoberta que atende às suas necessidades. Por exemplo, se você tiver um grande número de VMs, poderá definir o agendamento de descoberta para execução a cada 23 horas e 59 minutos. Se você tiver um pequeno número de VMs, poderá definir o agendamento de descoberta para ser executado a cada 12 horas. O intervalo mínimo é de 30 minutos e o máximo é de 24 horas.
+
+Você deve primeiro fazer algumas descobertas manuais para obter as informações mais atualizadas sobre o seu ambiente. Depois disso, você pode definir a programação para ser executada automaticamente.
+
+As VMs recém-adicionadas ou excluídas são reconhecidas na próxima descoberta programada ou durante uma descoberta manual imediata.
+
+As VMs só podem ser protegidas se o plano de replicação estiver em um dos seguintes estados:
+
+* Pronto
+* Failback cometido
+* Failover de teste cometido
+
 
 .Passos
 . Inicie sessão no BlueXP  e selecione *proteção* > *recuperação de desastres* no nav esquerdo.
@@ -64,4 +80,38 @@ image:sites-list2.png["Captura de tela da página de sites"]
 
 
 . Para ver o andamento da operação, no menu superior, selecione *Monitoramento de trabalho*.
+
+
+
+
+== Edite o site do vCenter Server e personalize o agendamento de descoberta
+
+Você pode editar o site do vCenter Server para personalizar o agendamento de descoberta. Por exemplo, se você tiver um grande número de VMs, poderá definir o agendamento de descoberta para execução a cada 23 horas e 59 minutos. Se você tiver um pequeno número de VMs, poderá definir o agendamento de descoberta para ser executado a cada 12 horas.
+
+Se você tiver adicionado vCenters em versões anteriores e quiser personalizar a programação de descoberta, edite o site do servidor vCenter e defina a programação.
+
+Se você não quiser agendar a descoberta, desative a opção de descoberta agendada e atualize a descoberta manualmente a qualquer momento.
+
+.Passos
+. No menu recuperação de desastres do BlueXP , selecione *sites*.
+. Selecione o site que você deseja editar.
+. Selecione o ícone ações image:icon-vertical-dots.png["Ícone ações"]à direita e selecione *Editar*.
+. Na página Editar servidor do vCenter, edite os campos conforme necessário.
+. Para personalizar o agendamento de descoberta, marque a caixa *Ativar descoberta agendada* e selecione a data e o intervalo de tempo desejados.
++
+image:sites-edit-schedule.png["Editar captura de tela do agendamento de descoberta"]
+
+. Selecione *Guardar*.
+
+
+
+
+== Atualizar a descoberta manualmente
+
+Você pode atualizar a descoberta manualmente a qualquer momento. Isso é útil se você adicionou ou removeu VMs e deseja atualizar as informações na recuperação de desastres do BlueXP .
+
+.Passos
+. No menu recuperação de desastres do BlueXP , selecione *sites*.
+. Selecione o site que deseja atualizar.
+. Selecione o ícone ações image:icon-vertical-dots.png["Ícone ações"]à direita e selecione *Atualizar*.
 

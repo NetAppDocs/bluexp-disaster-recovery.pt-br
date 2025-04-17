@@ -37,7 +37,13 @@ Você pode editar o nome do site do vCenter e o tipo de site (no local ou AWS).
 
 == Gerenciar grupos de recursos
 
-Embora seja possível adicionar um grupo de recursos como parte da criação de um plano de replicação, talvez seja mais conveniente adicionar os grupos separadamente e, posteriormente, usar esses grupos no plano.
+Embora seja possível adicionar um grupo de recursos como parte da criação de um plano de replicação, talvez seja mais conveniente adicionar os grupos separadamente e, posteriormente, usar esses grupos no plano. Você cria grupos de recursos por VMs ou armazenamentos de dados.
+
+Você pode criar um grupo de recursos por datastores das seguintes maneiras:
+
+* Ao adicionar um grupo de recursos usando datastores, você pode ver uma lista de datastores. Você pode selecionar um ou mais datastores para criar um grupo de recursos.
+* Ao criar um plano de replicação e criar um grupo de recursos dentro do plano, você pode ver as VMs nos datastores.
+
 
 Você também pode editar e excluir grupos de recursos.
 

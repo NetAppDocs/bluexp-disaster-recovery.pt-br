@@ -12,19 +12,21 @@ summary: A recuperação de desastres do NetApp BlueXP  é um serviço de recup
 
 
 [role="lead"]
-Depois de adicionar o vCenter Sites, talvez você queira criar grupos de recursos que agrupam as VMs. Os grupos de recursos permitem organizar um conjunto de VMs dependentes em grupos lógicos que atendem aos seus requisitos. Por exemplo, você pode agrupar VMs associadas a uma aplicação ou agrupar aplicações com níveis semelhantes. Como outro exemplo, grupos podem conter ordens de inicialização atrasadas que podem ser executadas após a recuperação.
+Depois de adicionar o vCenter Sites, talvez você queira criar grupos de recursos que agrupam as VMs por VMs ou armazenamentos de dados. Os grupos de recursos permitem organizar um conjunto de VMs dependentes em grupos lógicos que atendem aos seus requisitos. Por exemplo, você pode agrupar VMs associadas a uma aplicação ou agrupar aplicações com níveis semelhantes. Como outro exemplo, grupos podem conter ordens de inicialização atrasadas que podem ser executadas após a recuperação.
+
+Você pode agrupar as VMs ou VMs em datastores.
 
 Você pode criar grupos de recursos usando os seguintes métodos:
 
 * Na guia grupos de recursos
-* Enquanto você está criando uma recuperação de desastre ou _plano de replicação_. Se você tiver muitas VMs hospedadas por um cluster do vCenter de origem, talvez seja mais fácil criar os grupos de recursos enquanto estiver criando o plano de replicação. Para obter instruções sobre como criar grupos de recursos enquanto estiver criando um plano de replicação, link:dr-plan-create.html["Crie um plano de replicação"]consulte .
+* Enquanto você está criando uma recuperação de desastre ou _plano de replicação_. Se você tiver muitas VMs hospedadas por um cluster do vCenter de origem, talvez seja mais fácil criar os grupos de recursos enquanto estiver criando o plano de replicação. Para obter instruções sobre como criar grupos de recursos enquanto estiver criando um plano de replicação, link:drplan-create.html["Crie um plano de replicação"]consulte .
 
 
 
-TIP: Cada grupo de recursos pode incluir uma ou mais VMs. As VMs serão ligadas com base na sequência em que as incluir no plano de replicação. Você pode alterar a ordem arrastando as VMs para cima ou para baixo na lista de grupos de recursos.
+TIP: Cada grupo de recursos pode incluir uma ou mais VMs ou datastores. As VMs serão ligadas com base na sequência em que as incluir no plano de replicação. Você pode alterar a ordem arrastando as VMs ou armazenamentos de dados para cima ou para baixo na lista de grupos de recursos.
 
 .Sobre grupos de recursos
-Os grupos de recursos permitem combinar VMs relacionadas operacionalmente e precisam ser protegidas como uma única unidade.
+Os grupos de recursos permitem combinar VMs ou armazenamentos de dados que incluem VMs relacionadas operacionalmente e precisam ser protegidas como uma única unidade.
 
 Por exemplo, um aplicativo de ponto de venda pode consistir em várias VMs que hospedam bancos de dados, várias VMs que hospedam o gerenciamento de regras de lógica de negócios e várias VMs atuando como um storefront baseado em servidor web. Pode ser benéfico gerenciar a disponibilidade de toda a aplicação com um único processo de proteção, colocando essas VMs em um único grupo de recursos.
 
@@ -56,26 +58,33 @@ Se as VMs no grupo de recursos estiverem hospedadas em armazenamentos de dados d
 |===
 Ao criar grupos de recursos, considere os seguintes problemas:
 
-* Um único armazenamento de dados não deve hospedar VMs protegidas por mais de um plano de replicação.
-* Não hospede VMs protegidas e não protegidas no mesmo armazenamento de dados. Se VMs protegidas e desprotegidas estiverem hospedadas no mesmo armazenamento de dados, poderão surgir os seguintes problemas:
+* Antes de adicionar datastores a grupos de recursos, inicie primeiro uma descoberta manual ou uma descoberta agendada das VMs. Isso garante que as VMs sejam descobertas e listadas no grupo de recursos. Se você não acionar uma descoberta manual, as VMs podem não estar listadas no grupo de recursos.
+* Verifique se há pelo menos uma VM no datastore. Se não houver VMs no datastore, o datastore não será descoberto.
+* Um único datastore não deve hospedar VMs protegidas por mais de um plano de replicação.
+* Não hospede VMs protegidas e desprotegidas no mesmo datastore. Se VMs protegidas e desprotegidas estiverem hospedadas no mesmo datastore, os seguintes problemas poderão surgir:
 +
 ** Como a recuperação de desastres do BlueXP  usa o SnapMirror e o sistema replica volumes ONTAP inteiros, a capacidade usada desse volume é usada em considerações de licenciamento. Nesse caso, o espaço de volume consumido por VMs protegidas e desprotegidas seria incluído neste cálculo.
-** Se o grupo de recursos e os armazenamentos de dados associados precisarem ser repassados para o local de recuperação de desastre, quaisquer VMs não protegidas (VMs que não fazem parte do grupo de recursos, mas hospedadas no volume ONTAP) não existirão mais no local de origem do processo de failover, resultando em falha de VMs desprotegidas no local de origem. Além disso, a recuperação de desastres do BlueXP  não iniciará as VMs desprotegidas no local do failover vCenter.
+** Se o grupo de recursos e seus datastores associados precisarem ser repassados para o local de recuperação de desastres, quaisquer VMs desprotegidas (VMs que não fazem parte do grupo de recursos, mas hospedadas no volume ONTAP) não existirão mais no local de origem a partir do processo de failover, resultando em falha de VMs desprotegidas no local de origem. Além disso, a recuperação de desastres do BlueXP  não iniciará as VMs desprotegidas no local do failover vCenter.
 
 
 * Para ter uma VM protegida, ela deve ser incluída em um grupo de recursos.
 
 
-*PRÁTICA recomendada*: Organize suas VMs antes de implantar a recuperação de desastres do BlueXP  para minimizar a "proliferação de datastores". Coloque as VMs que precisam de proteção em um subconjunto de armazenamentos de dados e coloque as VMs que não serão protegidas em um subconjunto diferente de armazenamentos de dados. Certifique-se de que as VMs em um determinado armazenamento de dados não estejam protegidas por diferentes planos de replicação.
+*PRÁTICA recomendada*: Organize suas VMs antes de implantar a recuperação de desastres do BlueXP  para minimizar a "proliferação de datastores". Coloque as VMs que precisam de proteção em um subconjunto de datastores e coloque as VMs que não serão protegidas em um subconjunto diferente de datastores. Certifique-se de que as VMs em um determinado datastore não estejam protegidas por diferentes planos de replicação.
 
 .Passos
 . No menu recuperação de desastres do BlueXP , selecione *grupos de recursos*.
 . Selecione *Adicionar*.
 . Introduza um nome para o grupo de recursos.
 . Selecione o cluster do vCenter de origem onde as VMs estão localizadas.
+. Selecione *Virtual Machines* ou *datastores* dependendo de como você deseja pesquisar.
+. Selecione a guia *Adicionar grupos de recursos*. O sistema lista todos os datastores ou VMs no cluster do vCenter selecionado. Se você selecionou *datastores*, o sistema lista todos os datastores no cluster do vCenter selecionado. Se você selecionou *máquinas virtuais*, o sistema lista todas as VMs no cluster do vCenter selecionado.
 . No lado esquerdo da página Adicionar grupos de recursos, selecione as VMs que você deseja proteger.
 +
 image:dr-resource-groups-add.png["Captura de tela mostrando a página Adicionar grupos de recursos"]
+
++
+image:dr-resource-groups-datastores-add.png["Captura de tela mostrando a página Adicionar grupos de recursos"]
 
 . Opcionalmente, altere a ordem das VMs à direita arrastando cada VM para cima ou para baixo na lista. As VMs serão ligadas com base na sequência em que as incluir.
 . Selecione *Adicionar*.
