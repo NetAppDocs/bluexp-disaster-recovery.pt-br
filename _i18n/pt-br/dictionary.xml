@@ -1065,7 +1065,6 @@
   <block id="70fdbb4fe1ac448b07e3ab48c5bd8bb1" category="list-text">Se você quiser excluir todos os dados, marque *Excluir dados imediatamente após terminar minha avaliação gratuita*.</block>
   <block id="ba1769c41cb5cf97045fc108e9213d38" category="admonition">Se você terminar a avaliação gratuita, não solicitar a exclusão de dados e não comprar uma licença ou assinatura, a recuperação de desastres do BlueXP  excluirá todos os seus dados 60 dias após o término da avaliação gratuita.</block>
   <block id="801c0fa0d304ca22d8afec06189bcf93" category="section-title">16 de abril de 2025</block>
-  <block id="e1b61136672bccd13e6828fe7987e4f6" category="paragraph">Versão 4,3</block>
   <block id="61e45ffabe7cc2e3542ca9a55a1a53bf" category="paragraph">As VMs só podem ser protegidas se o plano de replicação estiver em um dos seguintes estados:</block>
   <block id="e7d31fc0602fb2ede144d18cdffd816b" category="list-text">Pronto</block>
   <block id="eca4b06cc957b067c25916bf563bfcb1" category="list-text">Failback cometido</block>
@@ -1122,4 +1121,18 @@
   <block id="c2104ad12897a5730ad3b288494cdd97" category="paragraph">Você pode atualizar a descoberta manualmente a qualquer momento. Isso é útil se você adicionou ou removeu VMs e deseja atualizar as informações na recuperação de desastres do BlueXP .</block>
   <block id="5196afaaa8fb34fc7153a30daf14514e" category="list-text">Selecione o site que deseja atualizar.</block>
   <block id="c87fc74cb4f8f9196e191287a96f80dd" category="list-text">Selecione o ícone ações <block ref="145ad72607e9a3c177918d31007a191e" category="inline-image-macro-rx" type="image"></block>à direita e selecione *Atualizar*.</block>
+  <block id="78e5de64c036a105265b3f447a5fbbca" category="doc">Suporte a proxy inteligente</block>
+  <block id="12430fc7d9e2c156fb2dc1af2bf60126" category="paragraph">O conetor BlueXP  suporta proxy inteligente. O proxy inteligente é uma maneira leve, segura e eficiente de conectar seu ambiente local ao serviço BlueXP . Ele fornece uma conexão segura entre o seu ambiente e o serviço BlueXP  sem exigir uma VPN ou acesso direto à Internet. Essa implementação de proxy otimizada descarrega o tráfego da API dentro da rede local.</block>
+  <block id="2baae43f4fa62104c66585e956c51e1e" category="paragraph">Quando um proxy é configurado, a recuperação de desastres do BlueXP  tenta se comunicar diretamente com o VMware ou o ONTAP e usa o proxy configurado se a comunicação direta falhar.</block>
+  <block id="a115e6ab8acfcda534f22a18d1d6940d" category="paragraph">A implementação do proxy de recuperação de desastres do BlueXP  requer comunicação da porta 443 entre o conetor e quaisquer vCenter Servers e arrays ONTAP usando um protocolo HTTPS. O agente de recuperação de desastres do BlueXP  no conetor se comunica diretamente com o VMware vSphere, o VC ou o ONTAP ao executar qualquer ação.</block>
+  <block id="a7a0475144b255eccfff4d2ee3e7a5c4" category="paragraph">Para obter mais informações sobre o proxy inteligente para recuperação de desastres do BlueXP ,<block ref="bf1bf7a536149f2406a2eab17db3a297" category="inline-link-rx"></block> consulte .</block>
+  <block id="146adb7944757e88795676b780c31811" category="inline-link">Configure um conetor para usar um servidor proxy</block>
+  <block id="635abfb2f80497d39998f2a81dfecd7e" category="paragraph">Para obter mais informações sobre a configuração geral do proxy no BlueXP ,<block ref="4d83a369cd8d5456206d71335578eaaa" category="inline-link-rx"></block> consulte .</block>
+  <block id="7469dc0d82ce9411c03b852f2163d515" category="section-title">Termine o teste gratuito a qualquer momento</block>
+  <block id="38567a6024618c3687de90b3e2cff86e" category="paragraph">Você pode parar o teste gratuito em qualquer dente ou você pode esperar até que ele expire.</block>
+  <block id="b618f30aeca114d464120de119b19ced" category="paragraph"><block ref="5f37f8bd4230e4b629c60b7dc23a5850" category="inline-link-rx"></block>Consulte .</block>
+  <block id="74027f9fc959ea61e0fe4228f42245b9" category="list-text">Para obter informações sobre como configurar um proxy inteligente para recuperação de desastres do BlueXP , <block ref="b42f106c81bf8d9365b4d08b31fa2987" category="inline-link-macro-rx"></block>consulte .</block>
+  <block id="848964f0743e2416b5d061a5e088ca73" category="paragraph">Versão 4.2.2</block>
+  <block id="f070435ef55d6c7cc1db59f0a41a4609" category="section-title">10 de março de 2025</block>
+  <block id="ae493f6fb938d3c8c6db8b5a9e623794" category="paragraph">Versão 4.2.1</block>
 </blocks>

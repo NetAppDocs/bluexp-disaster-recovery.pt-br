@@ -99,6 +99,7 @@ TIP: Para on-premises a on-premises, use o conector BlueXP  no local. Para ambi
 +
  https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["Descubra clusters ONTAP no local"^]Consulte .
 
+* Para obter informações sobre como configurar um proxy inteligente para recuperação de desastres do BlueXP , link:../get-started/dr-setup.html["Configure sua infraestrutura para recuperação de desastres no BlueXP "]consulte .
 
 
 
