@@ -86,13 +86,18 @@ TIP: Após o início do failover, as VMs recuperadas podem ser vistas no vCenter
 . Selecione o plano de replicação.
 . À direita, selecione a opção *ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "]e selecione *failover*.
 +
-image:dr-plan-failover2.png["Página de failover"]
+image:dr-plan-failover3.png["Página de failover"]
 
 . Na página failover, inicie um snapshot agora ou escolha o snapshot para o datastore a partir do qual será recuperado. O padrão é o mais recente.
 +
 Um instantâneo da fonte atual será levado e replicado para o destino atual antes que o failover ocorra.
 
 . Opcionalmente, selecione *forçar failover* se quiser que o failover ocorra mesmo que seja detetado um erro que normalmente impeça a ocorrência do failover.
+. Opcionalmente, selecione *Skip protection* se quiser que o serviço não crie automaticamente uma relação de proteção SnapMirror inversa após um failover do plano de replicação. Isso é útil se você quiser executar operações adicionais no local restaurado antes de colocá-lo novamente on-line na recuperação de desastres do BlueXP .
++
+
+TIP: Você pode estabelecer proteção reversa selecionando *proteger recursos* no menu ações do plano de replicação. Isso tenta criar uma relação de replicação reversa para cada volume no plano. Pode executar este trabalho repetidamente até que a proteçãoão seja restaurada. Quando a proteção é restaurada, você pode iniciar um failback da maneira habitual.
+
 . Digite "failover" na caixa.
 . Selecione *failover*.
 . Para verificar o progresso, no menu superior, selecione *Monitoramento de trabalho*.

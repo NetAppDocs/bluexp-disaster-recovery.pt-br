@@ -33,7 +33,7 @@ As VMs só podem ser protegidas se o plano de replicação estiver em um dos seg
 
 
 .Passos
-. Inicie sessão no BlueXP  e selecione *proteção* > *recuperação de desastres* no nav esquerdo.
+. Inicie sessão no BlueXP  e, a partir do menu de navegação à esquerda, selecione *proteção* > *recuperação de desastres*.
 +
 Você chegará à página do Painel de recuperação de desastres do BlueXP . Quando você começa com o serviço pela primeira vez, você precisa adicionar informações do vCenter. Mais tarde, o Dashboard exibe dados sobre seus sites e planos de replicação.
 
@@ -80,6 +80,70 @@ image:sites-list2.png["Captura de tela da página de sites"]
 
 
 . Para ver o andamento da operação, no menu superior, selecione *Monitoramento de trabalho*.
+
+
+
+
+== Adicionar mapeamento de sub-rede para um site do vCenter
+
+Gerencie endereços IP no failover de uma nova maneira usando o mapeamento de sub-rede, que permite adicionar sub-redes para cada vCenter. Ao fazer isso, você define o CIDR IPv4, o gateway padrão e o DNS para cada rede virtual.
+
+Após o failover, a recuperação de desastres do BlueXP  determina o endereço IP apropriado de cada vNIC, observando o CIDR fornecido para a rede virtual mapeada e o usa para derivar o novo endereço IP.
+
+Por exemplo:
+
+* NetworkA: 10,1.1.0/24
+* NetworkB: 192.168.1.0/24
+
+
+O VM1 tem um vNIC (10,1.1,50) que está conetado à NetworkA. O NetworkA é mapeado para o NetworkB nas configurações do plano de replicação.
+
+Após o failover, a recuperação de desastres do BlueXP  substitui a parte de rede do endereço IP original (10,1.1) e mantém o endereço do host (.50) do endereço IP original (10,1.1,50). Para o VM1, a recuperação de desastres do BlueXP  analisa as configurações do CIDR para o NetworkB e usa a parte 192.168.1 da rede NetworkB enquanto mantém a parte do host (.50) para criar o novo endereço IP para o VM1. O novo IP torna-se 192.168.1.50.
+
+Em resumo, o endereço do host permanece o mesmo, enquanto o endereço de rede é substituído pelo que estiver configurado no mapeamento de sub-rede do site. Isso permite que você gerencie a reatribuição de endereços IP após o failover com mais facilidade, especialmente se você tiver centenas de redes e milhares de VMs para gerenciar.
+
+O uso do mapeamento de sub-rede é um processo opcional de duas etapas:
+
+* Primeiro, adicione o mapeamento de sub-rede para cada site do vCenter.
+* Em segundo lugar, no plano de replicação, indique que pretende utilizar o mapeamento de sub-rede.
+
+
+.Passos
+. No menu superior de recuperação de desastres do BlueXP , selecione *sites*.
+. No ícone ações image:icon-vertical-dots.png["Ícone ações"]à direita, selecione *Adicionar sub-rede*.
++
+image:sites-subnet-add.png["Adicionar captura de tela de mapeamento de sub-rede"]
+
+. Na página Configurar sub-rede, insira as seguintes informações:
++
+.. Sub-rede: Insira o CIDR IPv4 para a sub-rede até /32.
++
+
+TIP: A notação CIDR é um método para especificar endereços IP e suas máscaras de rede. O /24 denota a máscara de rede. O número consiste em um endereço IP com o número após "/" indicando quantos bits do endereço IP denotam a rede. Por exemplo, 192.168.0.50/24, o endereço IP é 192.168.0.50 e o número total de bits no endereço de rede é 24. a 192.168.0.50 255.255.255.0 passa a 192.168.0.0/24.
+
+.. Gateway: Introduza o gateway predefinido para a sub-rede.
+.. DNS: Introduza o DNS para a sub-rede.
+
+
+. Selecione *Adicionar mapeamento de sub-rede*.
+
+
+
+
+=== Selecione o mapeamento de sub-rede para um plano de replicação
+
+Ao criar um plano de replicação, pode selecionar o mapeamento de sub-rede para o plano de replicação.
+
+.Passos
+. No menu superior da recuperação de desastres do BlueXP , selecione *planos de replicação*.
+. Selecione *Adicionar* para adicionar um plano de replicação.
+. Preencha os campos da maneira habitual adicionando os servidores vCenter, selecionando os grupos de recursos ou aplicativos e completando os mapeamentos.
+. Na página Plano de replicação > Mapeamento de recursos, selecione a seção *máquinas virtuais*.
++
+image:dr-plan-create-subnet-mapping.png["Captura de tela de seleção de mapeamento de sub-rede"]
+
+. No campo *Target IP*, selecione *Use subnet mapping* na lista suspensa.
+. Continue com a criação do plano de replicação.
 
 
 
