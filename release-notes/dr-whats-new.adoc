@@ -16,7 +16,7 @@ Saiba o que há de novo na recuperação de desastres do BlueXP .
 
 
 
-== 12 de maio de 2025
+== 13 de maio de 2025
 
 Versão 4.2.3
 
@@ -40,7 +40,7 @@ Após o failover, a recuperação de desastres do BlueXP  substitui a parte de 
 
 Em resumo, o endereço do host permanece o mesmo, enquanto o endereço de rede é substituído pelo que estiver configurado no mapeamento de sub-rede do site. Isso permite que você gerencie a reatribuição de endereços IP após o failover com mais facilidade, especialmente se você tiver centenas de redes e milhares de VMs para gerenciar.
 
-Para obter detalhes sobre como incluir o mapeamento de sub-redes em seus sites, link:../use/sites-add.html["Adicione sites do vCenter Server"]consulte .
+Para obter detalhes sobre como incluir o mapeamento de sub-redes em seus sites, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/sites-add.html["Adicione sites do vCenter Server"] consulte .
 
 
 
@@ -54,7 +54,7 @@ Ao iniciar um failover, agora você pode escolher a opção *Skip protection*. C
 
 Depois que o site de origem original estiver novamente on-line, você poderá estabelecer proteção reversa selecionando *Protect Resources* no menu ações do plano de replicação. Isso tenta criar uma relação de replicação reversa para cada volume no plano. Pode executar este trabalho repetidamente até que a proteçãoão seja restaurada. Quando a proteção é restaurada, você pode iniciar um failback da maneira habitual.
 
-Para obter detalhes sobre como ignorar a proteção, link:../use/failover.html["Failover de aplicativos para um local remoto"]consulte .
+Para obter mais detalhes sobre a proteção contra saltos, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["Falha de aplicativos ovre para um local remoto"] consulte .
 
 
 
@@ -68,7 +68,7 @@ Quando selecionado, a recuperação de desastres do BlueXP  não configura um a
 
 Depois que isso é configurado, o serviço não tira nenhum snapshot agendado regularmente, mas depende da entidade externa para tirar e atualizar esses snapshots.
 
-Para obter detalhes sobre o uso de soluções de snapshot externas no plano de replicação, link:../use/drplan-create.html["Crie um plano de replicação"]consulte .
+Para obter mais detalhes sobre a proteção contra saltos, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["Crie um plano de replicação"] consulte .
 
 
 
