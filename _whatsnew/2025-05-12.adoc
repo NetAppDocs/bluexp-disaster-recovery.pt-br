@@ -36,7 +36,7 @@ Ao iniciar um failover, agora você pode escolher a opção *Skip protection*. C
 
 Depois que o site de origem original estiver novamente on-line, você poderá estabelecer proteção reversa selecionando *Protect Resources* no menu ações do plano de replicação. Isso tenta criar uma relação de replicação reversa para cada volume no plano. Pode executar este trabalho repetidamente até que a proteçãoão seja restaurada. Quando a proteção é restaurada, você pode iniciar um failback da maneira habitual.
 
-Para obter mais detalhes sobre a proteção contra saltos, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["Falha de aplicativos ovre para um local remoto"] consulte .
+Para obter mais detalhes sobre a proteção contra saltos, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["Failover de aplicativos para um local remoto"] consulte .
 
 
 
@@ -46,8 +46,8 @@ A recuperação de desastres do BlueXP  agora suporta o uso de soluções de ge
 
 Para configurar, na seção Plano de replicação > Mapeamento de recursos, marque a caixa de seleção *usar backups gerenciados de plataforma e programações de retenção* ao configurar o mapeamento de datastores.
 
-Quando selecionado, a recuperação de desastres do BlueXP  não configura um agendamento de backup. No entanto, você ainda precisa configurar um cronograma de retenção porque snapshots podem ainda ser feitos para operações de teste, failover e failback.
+Quando a opção é selecionada, a recuperação de desastres do BlueXP  não configura um agendamento de backup. No entanto, você ainda precisa configurar um cronograma de retenção porque snapshots podem ainda ser feitos para operações de teste, failover e failback.
 
 Depois que isso é configurado, o serviço não tira nenhum snapshot agendado regularmente, mas depende da entidade externa para tirar e atualizar esses snapshots.
 
-Para obter mais detalhes sobre a proteção contra saltos, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["Crie um plano de replicação"] consulte .
+Para obter detalhes sobre como usar soluções de snapshot externas no plano de replicação, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["Crie um plano de replicação"] consulte .
