@@ -36,7 +36,6 @@
   <block id="66a7384fcc7d6c71e8da6dc152b82593" category="admonition">Alguns lançamentos incluem uma prévia da tecnologia. A NetApp não cobra por nenhuma capacidade de workload visualizada. Consulte <block ref="431ce6b88c6d5399033553c1891688aa" category="inline-link-macro-rx"></block> para obter informações sobre as últimas pré-visualizações de tecnologia.</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">Licenciamento</block>
   <block id="924cc6eaf82618251de609e2689ed733" category="paragraph">Você pode usar os seguintes tipos de licença:</block>
-  <block id="7cc1b1d71d565ea421a16ed9422fe6c2" category="list-text">Adquira uma assinatura PAYGO (pay-as-you-go) com o Amazon Web Services (AWS) Marketplace.</block>
   <block id="2caf85d76a31b7bef7132937ff28e9dc" category="list-text">Traga sua própria licença (BYOL), que é um arquivo de licença NetApp (NLF) que você obtém de seu representante de vendas da NetApp Você pode usar o número de série da licença para ativar o BYOL na carteira digital BlueXP .</block>
   <block id="c809a23426c6fb72cef75816c461ade9" category="paragraph">As licenças para todos os serviços BlueXP  são gerenciadas pelo serviço de carteira digital da BlueXP . Depois de configurar seu BYOL, você poderá ver uma licença ativa para o serviço na carteira digital BlueXP .</block>
   <block id="49cc6e59fe89d60aa8a69d475908ad17" category="section-title">Como funciona a recuperação de desastres do BlueXP </block>
@@ -77,10 +76,8 @@
   <block id="5be11c5dad3dd5860416e2978e91dae5" category="inline-link-macro">Adicione o vCenter Sites</block>
   <block id="d780b26d8f0dcbe5b2593febbaacdb60" category="paragraph">Para obter detalhes, <block ref="84d66f7662bc8a91a68e93706653efe2" category="inline-link-macro-rx"></block>consulte .</block>
   <block id="ad7911fdd21ff5752d10300d0446de95" category="section-title">Após o término da avaliação, inscreva-se no AWS Marketplace</block>
-  <block id="e1186eb5e41d3a9e96827c9ab4aef684" category="paragraph">Após o término da avaliação gratuita, você pode comprar uma licença da NetApp ou assinar pelo AWS Marketplace. Este procedimento fornece uma visão geral de alto nível de como se inscrever diretamente no AWS Marketplace.</block>
   <block id="acce4a6c25bc51b4930085d68e3cb0cd" category="list-text">Na recuperação de desastres do BlueXP , você verá uma mensagem informando que a avaliação gratuita está expirando. Na mensagem, selecione *Subscribe ou compre uma licença*.</block>
   <block id="584a50ae29d097d233ebd86ad952d305" category="list-text">Selecione *Inscrever-se no AWS Marketplace*.</block>
-  <block id="cb29907626b2fabe5961e9265140cc76" category="list-text">No AWS Marketplace, selecione *Exibir opções de compra*. Use o AWS Marketplace para assinar a recuperação de desastres do BlueXP .</block>
   <block id="717132172ed170ccb94cc8674c35dfbd" category="list-text">Quando você retorna à recuperação de desastres do BlueXP , uma mensagem indica que você está inscrito.</block>
   <block id="ee6d03e51dd7b0fc10c6b3c8fcab3718" category="section-title">Após o término da avaliação, compre uma licença BYOL por meio do NetApp</block>
   <block id="b9ef842238fa8d82db6b7559f33adc6c" category="paragraph">Após o término da avaliação, você pode comprar uma licença por meio de seu representante de vendas da NetApp</block>
@@ -1179,4 +1176,8 @@
   <block id="981aed0e5104e08339386a1c5379d13f" category="paragraph">Para obter mais detalhes sobre a proteção contra saltos,<block ref="1cbf59ee3e77dd0082612a21b0900f81" category="inline-link-rx"></block> consulte .</block>
   <block id="a104b856c104ac1d20a94ca4ed8ba3f8" category="paragraph">Quando a opção é selecionada, a recuperação de desastres do BlueXP  não configura um agendamento de backup. No entanto, você ainda precisa configurar um cronograma de retenção porque snapshots podem ainda ser feitos para operações de teste, failover e failback.</block>
   <block id="05861d9bf485f3b7dc6f56871ad28892" category="paragraph">Para obter detalhes sobre como usar soluções de snapshot externas no plano de replicação,<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block> consulte .</block>
+  <block id="d1b560a6ba275c266fdac08bcd1ba2d5" category="list-text">Compre uma assinatura PAYGO (pay-as-you-go) para *Serviços inteligentes da NetApp* com o mercado da Amazon Web Services (AWS).</block>
+  <block id="c14eff79606049ee3db744788f842d7d" category="list-text">Compre uma assinatura PAYGO (pay-as-you-go) para *Serviços inteligentes da NetApp* com o mercado de Serviços Web da Amazon (AWS).</block>
+  <block id="cbb303696e69ece252e4279cf7e650f4" category="paragraph">Após o término da avaliação gratuita, você pode comprar uma licença da NetApp ou assinar *Serviços inteligentes da NetApp* por meio do AWS Marketplace. Este procedimento fornece uma visão geral de alto nível de como se inscrever diretamente no AWS Marketplace.</block>
+  <block id="05d7d2c6dcb40b2ad3598ed40596c890" category="list-text">Use o AWS Marketplace para assinar *Serviços inteligentes da NetApp* e *recuperação de desastres da BlueXP *.</block>
 </blocks>

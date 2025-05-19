@@ -17,7 +17,7 @@ Com a recuperação de desastres do BlueXP , você pode usar diferentes planos 
 Você pode usar os seguintes tipos de licença:
 
 * Inscreva-se para uma avaliação gratuita de 30 dias.
-* Adquira uma assinatura PAYGO (pay-as-you-go) com o Amazon Web Services (AWS) Marketplace.
+* Compre uma assinatura PAYGO (pay-as-you-go) para *Serviços inteligentes da NetApp* com o mercado de Serviços Web da Amazon (AWS).
 * Traga sua própria licença (BYOL), que é um arquivo de licença NetApp (NLF) que você obtém de seu representante de vendas da NetApp Você pode usar o número de série da licença para ativar o BYOL na carteira digital BlueXP .
 
 
@@ -71,12 +71,12 @@ Para obter detalhes, link:../use/sites-add.html["Adicione o vCenter Sites"]consu
 
 == Após o término da avaliação, inscreva-se no AWS Marketplace
 
-Após o término da avaliação gratuita, você pode comprar uma licença da NetApp ou assinar pelo AWS Marketplace. Este procedimento fornece uma visão geral de alto nível de como se inscrever diretamente no AWS Marketplace.
+Após o término da avaliação gratuita, você pode comprar uma licença da NetApp ou assinar *Serviços inteligentes da NetApp* por meio do AWS Marketplace. Este procedimento fornece uma visão geral de alto nível de como se inscrever diretamente no AWS Marketplace.
 
 .Passos
 . Na recuperação de desastres do BlueXP , você verá uma mensagem informando que a avaliação gratuita está expirando. Na mensagem, selecione *Subscribe ou compre uma licença*.
 . Selecione *Inscrever-se no AWS Marketplace*.
-. No AWS Marketplace, selecione *Exibir opções de compra*. Use o AWS Marketplace para assinar a recuperação de desastres do BlueXP .
+. Use o AWS Marketplace para assinar *Serviços inteligentes da NetApp* e *recuperação de desastres da BlueXP *.
 . Quando você retorna à recuperação de desastres do BlueXP , uma mensagem indica que você está inscrito.
 +
 Pode ver os detalhes da subscrição na carteira digital BlueXP . link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-homepage.html["Saiba mais gerir subscrições com carteira digital"^].
