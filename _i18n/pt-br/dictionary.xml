@@ -573,8 +573,6 @@
   <block id="8020af4fa709c3156161baa6bf00e88a" category="inline-image-macro">Plano de replicação, separador Mapeamento de recursos</block>
   <block id="7906e2e007c3bad108fcd7ed7311a131" category="paragraph"><block ref="7906e2e007c3bad108fcd7ed7311a131" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6dbc81f47f4a822cd11ce7c8403756ed" category="list-text">Na guia Mapeamentos de failover, selecione a seta para baixo à direita de cada recurso e mapeie os recursos em cada um.</block>
-  <block id="022ab008c31f5588f9d15da4dc3439fb" category="list-text">*Recursos de computação*: Selecione a seta para baixo ao lado de *recursos de computação*.</block>
-  <block id="a358a5c755a9f869690207e2a0726737" category="list-text">*Máquinas virtuais*: Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *máquinas virtuais*.</block>
   <block id="210dfd955522333f74e13d0843ab02ff" category="paragraph">Esta secção pode estar ativada ou desativada dependendo da sua seleção.</block>
   <block id="13f51fa84ff64a1c633957d1dcf01637" category="paragraph">Isso pode ser muito útil ao recuperar ambientes grandes para clusters de destino menores ou para realizar testes de recuperação de desastres sem precisar provisionar uma infraestrutura VMware física um-para-um.</block>
   <block id="27469d5f3bff97989e2a320de315084a" category="inline-image-macro">Captura de ecrã mostrando Adicionar plano de replicação &amp;gt; Mapeamento de recursos &amp;gt; máquinas virtuais</block>
@@ -788,8 +786,6 @@
   <block id="da06c5c1d28e308403236438dda209dc" category="list-text">*Datacenters de origem e destino*</block>
   <block id="7067fdfe055fabd950bd45a1a17e1642" category="list-text">*Cluster de destino*</block>
   <block id="2c0a2cae30cf923c64bbed704e923521" category="list-text">*Target host* (opcional): Depois de selecionar o cluster, você pode então definir essas informações.</block>
-  <block id="6d9f48430941cb04802ac18d9c695e65" category="admonition">Se um vCenter tiver um DRS (Distributed Resource Scheduler) configurado para gerenciar vários hosts em um cluster, você não precisará selecionar um host. Se você selecionar um host, a recuperação de desastres do BlueXP  colocará todas as VMs no host selecionado.</block>
-  <block id="999becf997185f87ea1b5bd029bf5b34" category="list-text">*Target VM folder* (opcional): Crie uma nova pasta raiz para armazenar as VMs selecionadas.</block>
   <block id="0a8bc9b2bb8f581fa27738fc437d64b3" category="paragraph">Esta seção pode exibir campos diferentes dependendo da sua seleção.</block>
   <block id="7b2b025be41dbbc4cda9601c1b5523a5" category="list-text">* Prefixo e sufixo da VM de destino*: Sob os detalhes das máquinas virtuais, você pode opcionalmente adicionar um prefixo e sufixo ao nome da VM.</block>
   <block id="230dc85a08275a2466390ae799703f92" category="list-text">*Source VM CPU e RAM*: Sob os detalhes das máquinas virtuais, você pode redimensionar opcionalmente os parâmetros CPU e RAM da VM.</block>
@@ -830,8 +826,6 @@
   <block id="8914a354aeff1b07a47e178ccae21e27" category="list-text">*DHCP*: Selecione esta definição se pretender que as VMs obtenham informações de configuração de rede a partir de um servidor DHCP. Se você escolher essa opção, você fornecerá apenas as credenciais para a VM.</block>
   <block id="fac29f06ba242d5478f84ec94ec5b901" category="list-text">*Scripts*: Você pode incluir scripts personalizados no formato .sh, .bat ou .ps1 como processos pós-failover. Com scripts personalizados, você pode fazer com que a recuperação de desastres do BlueXP  execute seu script após um processo de failover. Por exemplo, você pode usar um script personalizado para retomar todas as transações de banco de dados após a conclusão do failover.</block>
   <block id="df6b8c791e4694210c8862ed040048ef" category="list-text">*Criar réplicas consistentes com aplicativos*: Indique se deseja criar cópias snapshot consistentes com aplicativos. O serviço silenciará o aplicativo e, em seguida, fará um snapshot para obter um estado consistente do aplicativo. Esse recurso é compatível com Oracle em execução no Windows e Linux e SQL Server em execução no Windows.</block>
-  <block id="708b68cf49e909f729ce67863a2f6de3" category="list-text">*Datastores*: Selecione a seta para baixo ao lado de *datastores*. Com base na seleção de VMs, os mapeamentos do datastore são selecionados automaticamente.</block>
-  <block id="27ee5986957f012b4e37ee29afe29c7f" category="list-text">*Datastores de origem e destino*: Se existirem várias relações de SnapMirror (fan-out), você poderá selecionar o destino a ser usado. Se um volume tiver uma relação SnapMirror já estabelecida, os datastores de origem e destino correspondentes serão exibidos. Se um volume que não tenha uma relação com o SnapMirror, você poderá criar um agora selecionando um cluster de destino, um SVM de destino e fornecendo um nome de volume. O serviço criará o volume e a relação SnapMirror.</block>
   <block id="950fa88679103c3c7c4e449423d8bfcc" category="list-text">Se as VMs forem do mesmo volume e do mesmo SVM, o serviço executará um snapshot ONTAP padrão e atualizará os destinos secundários.</block>
   <block id="a47d6910008cc9bb73921a36d6609a08" category="list-text">Se as VMs forem de volume diferente e mesmo SVM, o serviço criará um snapshot de grupo de consistência, incluindo todos os volumes e atualizará os destinos secundários.</block>
   <block id="3cc1e8e247fa51b1c7d6f2a7c029a515" category="list-text">Se as VMs forem de volume diferente e SVM diferente, o serviço executará uma fase de início de grupo de consistência e snapshot de fase de confirmação, incluindo todos os volumes no mesmo cluster ou diferente, além de atualizar os destinos secundários.</block>
@@ -947,7 +941,6 @@
   <block id="07b0eade4402d209b5dbe587a8ad3f6f" category="inline-link">Implante e configure o ambiente de virtualização na AWS</block>
   <block id="2eccc2b2612ae991619a18b34919d843" category="paragraph">Para configurar um ambiente do VMware Cloud na AWS, siga as etapas em<block ref="0faddedbfeb6e9d451b742468dbfc158" category="inline-link-rx"></block>. Um cluster de luz piloto também pode ser usado para fins de recuperação de desastres.</block>
   <block id="8c587749bc8bd978d85704d9a142b7a6" category="paragraph">Você pode proteger várias VMs em vários datastores. A recuperação de desastres do BlueXP  cria grupos de consistência do ONTAP para todos os volumes do ONTAP que hospedam datastores VM protegidos.</block>
-  <block id="345f26a72f023b2055826859eb701ceb" category="list-text">*Redes virtuais*: Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *redes virtuais*. Selecione a LAN virtual de origem e a LAN virtual de destino.</block>
   <block id="02453bc953d0b6e10f85235da7a8cca7" category="paragraph">Selecione o mapeamento de rede para a LAN virtual apropriada. As LANs virtuais já devem ser provisionadas, então selecione a LAN virtual apropriada para mapear a VM.</block>
   <block id="c71c9ca45b74f3ddf3435fee65f93cfc" category="paragraph">O padrão para as VMs é mapeado. O mapeamento padrão usa as mesmas configurações que as VMs usam no ambiente de produção (mesmo endereço IP, máscara de sub-rede e gateway).</block>
   <block id="a82971318b0c070daea6677a10d3473c" category="paragraph">Se você fizer alterações a partir das configurações padrão, você deve alterar o campo IP de destino para "diferente da origem".</block>
@@ -1168,7 +1161,6 @@
   <block id="807059f044473e420c53e102505d49cf" category="list-text">Preencha os campos da maneira habitual adicionando os servidores vCenter, selecionando os grupos de recursos ou aplicativos e completando os mapeamentos.</block>
   <block id="6a1727ba4109844c2f1bf48438eb19f5" category="list-text">Na página Plano de replicação &gt; Mapeamento de recursos, selecione a seção *máquinas virtuais*.</block>
   <block id="b743f75136ce51e05e36623ebf8d0373" category="inline-image-macro">Captura de tela de seleção de mapeamento de sub-rede</block>
-  <block id="d56562607152896b0efda703821ab816" category="paragraph"><block ref="d56562607152896b0efda703821ab816" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a60af3ebe60a5e3cebadd89e2c407a9c" category="list-text">No campo *Target IP*, selecione *Use subnet mapping* na lista suspensa.</block>
   <block id="88497a7ce9c844d7b07cc838ad7754d6" category="list-text">Continue com a criação do plano de replicação.</block>
   <block id="e28871dd1f9f31bb54d653e42ab61487" category="paragraph">Para obter detalhes sobre como incluir o mapeamento de sub-redes em seus sites,<block ref="54555db921feb31b73553520fa282341" category="inline-link-rx"></block> consulte .</block>
@@ -1180,4 +1172,21 @@
   <block id="c14eff79606049ee3db744788f842d7d" category="list-text">Compre uma assinatura PAYGO (pay-as-you-go) para *Serviços inteligentes da NetApp* com o mercado de Serviços Web da Amazon (AWS).</block>
   <block id="cbb303696e69ece252e4279cf7e650f4" category="paragraph">Após o término da avaliação gratuita, você pode comprar uma licença da NetApp ou assinar *Serviços inteligentes da NetApp* por meio do AWS Marketplace. Este procedimento fornece uma visão geral de alto nível de como se inscrever diretamente no AWS Marketplace.</block>
   <block id="05d7d2c6dcb40b2ad3598ed40596c890" category="list-text">Use o AWS Marketplace para assinar *Serviços inteligentes da NetApp* e *recuperação de desastres da BlueXP *.</block>
+  <block id="ddbdc0fdada8e6466e651115cefbafee" category="section-title">Mapear recursos &gt; seção recursos de computação</block>
+  <block id="c74f8b35838f9f38552c33a8c05ad01a" category="paragraph">Selecione a seta para baixo ao lado de *Compute Resources*.</block>
+  <block id="5044b19178ff5f8de4c9c0246fe12b78" category="admonition">Se um vCenter tiver um DRS (Distributed Resource Scheduler) configurado para gerenciar vários hosts em um cluster, você não precisará selecionar um host. Se você selecionar um host, a recuperação de desastres do BlueXP  colocará todas as VMs no host selecionado. * * Pasta VM de destino* (opcional): Crie uma nova pasta raiz para armazenar as VMs selecionadas.</block>
+  <block id="74b0088eeb9a4fc43afd0ad0e9f1ef57" category="section-title">Mapear recursos &gt; seção redes virtuais</block>
+  <block id="21538d8465027f7c4a2d65593552875c" category="paragraph">Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *redes virtuais*. Selecione a LAN virtual de origem e a LAN virtual de destino.</block>
+  <block id="d43d5aee258367a26705d2e855068453" category="section-title">Recursos do mapa &gt; seção máquinas virtuais</block>
+  <block id="27d300eb526c12800753bbfacfc390b6" category="paragraph">Na guia Mapeamentos de failover, selecione a seta para baixo ao lado de *máquinas virtuais*.</block>
+  <block id="64a2a2b78e563e79f2c42c8e9d160e0e" category="section-title">Mapear recursos &gt; seção datastores</block>
+  <block id="923805befcdde4aa8fa4752b9e9a277f" category="paragraph">Selecione a seta para baixo ao lado de *datastores*. Com base na seleção de VMs, os mapeamentos do datastore são selecionados automaticamente.</block>
+  <block id="c4c09b507b4da4a281d7ce6c068b6a88" category="inline-image-macro">Captura de ecrã a mostrar Adicionar plano de replicação &amp;gt; Mapeamento de recursos &amp;gt; datastores</block>
+  <block id="7b6735057ec599457ce14b0629d098bf" category="paragraph"><block ref="383fd741f178abe8be4920d498113a6c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="63882377431b20b814641f0190aa1986" category="list-text">*Datastores de origem e destino*: Se existirem várias relações de SnapMirror (fan-out), você poderá selecionar o destino a ser usado. Se um volume tiver uma relação SnapMirror já estabelecida, os datastores de origem e destino correspondentes serão exibidos. Se um volume que não tenha uma relação do SnapMirror, você poderá criar um agora selecionando um cluster de destino, selecionando um SVM de destino e fornecendo um nome de volume. O serviço criará o volume e a relação SnapMirror.</block>
+  <block id="d3d01ba34a902e9e5d7cb703c2b96a65" category="inline-image-macro">Adicionar captura de tela do menu de sub-rede</block>
+  <block id="6f7c69118d430fce089e3f0f18aba2c5" category="paragraph"><block ref="6f7c69118d430fce089e3f0f18aba2c5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e7be7bda88531d046e21401efd5bd9d5" category="paragraph">A página Configurar sub-rede é exibida:</block>
+  <block id="aaaeb2ea35c55b4a37b25b328a34587c" category="paragraph"><block ref="aaaeb2ea35c55b4a37b25b328a34587c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58091bb6c8793ca7ad7178167e36010f" category="admonition">Se houver duas VMs (por exemplo, uma é o Linux e a outra é o Windows), as credenciais são necessárias apenas para o Windows.</block>
 </blocks>

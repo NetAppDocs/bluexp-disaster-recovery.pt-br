@@ -112,6 +112,12 @@ O uso do mapeamento de sub-rede é um processo opcional de duas etapas:
 . No menu superior de recuperação de desastres do BlueXP , selecione *sites*.
 . No ícone ações image:icon-vertical-dots.png["Ícone ações"]à direita, selecione *Adicionar sub-rede*.
 +
+image:dr-sites-subnet-menu.png["Adicionar captura de tela do menu de sub-rede"]
+
++
+A página Configurar sub-rede é exibida:
+
++
 image:sites-subnet-add.png["Adicionar captura de tela de mapeamento de sub-rede"]
 
 . Na página Configurar sub-rede, insira as seguintes informações:
@@ -140,9 +146,13 @@ Ao criar um plano de replicação, pode selecionar o mapeamento de sub-rede para
 . Preencha os campos da maneira habitual adicionando os servidores vCenter, selecionando os grupos de recursos ou aplicativos e completando os mapeamentos.
 . Na página Plano de replicação > Mapeamento de recursos, selecione a seção *máquinas virtuais*.
 +
-image:dr-plan-create-subnet-mapping.png["Captura de tela de seleção de mapeamento de sub-rede"]
+image:dr-plan-vm-subnet-option.png["Captura de tela de seleção de mapeamento de sub-rede"]
 
 . No campo *Target IP*, selecione *Use subnet mapping* na lista suspensa.
++
+
+NOTE: Se houver duas VMs (por exemplo, uma é o Linux e a outra é o Windows), as credenciais são necessárias apenas para o Windows.
+
 . Continue com a criação do plano de replicação.
 
 
