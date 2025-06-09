@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-add-vcenters.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: Introdução à recuperação de desastres do BlueXP usando Amazon EVS e Amazon FSxN. Com os sites criados, agora você adiciona seus clusters do vCenter a cada site na recuperação de desastres do BlueXP. Ao criar cada site, indicamos o tipo de site de cada um. Isso informa à recuperação de desastres do BlueXP qual tipo de acesso é necessário para os vCenters hospedados em cada tipo de site. Uma das vantagens do Amazon EVS é que não há diferenciação real entre um vCenter do Amazon EVS e um vCenter local. Ambos exigem as mesmas informações de conexão e autenticação. 
+---
+= Adicionar clusters locais e Amazon EVS vCenter na recuperação de desastres do BlueXP
+:allow-uri-read: 
+
+
+[role="lead"]
+Com os sites criados, você agora adiciona seus clusters do vCenter a cada site na recuperação de desastres do BlueXP. Ao criar cada site, indicamos cada tipo de site. Isso informa à recuperação de desastres do BlueXP qual tipo de acesso é necessário para os vCenters hospedados em cada tipo de site. Uma das vantagens do Amazon EVS é que não há diferenciação real entre um vCenter do Amazon EVS e um vCenter local. Ambos exigem as mesmas informações de conexão e autenticação.
+
+.Etapas para adicionar um vCenter a cada site
+. Na guia *Sites*, selecione *Adicionar vCenter* para o site desejado.
++
+image:evs-add-vcenter-1.png["Adicionar opção vCenter"]
+
+. Na caixa de diálogo Adicionar servidor vCenter, selecione ou forneça as seguintes informações:
++
+.. O conector BlueXP hospedado na sua VPC da AWS.
+.. O endereço IP ou FQDN do vCenter a ser adicionado.
+.. Se for diferente, altere o valor da porta para a porta TCP usada pelo seu gerenciador de cluster do vCenter.
+.. O nome de usuário do vCenter para a conta criada anteriormente que será usada pela recuperação de desastres do BlueXP para gerenciar o vCenter.
+.. A senha do vCenter para o nome de usuário fornecido.
+.. Se a sua empresa utiliza uma Autoridade Certificadora (CA) externa ou o vCenter Endpoint Certificate Store para acessar seus vCenters, desmarque a caixa de seleção *Usar certificados autoassinados*. Caso contrário, deixe a caixa marcada.
+
+
+. Selecione *Adicionar*.
++
+image:evs-add-vcenter-2-3.png["Caixa de diálogo Adicionar vCenter"]
+
+

@@ -1,0 +1,232 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-rp-operations.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, netapp, ontap 
+summary: Introdução à recuperação de desastres BlueXP usando Amazon EVS e Amazon FSx para NetApp ONTAP. Use a recuperação de desastres BlueXP com Amazon EVS e Amazon FSx para NetApp ONTAP para executar failover, testar failover, atualizar recursos, migrar, tirar um snapshot agora, desabilitar ou habilitar planos de replicação, limpar snapshots antigos, reconciliar snapshots, excluir plano de replicação e editar agendamentos. 
+---
+= Execute operações de plano de replicação com recuperação de desastres BlueXP
+:allow-uri-read: 
+
+
+[role="lead"]
+Use a recuperação de desastres do BlueXP com o Amazon EVS e o Amazon FSx para NetApp ONTAP para executar as seguintes operações: failover, failover de teste, atualizar recursos, migrar, tirar um snapshot agora, desabilitar/habilitar o plano de replicação, limpar snapshots antigos, reconciliar snapshots, excluir o plano de replicação e editar agendamentos.
+
+
+
+== Falha
+
+A principal operação que você pode precisar executar é aquela que você espera que nunca aconteça: fazer failover para o datacenter de DR (destino) no caso de uma falha catastrófica no site de produção local.
+
+O failover é um processo iniciado manualmente.
+
+.Etapas para acessar a operação de failover
+. Na navegação à esquerda do BlueXP, selecione *Proteção* > *Recuperação de desastres*.
+. No menu de recuperação de desastres do BlueXP, selecione *Planos de replicação*.
+
+
+.Etapas para executar um failover
+. Na página Planos de replicação, selecione a opção Ações do plano de replicação image:icon-horizontal-dots.png["Pontos horizontais para o menu Ações"] .
+. Selecione *failover*.
++
+image:evs-rp-menu-failover.png["Opção de menu de failover"]
+
+. Se o site de produção (protegido) não estiver acessível, selecione um snapshot criado anteriormente como sua imagem de recuperação. Para isso, selecione *Selecionar*.
+. Selecione o backup a ser usado para a recuperação.
+. (Opcional) Selecione se deseja que a recuperação de desastres do BlueXP force o processo de failover, independentemente do estado do plano de replicação. Isso deve ser feito apenas como último recurso.
+. (Opcional) Selecione se deseja que a recuperação de desastres do BlueXP crie automaticamente um relacionamento de proteção reversa após a recuperação do site de produção.
+. Digite a palavra “Failover” para confirmar que você deseja prosseguir.
+. Selecione *Failover*.
++
+image:evs-rp-failover-dialog.png["Caixa de diálogo de failover"]
+
+
+
+
+
+== Failover de teste
+
+Um failover de teste é semelhante a um failover, exceto por duas diferenças.
+
+* O site de produção ainda está ativo e todas as VMs continuam operando conforme o esperado.
+* A proteção de recuperação de desastres do BlueXP das VMs de produção continua.
+
+
+Isso é feito usando volumes ONTAP FlexClone nativos no site de destino. Para saber mais sobre failover de teste, consulte link:../use/failover.html["Failover de aplicativos para um site remoto | Documentação da NetApp"] .
+
+As etapas para executar um failover de teste são idênticas às usadas para executar um failover real, exceto que você usa a operação Failover de teste no menu de contexto do plano de replicação.
+
+.Passos
+. Selecione a opção Ações do plano de replicação image:icon-horizontal-dots.png["Pontos horizontais para o menu Ações"] .
+. Selecione *Testar failover* no menu.
++
+image:evs-rp-menu-test-failover.png["Opção de menu de failover de teste"]
+
+. Decida se deseja obter o estado mais recente do ambiente de produção (Tirar instantâneo agora) ou usar um backup de plano de replicação criado anteriormente (Selecionar)
+. Se você escolheu um backup criado anteriormente, selecione o backup a ser usado para a recuperação.
+. Digite a palavra “Test failover” para confirmar que você deseja prosseguir.
+. Selecione *failover de teste*.
++
+image:evs-test-failover-dialog.png["Caixa de diálogo de failover de teste"]
+
+
+
+
+
+== Execute uma verificação de conformidade
+
+As verificações de conformidade são executadas a cada três horas, por padrão. A qualquer momento, você pode querer executar uma verificação de conformidade manualmente.
+
+.Passos
+. Selecione a opção *Ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "] ao lado do plano de replicação.
+. Selecione a opção *Executar verificação de conformidade* no menu Ações do plano de replicação:
++
+image:evs-rp-menu-compliance-check.png["Opção de menu Executar verificação de conformidade"]
+
+. Para alterar a frequência com que a recuperação de desastres do BlueXP executa verificações de conformidade automaticamente, selecione a opção *Editar agendamentos* no menu Ações do plano de replicação.
+
+
+
+
+== Atualizar recursos
+
+Sempre que você fizer alterações na sua infraestrutura virtual — como adicionar ou excluir VMs, adicionar ou excluir datastores ou mover VMs entre datastores — será necessário atualizar os clusters do vCenter afetados no serviço de recuperação de desastres BlueXP. O serviço faz isso automaticamente a cada 24 horas por padrão, mas uma atualização manual garante que as informações mais recentes da infraestrutura virtual estejam disponíveis e sejam levadas em consideração para a proteção contra desastres.
+
+Há dois casos em que uma atualização é necessária:
+
+* Atualização do vCenter: execute uma atualização do vCenter sempre que VMs forem adicionadas, excluídas ou movidas para fora de um cluster do vCenter:
+* Atualização do plano de replicação: execute uma atualização do plano de replicação sempre que uma VM for movida entre armazenamentos de dados no mesmo cluster vCenter de origem.
+
+
+image::evs-rp-menu-refresh-resources.png[Opção de menu Atualizar recursos]
+
+
+
+== Migrar
+
+Embora a recuperação de desastres BlueXP seja usada principalmente para casos de recuperação de desastres, ela também pode permitir a movimentação única de um conjunto de VMs do site de origem para o site de destino. Isso pode ser para uma migração coordenada para um projeto na nuvem ou para evitar desastres, como mau tempo, conflitos políticos ou outros potenciais eventos catastróficos temporários.
+
+. Selecione a opção *Ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "] ao lado do plano de replicação.
+. Para mover as VMs em um plano de replicação para o cluster Amazon EVS de destino, selecione *Migrar* no menu Ações do plano de replicação:
++
+image::evs-rp-menu-migrate.png[Opção de menu Migrar]
+
+. Insira informações na caixa de diálogo Migrar.
+
+
+
+
+== Tire uma foto agora
+
+A qualquer momento, você pode tirar um snapshot imediato do plano de replicação. Esse snapshot está incluído nas considerações de recuperação de desastres do BlueXP definidas pela contagem de retenção de snapshots do plano de replicação.
+
+. Selecione a opção *Ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "] ao lado do plano de replicação.
+. Para tirar um instantâneo imediato dos recursos do plano de replicação, selecione *Tirar instantâneo agora* no menu Ações do plano de replicação:
++
+image::evs-rp-menu-take-snapshot-now.png[Opção de menu Tirar instantâneo agora]
+
+
+
+
+
+== Desabilitar ou habilitar o plano de replicação
+
+Pode ser necessário interromper temporariamente o plano de replicação para realizar alguma operação ou manutenção que possa impactar o processo de replicação. O serviço fornece um método para interromper e iniciar a replicação.
+
+. Para interromper temporariamente a replicação, selecione *Desativar* no menu Ações do plano de replicação.
+. Para reiniciar a replicação, selecione *Ativar* no menu Ações do plano de replicação.
++
+Quando o plano de replicação está ativo, o comando *Ativar* fica indisponível. Quando o plano de replicação está desativado, o comando *Desativar* fica indisponível.
+
++
+image::evs-rp-menu-disable-enable.png[Desativar/ativar opção de menu]
+
+
+
+
+
+== Limpe os instantâneos antigos
+
+Talvez seja necessário limpar snapshots mais antigos que foram retidos nos sites de origem e destino. Isso pode acontecer se a contagem de retenção de snapshots do plano de replicação for alterada.
+
+. Selecione a opção *Ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "] ao lado do plano de replicação.
+. Para remover esses instantâneos mais antigos manualmente, selecione *Limpar instantâneos antigos* no menu Ações do plano de replicação.
++
+image::evs-rp-menu-cleanup-old-snapshots.png[Opção de menu Limpar instantâneos antigos]
+
+
+
+
+
+== Reconciliar instantâneos
+
+Como o serviço orquestra snapshots de volumes ONTAP, é possível que um administrador de armazenamento ONTAP exclua snapshots diretamente usando o Gerenciador de Sistemas ONTAP, a CLI do ONTAP ou as APIs REST do ONTAP sem o conhecimento do serviço. O serviço exclui automaticamente quaisquer snapshots na origem que não estejam no cluster de destino a cada 24 horas. No entanto, você pode executar isso sob demanda. Esse recurso permite que você garanta que os snapshots sejam consistentes em todos os sites.
+
+. Selecione a opção *Ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "] ao lado do plano de replicação.
+. Para excluir instantâneos do cluster de origem que não existem no cluster de destino, selecione *Reconciliar instantâneos* no menu Ações do plano de replicação.
++
+image::evs-rp-menu-reconcile-snapshots.png[Opção de menu Reconciliar instantâneos]
+
+
+
+
+
+== Excluir plano de replicação
+
+Se o plano de replicação não for mais necessário, você poderá excluí-lo.
+
+. Selecione a opção *Ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "] ao lado do plano de replicação.
+. Para excluir o plano de replicação, selecione *Excluir* no menu de contexto do plano de replicação.
++
+image::evs-rp-menu-delete.png[Excluir opção de menu]
+
+
+
+
+
+== Editar programações
+
+Duas operações são executadas automaticamente em um cronograma regular: failovers de teste e verificações de conformidade.
+
+. Selecione a opção *Ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "] ao lado do plano de replicação.
+. Para alterar esses agendamentos para qualquer uma dessas duas operações, selecione *Editar agendamentos* para o plano de replicação.
++
+image::evs-rp-menu-edit-schedules.png[Opção de menu Editar agendamentos]
+
+
+
+
+
+=== Alterar intervalo de verificação de conformidade
+
+Por padrão, as verificações de conformidade são realizadas a cada três horas. Você pode alterar esse intervalo para qualquer intervalo entre 30 minutos e 24 horas.
+
+Para alterar esse intervalo, altere o campo Frequência na caixa de diálogo Editar agendamentos:
+
+image::evs-rp-edit-compliance-check-schedule.png[Cronograma de verificação de conformidade]
+
+
+
+=== Agendar failovers de testes automatizados
+
+Os failovers de teste são executados manualmente por padrão. Você pode agendar failovers de teste automáticos, o que ajuda a garantir que seus planos de replicação funcionem conforme o esperado. Para saber mais sobre o processo de failover de teste, consulte link:../use/failover.html["Teste o processo de failover"] .
+
+.Etapas para agendar failovers de teste
+. Selecione a opção *Ações* image:../use/icon-horizontal-dots.png["Ícone do menu ações no serviço de recuperação de desastres do BlueXP "] ao lado do plano de replicação.
+. Selecione *Executar failover*.
+. Marque a caixa de seleção *Executar failovers de teste conforme uma programação*.
+. (Opcional) Marque *Usar instantâneo sob demanda para failover de teste agendado*.
+. Selecione um tipo de intervalo no menu suspenso Repetir.
+. Selecione quando executar o failover de teste
++
+.. Semanal: selecione o dia da semana
+.. Mensal: selecione o dia do mês
+
+
+. Escolha a hora do dia para executar o teste de failover
+. Escolha a data de início.
+. Decida se você deseja que o serviço limpe automaticamente o ambiente de teste e por quanto tempo você gostaria que o ambiente de teste fosse executado antes que o processo de limpeza começasse.
+. Selecione *Guardar*.
++
+image::evs-rp-edit-schedule-test-failover.png[Editar failover de teste de agendamento]
+
+
