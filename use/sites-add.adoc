@@ -4,7 +4,7 @@ permalink: use/sites-add.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
 summary: Antes de criar um plano de recuperação de desastres, é necessário adicionar um site do vCenter primário e um local de recuperação de desastres do vCenter de destino na recuperação de desastres do BlueXP . 
 ---
-= Adicione vCenters a um site
+= Adicionar vCenters a um site na recuperação de desastres do BlueXP
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -13,6 +13,9 @@ summary: Antes de criar um plano de recuperação de desastres, é necessário a
 
 [role="lead"]
 Antes de criar um plano de recuperação de desastres, é necessário adicionar um servidor vCenter primário a um site e um site de recuperação de desastres do vCenter de destino no BlueXP .
+
+
+TIP: Certifique-se de que os vCenters de origem e de destino usem o mesmo BlueXP Connector.
 
 Depois que os vCenters forem adicionados, a recuperação de desastres do BlueXP  realiza uma descoberta profunda dos ambientes do vCenter, incluindo clusters do vCenter, hosts ESXi, datastores, impressão de pé de armazenamento, detalhes da máquina virtual, réplicas do SnapMirror e redes de máquinas virtuais.
 
@@ -139,6 +142,12 @@ TIP: A notação CIDR é um método para especificar endereços IP e suas másca
 === Selecione o mapeamento de sub-rede para um plano de replicação
 
 Ao criar um plano de replicação, pode selecionar o mapeamento de sub-rede para o plano de replicação.
+
+O uso do mapeamento de sub-rede é um processo opcional de duas etapas:
+
+* Primeiro, adicione o mapeamento de sub-rede para cada site do vCenter.
+* Em segundo lugar, no plano de replicação, indique que pretende utilizar o mapeamento de sub-rede.
+
 
 .Passos
 . No menu superior da recuperação de desastres do BlueXP , selecione *planos de replicação*.

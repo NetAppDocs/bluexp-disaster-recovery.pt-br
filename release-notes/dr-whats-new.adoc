@@ -16,6 +16,22 @@ Saiba o que há de novo na recuperação de desastres do BlueXP .
 
 
 
+== 9 de junho de 2025
+
+Versão 4.2.4
+
+
+
+=== Suporte à solução de senha do administrador local do Windows (LAPS)
+
+O Windows Local Administrator Password Solution (Windows LAPS) é um recurso do Windows que gerencia e faz backup automaticamente da senha de uma conta de administrador local no Active Directory.
+
+Agora você pode selecionar opções de mapeamento de sub-rede e marcar a opção LAPS fornecendo os detalhes do controlador de domínio. Com esta opção, você não precisa fornecer uma senha para cada uma das suas máquinas virtuais.
+
+Para obter detalhes, https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["Crie um plano de replicação"] consulte .
+
+
+
 == 13 de maio de 2025
 
 Versão 4.2.3

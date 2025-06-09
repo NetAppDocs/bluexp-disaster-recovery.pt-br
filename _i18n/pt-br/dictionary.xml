@@ -14,7 +14,6 @@
   <block id="bc483ba843f73e5d609495aa94d035b9" category="paragraph">O BlueXP  Disaster Recovery é um serviço de recuperação de desastres baseado na nuvem que automatiza os workflows de recuperação de desastres. Com o serviço de recuperação de desastres da BlueXP , você pode proteger seus workloads locais baseados em NFS e armazenamentos de dados do sistema de arquivos de máquina virtual (VMFS) do VMware vSphere para iSCSI e FC executando storage NetApp em um dos seguintes casos:</block>
   <block id="6f5e3fdfa73285ac2283ba492cf2d47b" category="list-text">VMware Cloud (VMC) na AWS com o Amazon FSX for NetApp ONTAP ou</block>
   <block id="b374472b15e644f23d1e6b059b5216b9" category="list-text">Outro ambiente VMware no local, baseado em NFS, com storage ONTAP</block>
-  <block id="d5368fed025a9875e8a424b419508bef" category="admonition">Com essa versão, a recuperação de desastres é suportada em uma prévia de tecnologia para cargas de trabalho VMware locais para ambientes VMware locais com armazenamentos de dados do VMware vSphere Virtual Machine File System (VMFS). A NetApp não cobra por nenhuma capacidade de workload visualizada.</block>
   <block id="fbec25bffbcdefa11c9ca28adb0b824c" category="paragraph">A recuperação de desastres da BlueXP  usa a tecnologia ONTAP SnapMirror como o transporte de replicação para o local de recuperação de desastres. Isso possibilita a melhor eficiência de storage do setor (compactação e deduplicação) em locais primários e secundários.</block>
   <block id="a3c972b2a97e85a689b9fc36b1658dcf" category="inline-image-macro">Diagrama mostrando os componentes da recuperação de desastres do BlueXP  para VMware</block>
   <block id="53c1c0c22e2a647591a0b52427852850" category="paragraph"><block ref="53c1c0c22e2a647591a0b52427852850" category="inline-image-macro-rx" type="image"></block></block>
@@ -576,7 +575,6 @@
   <block id="210dfd955522333f74e13d0843ab02ff" category="paragraph">Esta secção pode estar ativada ou desativada dependendo da sua seleção.</block>
   <block id="13f51fa84ff64a1c633957d1dcf01637" category="paragraph">Isso pode ser muito útil ao recuperar ambientes grandes para clusters de destino menores ou para realizar testes de recuperação de desastres sem precisar provisionar uma infraestrutura VMware física um-para-um.</block>
   <block id="27469d5f3bff97989e2a320de315084a" category="inline-image-macro">Captura de ecrã mostrando Adicionar plano de replicação &amp;gt; Mapeamento de recursos &amp;gt; máquinas virtuais</block>
-  <block id="c28e8a3b83f3f2cce376fe3daa7ad95d" category="paragraph"><block ref="64eb1ec301597178e47fa7deed0121dc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*Contagem de retenção*: Insira o número de instantâneos que deseja reter.</block>
   <block id="30cb4638cdd1e514eba27473e745afb4" category="paragraph">Na guia Mapeamentos de teste, os mapeamentos de máquinas virtuais e armazenamentos de dados são desativados.</block>
   <block id="0516742190fe9dfeaffe988ba6abe786" category="admonition">Você pode testar mais tarde todo o plano. Neste momento, você está configurando os mapeamentos para o ambiente de teste.</block>
@@ -602,7 +600,6 @@
   <block id="20ace5d6661ce95df08950b97c500ddc" category="admonition">Esse processo desRegistra as VMs temporárias do local de teste, exclui o volume FlexClone que foi criado e desmonta os datastores temporários.</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">Selecione *Guardar*.</block>
   <block id="39229a488a735eac754ba7939d38eb84" category="summary">A recuperação de desastres do NetApp BlueXP  é um serviço de recuperação de desastres baseado na nuvem que automatiza os workflows de recuperação de desastres.</block>
-  <block id="4e76033871d8eb52e7a46330cc531bd8" category="doc">Falha de aplicativos para a fonte original</block>
   <block id="95c065ae2a71de38942ceb973d97399b" category="paragraph">Nesse fluxo de trabalho, a recuperação de desastres do BlueXP  replica (ressincrones) quaisquer alterações de volta à máquina virtual de origem original antes de reverter a direção de replicação. Este processo começa a partir de um relacionamento que concluiu o failover para um alvo e envolve as seguintes etapas:</block>
   <block id="c6e71b0dcb6847124e49e97ed111f902" category="list-text">No site de destino, as máquinas virtuais são desligadas e não registradas, e os volumes são desmontados.</block>
   <block id="187b70ae9883d244642e7af4f1b374c6" category="list-text">O relacionamento SnapMirror na fonte original é quebrado para fazê-lo ler/escrever.</block>
@@ -639,8 +636,6 @@
   <block id="544bb990c26b075198ab3593eb235cab" category="list-text">Digite "failover" na caixa.</block>
   <block id="d3c41fabd7d85897eb0f306101f87e33" category="list-text">Selecione *failover*.</block>
   <block id="9aaabae265e2785e58b6618d73b8e267" category="summary">Você pode obter uma visão geral rápida de todos os seus recursos de recuperação de desastres do BlueXP  e gerenciar vCenter Sites, grupos de recursos e planos de replicação.</block>
-  <block id="592189bb19e09b41686c42842ae7f60a" category="doc">Gerencie sites, grupos de recursos, planos de replicação, armazenamentos de dados e informações de máquinas virtuais</block>
-  <block id="ceeed92bd86d67dc2a2a6016ed40a571" category="paragraph">Você pode ver rapidamente todos os seus recursos de recuperação de desastres ou ver cada um deles em detalhes:</block>
   <block id="3faa64303d5f5bcd043bb88f6768e603" category="list-text">Locais</block>
   <block id="769b718779fbe38c65b122b69e0271a3" category="list-text">Grupos de recursos</block>
   <block id="a8fc43ecd23ee9eb5e9efa5c60cb20b9" category="list-text">Planos de replicação</block>
@@ -687,12 +682,10 @@
   <block id="3849da8702f93c4c73b8b2d18d7d3b4d" category="list-text">Selecione *máquinas virtuais*.</block>
   <block id="2e91c6382e139b4d3b0307917725df9c" category="list-text">Veja as informações das máquinas virtuais.</block>
   <block id="6bc8dd7bb67f1165364943cf065cadcf" category="summary">Usando a recuperação de desastres do BlueXP , você pode migrar aplicativos VMware no site de origem para outro site.</block>
-  <block id="37fca13c16336a96bde58435050fff09" category="doc">Migrar aplicativos para outro site</block>
   <block id="ef5012739ecaf46323c1ba893541dc15" category="admonition">Depois de criar o plano de replicação, identificar a recorrência no assistente e iniciar a migração, a cada 30 minutos a recuperação de desastres do BlueXP  verifica se a migração está realmente ocorrendo de acordo com o plano. Pode monitorizar o progresso na página Monitor de trabalhos.</block>
   <block id="c7e296ab461bd699a5d9cbf0801b389c" category="paragraph">Antes de iniciar a migração, você deve ter criado um plano de replicação e selecionado para migrar os aplicativos. Em seguida, a opção *Migrate* aparece no menu ações.</block>
   <block id="4b832a5ef0d288f92d7b413054dc905f" category="list-text">À direita, selecione a opção *ações* <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>e selecione *migrar*.</block>
   <block id="a1d594c41e91785ad3637cf3bff4ade5" category="summary">A recuperação de desastres do NetApp BlueXP  é um serviço de recuperação de desastres baseado na nuvem que automatiza os workflows de recuperação de desastres. Você pode monitorar todos os trabalhos de recuperação de desastres e determinar seu progresso.</block>
-  <block id="239ed7a0645094a000a5d286f3b2ccf2" category="paragraph">Você pode monitorar todos os trabalhos de recuperação de desastres e determinar seu progresso.</block>
   <block id="957efce312dc74d9f2981b256c11180c" category="list-text">No menu superior, selecione *monitorização de trabalhos*.</block>
   <block id="a658e38fe05c1b71ade8529d73e083db" category="list-text">Explore todos os trabalhos relacionados com operações e reveja os respetivos carimbos de data/hora e estado.</block>
   <block id="a2628e207373ba02728e8a48a677eca6" category="list-text">Para ver detalhes de um determinado trabalho, selecione essa linha.</block>
@@ -809,7 +802,6 @@
   <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">Selecione *Eliminar*.</block>
   <block id="835e92deb53775d3ce75f1bab2ff7fe5" category="list-text">Com o plano de replicação selecionado, selecione o menu ações, selecione *Limpar instantâneos antigos" para remover instantâneos antigos no destino para corresponder à nova contagem de retenção.</block>
   <block id="4fcb591c27b70823ff71112c0db6af4f" category="summary">A revisão dos relatórios de recuperação de desastres pode ajudá-lo a analisar sua preparação para recuperação de desastres. Os relatórios pré-projetados incluem um resumo de failovers e failbacks, detalhes de replicação em todos os locais e detalhes da tarefa do ano passado.</block>
-  <block id="8c909df77f7b5e2e6b77ff66ee6bd3e7" category="paragraph">A revisão dos relatórios de recuperação de desastres pode ajudá-lo a analisar sua preparação para recuperação de desastres. Os relatórios pré-projetados incluem um resumo de failovers de teste, detalhes do plano de replicação e detalhes da tarefa em todos os sites de uma conta nos últimos sete dias.</block>
   <block id="cd463f7ca5dbc8268a82ea8d8f5e4281" category="paragraph">O link Download é válido por seis horas.</block>
   <block id="5e521694fac83ef0acfcb6f722d2b3cf" category="list-text">No navegador esquerdo do BlueXP , selecione *proteção* &gt; *recuperação de desastres* &gt; *planos de replicação*.</block>
   <block id="40f8ac7caaab02ab3b9834517b54c7a4" category="list-text">Na parte superior da página, selecione *criar relatório*.</block>
@@ -982,7 +974,6 @@
   <block id="e2a36029181f04d6208811edf66b0c62" category="paragraph"><block ref="039fd09b60dad6f86188402eac2ef738" category="inline-link-rx"></block>.</block>
   <block id="5d3579189b9441a8b42010228d169cbc" category="inline-link">Saiba mais sobre como atualizar licenças com carteira digital</block>
   <block id="597c7a7ee6e647859f8aa98b20be3cb0" category="paragraph"><block ref="1180f9bbf40cd0c05f379b347ef1d8f9" category="inline-link-rx"></block>.</block>
-  <block id="4f65b71af0098f41a96bfdb343f2f325" category="doc">Crie um grupo de recursos para organizar as VMs em conjunto</block>
   <block id="142aa3cf2c56c4cee9658fbb7fa95634" category="paragraph">Você pode criar grupos de recursos usando os seguintes métodos:</block>
   <block id="ad2f31d93207199cb75dd53824344fab" category="list-text">Na guia grupos de recursos</block>
   <block id="ae21aa75d137aec3ba200318a51f9166" category="paragraph-title">Sobre grupos de recursos</block>
@@ -1189,4 +1180,33 @@
   <block id="e7be7bda88531d046e21401efd5bd9d5" category="paragraph">A página Configurar sub-rede é exibida:</block>
   <block id="aaaeb2ea35c55b4a37b25b328a34587c" category="paragraph"><block ref="aaaeb2ea35c55b4a37b25b328a34587c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="58091bb6c8793ca7ad7178167e36010f" category="admonition">Se houver duas VMs (por exemplo, uma é o Linux e a outra é o Windows), as credenciais são necessárias apenas para o Windows.</block>
+  <block id="97d3a415f1d32e0fd7045cf243744acd" category="doc">Suporte à solução de senha do administrador local do Windows (LAPS)</block>
+  <block id="016381830d7dd927c4b8504121b26175" category="paragraph">O Windows Local Administrator Password Solution (Windows LAPS) é um recurso do Windows que gerencia e faz backup automaticamente da senha de uma conta de administrador local no Active Directory.</block>
+  <block id="33e3d20ad0d71e75d746da0b85431750" category="paragraph">Agora você pode selecionar opções de mapeamento de sub-rede e marcar a opção LAPS fornecendo os detalhes do controlador de domínio. Com esta opção, você não precisa fornecer uma senha para cada uma das suas máquinas virtuais.</block>
+  <block id="6988ffa358e4fb05fdfdb5afcd9633db" category="list-text">Certifique-se de que os vCenters de origem e de destino usem o mesmo BlueXP Connector.</block>
+  <block id="45d6a7a8d814b0580c86b35537ead34e" category="doc">Limitações na recuperação de desastres do BlueXP</block>
+  <block id="f27f1ce6df3e2ec2518f77e8e1a4a531" category="section-title">9 de junho de 2025</block>
+  <block id="a5b3547213084a11aef815f04f636f42" category="paragraph">Versão 4.2.4</block>
+  <block id="ae028f4b0907152c734ed4a90acbc64b" category="doc">Veja a integridade dos seus planos de recuperação de desastres BlueXP no Painel</block>
+  <block id="8d653efc41b18c9a1268d3e4be0f15ca" category="doc">Crie um plano de replicação na recuperação de desastres do BlueXP</block>
+  <block id="1883274b7afbbc2357cb15c15a1af17e" category="paragraph"><block ref="a690938170d1fae8a1d7e7ed3a6d014f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="779cca7c4cefbaa596e10329a5e7344b" category="list-text">No campo *IP de destino*, selecione uma das seguintes opções:</block>
+  <block id="43c3d8ca0ff82c763dd8ba2587262ce7" category="list-text">*Igual à fonte*</block>
+  <block id="c0906c265f059cdd05a640cb10c05397" category="list-text">*Diferente da fonte*</block>
+  <block id="c93cc22297f7869a2923cf4a568e3431" category="list-text">*Mapeamento de sub-rede*: Selecione esta opção se desejar mapear a sub-rede de origem para uma sub-rede de destino diferente. Você pode selecionar a sub-rede de origem e, em seguida, a sub-rede de destino. Isso é útil quando você deseja alterar o endereço IP da VM no ambiente de destino.</block>
+  <block id="9cdd5ce4f7751ec05ecae73c3e3d5959" category="admonition">O uso do mapeamento de sub-rede é um processo opcional de duas etapas: primeiro, adicione o mapeamento de sub-rede para cada site do vCenter na guia Sites. Em segundo lugar, no plano de replicação, indique que pretende utilizar o mapeamento de sub-rede.</block>
+  <block id="6262500729b6f197aa6e4ad6b2b8e85e" category="list-text">*Usar Windows LAPS*: Se você estiver usando a Solução de Senha de Administrador Local do Windows (Windows LAPS), marque esta caixa. Esta opção só estará disponível se você tiver selecionado a opção *IP Estático*. Ao marcar esta caixa, você não precisa fornecer uma senha para cada uma das suas máquinas virtuais. Em vez disso, você fornece os detalhes do controlador de domínio.</block>
+  <block id="4fd3e179011cd215b45b25dbfb0cc8d2" category="paragraph">Se você não usa o Windows LAPS, a VM é uma VM Windows e a opção de credenciais na linha VM está habilitada. Você pode fornecer as credenciais para a VM.</block>
+  <block id="cf09d6f8881c452b09554e4e9dbc997e" category="doc">Faça failback de aplicativos para a fonte original com a recuperação de desastres BlueXP</block>
+  <block id="23a9c843e7c84f7ba86dd5a99ee43340" category="doc">Faça failover de aplicativos para um site remoto com recuperação de desastres BlueXP</block>
+  <block id="2be6295929f0fec41d6014ed55de0fcb" category="doc">Gerencie sites, grupos de recursos, planos de replicação, armazenamentos de dados e informações de máquinas virtuais com a recuperação de desastres do BlueXP</block>
+  <block id="b88f2b61385be4d7b80c6f9deb44ef99" category="paragraph">Você pode dar uma olhada rápida em todos os seus recursos de recuperação de desastres do BlueXP ou analisar cada um deles em detalhes:</block>
+  <block id="e823ac96d622a36a3befb2adaf78dfc7" category="doc">Migrar aplicativos para outro site com a recuperação de desastres BlueXP</block>
+  <block id="06db0057955b153079b2224fe8fe3fca" category="doc">Monitorar tarefas de recuperação de desastres do BlueXP</block>
+  <block id="33364d8b01ea631f73ab5e07dbec17bc" category="paragraph">Você pode monitorar todos os trabalhos de recuperação de desastres do BlueXP e determinar seu progresso.</block>
+  <block id="4c37c0f8ebfaa6ad002a3b8027540686" category="doc">Replique aplicativos para outro site com a recuperação de desastres do BlueXP</block>
+  <block id="8402259962b0173d9712a8c8e6d195dd" category="doc">Crie relatórios de recuperação de desastres do BlueXP</block>
+  <block id="b12e5762638e8dca606f02345a47867a" category="paragraph">Analisar os relatórios de recuperação de desastres do BlueXP pode ajudar você a analisar sua preparação para recuperação de desastres. Os relatórios pré-projetados incluem um resumo de failovers de teste, detalhes do plano de replicação e detalhes da tarefa em todos os sites de uma conta nos últimos sete dias.</block>
+  <block id="b3d496fccdf5d0b52dd71622cd01ca4c" category="doc">Crie um grupo de recursos para organizar VMs juntas na recuperação de desastres do BlueXP</block>
+  <block id="4931eee83a268b667e0c868104ec1e32" category="doc">Adicionar vCenters a um site na recuperação de desastres do BlueXP</block>
 </blocks>

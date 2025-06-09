@@ -4,7 +4,7 @@ permalink: use/monitor-jobs.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, monitor, bluexp 
 summary: A recuperação de desastres do NetApp BlueXP  é um serviço de recuperação de desastres baseado na nuvem que automatiza os workflows de recuperação de desastres. Você pode monitorar todos os trabalhos de recuperação de desastres e determinar seu progresso. 
 ---
-= Monitorar trabalhos de recuperação de desastres
+= Monitorar tarefas de recuperação de desastres do BlueXP
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: A recuperação de desastres do NetApp BlueXP  é um serviço de recup
 
 
 [role="lead"]
-Você pode monitorar todos os trabalhos de recuperação de desastres e determinar seu progresso.
+Você pode monitorar todos os trabalhos de recuperação de desastres do BlueXP e determinar seu progresso.
 
 .Passos
 . No sistema de navegação esquerdo do BlueXP , selecione *proteção* > *recuperação de desastres*.
