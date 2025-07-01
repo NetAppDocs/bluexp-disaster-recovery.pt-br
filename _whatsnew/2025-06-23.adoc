@@ -1,0 +1,9 @@
+= Melhorias no mapeamento de sub-redes
+:allow-uri-read: 
+
+
+
+
+=== Melhorias no mapeamento de sub-redes
+
+Esta atualização aprimora a caixa de diálogo Adicionar e Editar Mapeamento de Sub-redes com uma nova funcionalidade de pesquisa. Agora você pode encontrar sub-redes específicas rapidamente inserindo termos de pesquisa, facilitando o gerenciamento de mapeamentos de sub-redes.

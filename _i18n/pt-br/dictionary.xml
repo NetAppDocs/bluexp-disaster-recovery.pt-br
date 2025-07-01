@@ -1638,4 +1638,12 @@
   <block id="3a83143b77a0b90d82bf03cbf43e4443" category="sidebar">Crie um plano de replicação Etapa 4 para o Amazon EVS</block>
   <block id="5a72de72f8b0ba4525e25ce937621889" category="sidebar">Verifique o plano de replicação do Amazon EVS</block>
   <block id="f260d0f12b515f0ab789c0349e49a0fc" category="sidebar">Executar operações do plano de replicação</block>
+  <block id="a1e044c84ca270d3adc998b256510801" category="doc">Melhorias no mapeamento de sub-redes</block>
+  <block id="494053c615ca0aa0debeb6eac90b3e5a" category="paragraph">Esta atualização aprimora a caixa de diálogo Adicionar e Editar Mapeamento de Sub-redes com uma nova funcionalidade de pesquisa. Agora você pode encontrar sub-redes específicas rapidamente inserindo termos de pesquisa, facilitando o gerenciamento de mapeamentos de sub-redes.</block>
+  <block id="dc729c135725ed28b09cd35258e2a28d" category="doc">Melhorias na descoberta</block>
+  <block id="778d15d21e8eaffc6a6c8069d8fa5872" category="paragraph">Esta atualização melhora o processo de descoberta, o que reduz o tempo necessário para a descoberta.</block>
+  <block id="b77e8ec0a3425747f32b3dbc303adecb" category="section-title">30 de junho de 2025</block>
+  <block id="f5939a7e3fd75d2d5422c1d6029f44c8" category="paragraph">Versão 4.2.4P2</block>
+  <block id="1d498761d9b5afe7d166fb15809b8000" category="section-title">23 de junho de 2025</block>
+  <block id="c114a433f08237cc585990ed9e9e88d5" category="paragraph">Versão 4.2.4P1</block>
 </blocks>

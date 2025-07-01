@@ -16,6 +16,30 @@ Saiba o que há de novo na recuperação de desastres do BlueXP .
 
 
 
+== 30 de junho de 2025
+
+Versão 4.2.4P2
+
+
+
+=== Melhorias na descoberta
+
+Esta atualização melhora o processo de descoberta, o que reduz o tempo necessário para a descoberta.
+
+
+
+== 23 de junho de 2025
+
+Versão 4.2.4P1
+
+
+
+=== Melhorias no mapeamento de sub-redes
+
+Esta atualização aprimora a caixa de diálogo Adicionar e Editar Mapeamento de Sub-redes com uma nova funcionalidade de pesquisa. Agora você pode encontrar sub-redes específicas rapidamente inserindo termos de pesquisa, facilitando o gerenciamento de mapeamentos de sub-redes.
+
+
+
 == 9 de junho de 2025
 
 Versão 4.2.4
