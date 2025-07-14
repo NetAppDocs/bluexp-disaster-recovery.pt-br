@@ -14,6 +14,10 @@ summary: A recuperação de desastres do NetApp BlueXP  é um serviço de recup
 [role="lead"]
 Depois de adicionar o vCenter Sites, talvez você queira criar grupos de recursos que agrupam as VMs por VMs ou armazenamentos de dados. Os grupos de recursos permitem organizar um conjunto de VMs dependentes em grupos lógicos que atendem aos seus requisitos. Por exemplo, você pode agrupar VMs associadas a uma aplicação ou agrupar aplicações com níveis semelhantes. Como outro exemplo, grupos podem conter ordens de inicialização atrasadas que podem ser executadas após a recuperação.
 
+*Função BlueXP necessária* Administrador da organização, administrador de pasta ou projeto, administrador de recuperação de desastres ou administrador de aplicativo de recuperação de desastres.
+
+link:../reference/dr-reference-roles.html["Saiba mais sobre funções e permissões de usuário na BlueXP disaster recovery"]. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre as funções de acesso do BlueXP para todos os serviços"^].
+
 Você pode agrupar as VMs ou VMs em datastores.
 
 Você pode criar grupos de recursos usando os seguintes métodos:

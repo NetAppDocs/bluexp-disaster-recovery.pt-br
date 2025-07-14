@@ -16,6 +16,8 @@ Você usa o NetApp BlueXP  para fazer login no serviço de recuperação de des
 
 Para fazer login no BlueXP , você pode usar as credenciais do site de suporte da NetApp ou se inscrever para fazer login na nuvem do NetApp usando seu e-mail e uma senha. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Saiba mais sobre como fazer login"^].
 
+Tarefas específicas exigem funções específicas do usuário do BlueXP . link:../reference/dr-reference-roles.html["Saiba mais sobre funções e permissões de usuário na BlueXP disaster recovery"]. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre as funções de acesso do BlueXP para todos os serviços"^].
+
 .Passos
 . Abra um navegador da Web e vá para o https://console.bluexp.netapp.com/["Consola BlueXP "^].
 +

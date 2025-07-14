@@ -21,11 +21,17 @@ Você pode dar uma olhada rápida em todos os seus recursos de recuperação de 
 * Máquinas virtuais
 
 
+As tarefas exigem funções BlueXP diferentes. Para mais detalhes, consulte a seção *Função BlueXP necessária* em cada tarefa.
+
+link:../reference/dr-reference-roles.html["Saiba mais sobre funções e permissões de usuário na BlueXP disaster recovery"]. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre as funções de acesso do BlueXP para todos os serviços"^].
+
 
 
 == Gerenciar o vCenter Sites
 
 Você pode editar o nome do site do vCenter e o tipo de site (no local ou AWS).
+
+*Função necessária do BlueXP * Administrador da organização, administrador de pasta ou projeto ou administrador de recuperação de desastres.
 
 .Passos
 . No menu superior, selecione *Sites*.
@@ -38,6 +44,8 @@ Você pode editar o nome do site do vCenter e o tipo de site (no local ou AWS).
 == Gerenciar grupos de recursos
 
 Embora seja possível adicionar um grupo de recursos como parte da criação de um plano de replicação, talvez seja mais conveniente adicionar os grupos separadamente e, posteriormente, usar esses grupos no plano. Você cria grupos de recursos por VMs ou armazenamentos de dados.
+
+*Função BlueXP necessária* Administrador da organização, administrador de pasta ou projeto, administrador de recuperação de desastres ou administrador de aplicativo de recuperação de desastres.
 
 Você pode criar um grupo de recursos por datastores das seguintes maneiras:
 
@@ -58,6 +66,8 @@ Você também pode editar e excluir grupos de recursos.
 == Gerenciar planos de replicação
 
 Pode desativar, ativar e eliminar planos de replicação. Você pode alterar horários.
+
+*Função BlueXP necessária* Administrador da organização, administrador de pasta ou projeto, administrador de recuperação de desastres, administrador de failover de recuperação de desastres ou administrador de aplicativo de recuperação de desastres.
 
 * Se você quiser pausar um plano de replicação temporariamente, você pode desativá-lo e ativá-lo posteriormente.
 * Se você não precisar mais do plano, você pode excluí-lo.
@@ -94,6 +104,8 @@ image:../use/dr-plan-list2.png["Lista de planos de replicação"]
 
 É possível reconciliar instantâneos que estão fora de sincronia entre a origem e o destino. Isso pode ocorrer se os snapshots forem excluídos em um destino fora da recuperação de desastres do BlueXP . O serviço exclui automaticamente o instantâneo na origem a cada 24 horas. No entanto, você pode executar isso sob demanda. Esse recurso permite que você garanta que os snapshots sejam consistentes em todos os sites.
 
+*Função BlueXP necessária* Administrador da organização, administrador de pasta ou projeto, administrador de recuperação de desastres, administrador de failover de recuperação de desastres ou administrador de aplicativo de recuperação de desastres.
+
 .Passos
 . No menu superior, selecione *planos de replicação*.
 +
@@ -109,6 +121,8 @@ image:../use/dr-plan-list2.png["Lista de planos de replicação"]
 === Eliminar um plano de replicação
 
 Você pode excluir um plano de replicação se não precisar mais dele. Se você excluir um plano de replicação, também poderá excluir os snapshots primários e secundários criados pelo plano.
+
+*Função BlueXP necessária* Administrador da organização, administrador de pasta ou projeto, administrador de recuperação de desastres, administrador de failover de recuperação de desastres ou administrador de aplicativo de recuperação de desastres.
 
 .Passos
 . No menu superior, selecione *planos de replicação*.
@@ -127,6 +141,9 @@ image:../use/dr-plan-list2.png["Lista de planos de replicação"]
 
 Você pode alterar quantos datastores são retidos.
 
+*Função BlueXP necessária* Administrador da organização, administrador de pasta ou projeto, administrador de recuperação de desastres, administrador de failover de recuperação de desastres ou administrador de aplicativo de recuperação de desastres.
+
+.Passos
 . No menu superior, selecione *planos de replicação*.
 . Selecione o plano de replicação, clique na guia *Mapeamento de failover* e clique no ícone de lápis *Editar*.
 . Clique na seta *datastores* para expandi-la.
@@ -143,6 +160,9 @@ image:../use/dr-plan-failover-edit.png["Editar mapeamentos de failover página"]
 
 Você pode ver informações sobre quantos datastores existem na origem e no destino.
 
+*Função BlueXP necessária* Administrador da organização, administrador de pasta ou projeto, administrador de recuperação de desastres, administrador de failover de recuperação de desastres, administrador de aplicativo de recuperação de desastres ou função de visualizador de recuperação de desastres.
+
+.Passos
 . No menu superior, selecione *Painel*.
 . Selecione o vCenter na linha do site.
 . Selecione *datastores*.
@@ -155,6 +175,9 @@ Você pode ver informações sobre quantos datastores existem na origem e no des
 
 Você pode ver informações sobre quantas máquinas virtuais existem na origem e no destino, juntamente com CPU, memória e capacidade disponível.
 
+*Função BlueXP necessária* Administrador da organização, administrador de pasta ou projeto, administrador de recuperação de desastres, administrador de failover de recuperação de desastres, administrador de aplicativo de recuperação de desastres ou função de visualizador de recuperação de desastres.
+
+.Passos
 . No menu superior, selecione *Painel*.
 . Selecione o vCenter na linha do site.
 . Selecione *máquinas virtuais*.

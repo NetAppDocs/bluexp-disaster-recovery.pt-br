@@ -19,6 +19,10 @@ TIP: Certifique-se de que os vCenters de origem e de destino usem o mesmo BlueXP
 
 Depois que os vCenters forem adicionados, a recuperação de desastres do BlueXP  realiza uma descoberta profunda dos ambientes do vCenter, incluindo clusters do vCenter, hosts ESXi, datastores, impressão de pé de armazenamento, detalhes da máquina virtual, réplicas do SnapMirror e redes de máquinas virtuais.
 
+*Função BlueXP necessária* Administrador da organização, administrador de pasta ou projeto ou administrador de recuperação de desastres.
+
+link:../reference/dr-reference-roles.html["Saiba mais sobre funções e permissões de usuário na BlueXP disaster recovery"]. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre as funções de acesso do BlueXP para todos os serviços"^].
+
 Se você tiver adicionado vCenters em versões anteriores e quiser personalizar a programação de descoberta, edite o site do servidor vCenter e defina a programação.
 
 

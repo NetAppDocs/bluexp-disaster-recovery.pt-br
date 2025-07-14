@@ -4,6 +4,8 @@ title: Referência
 entries:
 - title: O vCenter Privileges é necessário para a recuperação de desastres do BlueXP 
   url: "/reference/vcenter-privileges.html"
+- title: Funções e privilégios de BlueXP disaster recovery
+  url: "/reference/dr-reference-roles.html"
 - title: Use a recuperação de desastres BlueXP com o Amazon EVS
   entries:
   - title: Visão geral da recuperação de desastres BlueXP com Amazon EVS

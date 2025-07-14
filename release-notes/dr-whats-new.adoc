@@ -16,6 +16,59 @@ Saiba o que há de novo na recuperação de desastres do BlueXP .
 
 
 
+== 14 de julho de 2025
+
+Versão 4.2.5
+
+
+
+=== Funções do usuário na BlueXP disaster recovery
+
+A BlueXP disaster recovery agora emprega funções para controlar o acesso que cada usuário tem a recursos e ações específicos.
+
+O serviço usa as seguintes funções específicas para BlueXP disaster recovery.
+
+* *Administrador de recuperação de desastres*: Execute qualquer ação na BlueXP disaster recovery.
+* *Administrador de failover de recuperação de desastres*: execute ações de failover e migração na BlueXP disaster recovery.
+* *Administrador do aplicativo de recuperação de desastres*: Crie e modifique planos de replicação e inicie failovers de teste.
+* *Visualizador de recuperação de desastres*: visualize informações na BlueXP disaster recovery, mas não pode executar nenhuma ação.
+
+
+Se estiver clicando no serviço de BlueXP disaster recovery e configurando-o pela primeira vez, você deverá ter a permissão *SnapCenterAdmin* ou ter a função *Administrador da organização*.
+
+Para obter detalhes,  https://docs.netapp.com/us-en/bluexp-disaster-recovery/reference/dr-reference-roles.html["Funções e permissões de usuário na BlueXP disaster recovery"]consulte .
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre as funções de acesso do BlueXP para todos os serviços"^].
+
+
+
+=== Outras atualizações na BlueXP disaster recovery
+
+* Descoberta de rede aprimorada
+* Melhorias de escalabilidade:
++
+** Filtragem dos metadados necessários em vez de todos os detalhes
+** Melhorias na descoberta para recuperar e atualizar recursos de VM mais rapidamente
+** Otimização de memória e otimização de desempenho para recuperação e atualização de dados
+** Melhorias na criação de clientes do vCenter SDK e no gerenciamento de pools
+
+
+* Gerenciamento de dados obsoletos na próxima descoberta agendada ou manual:
++
+** Quando uma VM é excluída no vCenter, a BlueXP disaster recovery agora a remove automaticamente do plano de replicação.
+** Quando um armazenamento de dados ou rede é excluído no vCenter, a BlueXP disaster recovery agora o exclui do plano de replicação e do grupo de recursos.
+** Quando um cluster, host ou datacenter é excluído no vCenter, a BlueXP disaster recovery agora o exclui do plano de replicação e do grupo de recursos.
+
+
+* Agora você pode acessar a documentação do Swagger no modo anônimo do seu navegador. Você pode acessá-la na BlueXP disaster recovery, na opção Configurações > Documentação da API ou diretamente no seguinte URL no modo anônimo do seu navegador:  https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas["Documentação do Swagger"^] .
+* Em algumas situações, após uma operação de failback, o iGroup era deixado para trás após a conclusão da operação. Esta atualização remove o iGroup se ele estiver obsoleto.
+* Se o FQDN do NFS foi usado no plano de replicação, a BlueXP disaster recovery agora o resolve para um endereço IP. Esta atualização é útil se o FQDN não puder ser resolvido no site de recuperação de desastres.
+* Melhorias no alinhamento da interface do usuário
+* Melhorias de log para capturar os detalhes de dimensionamento do vCenter após a descoberta bem-sucedida
+
+
+
+
 == 30 de junho de 2025
 
 Versão 4.2.4P2

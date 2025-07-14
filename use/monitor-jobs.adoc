@@ -14,6 +14,14 @@ summary: A recuperação de desastres do NetApp BlueXP  é um serviço de recup
 [role="lead"]
 Você pode monitorar todos os trabalhos de recuperação de desastres do BlueXP e determinar seu progresso.
 
+
+
+== Ver trabalhos
+
+*Função BlueXP necessária* Administrador da organização, administrador de pasta ou projeto, administrador de recuperação de desastres, administrador de aplicativo de recuperação de desastres ou função de visualizador de recuperação de desastres.
+
+link:../reference/dr-reference-roles.html["Saiba mais sobre funções e permissões de usuário na BlueXP disaster recovery"]. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre as funções de acesso do BlueXP para todos os serviços"^].
+
 .Passos
 . No sistema de navegação esquerdo do BlueXP , selecione *proteção* > *recuperação de desastres*.
 . No menu superior, selecione *monitorização de trabalhos*.
@@ -27,6 +35,10 @@ Você pode monitorar todos os trabalhos de recuperação de desastres do BlueXP 
 == Cancelar um trabalho
 
 Se um trabalho estiver em andamento ou em um estado na fila e você não quiser continuar, você pode cancelá-lo. Pode pretender cancelar um trabalho se este estiver preso no mesmo estado e pretender libertar a próxima operação na fila de espera. Você pode querer cancelar um trabalho antes que ele acabe.
+
+*Função BlueXP necessária* Administrador da organização, administrador de pasta ou projeto, administrador de recuperação de desastres, administrador de failover de recuperação de desastres ou administrador de aplicativo de recuperação de desastres.
+
+link:../reference/dr-reference-roles.html["Saiba mais sobre funções e permissões de usuário na BlueXP disaster recovery"]. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre as funções de acesso do BlueXP para todos os serviços"^].
 
 .Passos
 . No sistema de navegação esquerdo do BlueXP , selecione *proteção* > *recuperação de desastres*.
