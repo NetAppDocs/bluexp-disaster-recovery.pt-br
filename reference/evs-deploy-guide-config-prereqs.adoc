@@ -16,7 +16,7 @@ Especificamente, faça o seguinte:
 * Crie uma conta de usuário do vCenter com os privilégios específicos do VMware necessários para a recuperação de desastres do BlueXP para executar as operações necessárias.
 +
 
-NOTE: Não recomendamos o uso da conta de administrador padrão "administrator@vsphere.com". Em vez disso, você deve criar uma conta de usuário específica para recuperação de desastres do BlueXP em todos os clusters do vCenter que participarão do processo de recuperação de desastres. Para obter uma lista de privilégios específicos necessários, consulte link:vcenter-privileges.html["O vCenter Privileges é necessário para a recuperação de desastres do BlueXP "] .
+NOTE: Não recomendamos usar a conta de administrador padrão "\administrator@vsphere.com". Em vez disso, você deve criar uma conta de usuário específica para recuperação de desastres do BlueXP em todos os clusters do vCenter que participarão do processo de recuperação de desastres. Para obter uma lista de privilégios específicos necessários, consulte link:vcenter-privileges.html["O vCenter Privileges é necessário para a recuperação de desastres do BlueXP "] .
 
 * Certifique-se de que todos os armazenamentos de dados do vCenter que hospedarão VMs protegidas pela recuperação de desastres do BlueXP estejam localizados nos recursos de armazenamento do NetApp ONTAP.
 +
