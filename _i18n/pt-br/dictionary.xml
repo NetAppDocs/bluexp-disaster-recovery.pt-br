@@ -370,15 +370,12 @@
   <block id="8454892d6268011bb79d98eedd4f8afb" category="paragraph"><block ref="10a687fb14a41a274bb5d883fcf5c124" category="inline-link-macro-rx"></block>.</block>
   <block id="c9df4195a305212ffd7b56d24f67129d" category="summary">O NetApp fornece suporte para BlueXP  de várias maneiras. Amplas opções gratuitas de suporte autônomo estão disponíveis 24 horas por dia, 7 dias por semana, como artigos da base de conhecimento (KB) e um fórum da comunidade. O seu registo de suporte inclui suporte técnico remoto através de Bilheteira na Web.</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Obtenha ajuda</block>
-  <block id="7c5661ab6b39ee901cea00a6e7020a49" category="paragraph">A NetApp oferece suporte ao BlueXP  e seus serviços de nuvem de várias maneiras. Amplas opções gratuitas de suporte autônomo estão disponíveis 24 horas por dia, 7 dias por semana, como artigos da base de conhecimento (KB) e um fórum da comunidade. O seu registo de suporte inclui suporte técnico remoto através de Bilheteira na Web.</block>
   <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">Obtenha suporte para um serviço de arquivos do provedor de nuvem</block>
   <block id="f6185bb12f5e53c800be8cda7fbca65b" category="paragraph">Para obter suporte técnico relacionado a um serviço de arquivo de provedor de nuvem, sua infraestrutura ou qualquer solução usando o serviço, consulte "obter ajuda" na documentação do BlueXP  para esse produto.</block>
   <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSX para ONTAP</block>
   <block id="9d06990508d25d367d9158c6558eb9c8" category="list-text"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="inline-link-macro">Azure NetApp Files</block>
   <block id="2e0c742f4616eb27b5b7646aa790edfe" category="list-text"><block ref="2e0c742f4616eb27b5b7646aa790edfe" category="inline-link-macro-rx"></block></block>
-  <block id="b0cee72642f5457a71ddd0b49efb6d93" category="inline-link-macro">Cloud Volumes Service para Google Cloud</block>
-  <block id="cf14bff66a8b72d3675db8ffe0f02ee3" category="list-text"><block ref="cf14bff66a8b72d3675db8ffe0f02ee3" category="inline-link-macro-rx"></block></block>
   <block id="3880ae5df9fdc4d0fc4a6d00a2239530" category="paragraph">Para receber suporte técnico específico da BlueXP  e de suas soluções e serviços de storage, use as opções de suporte descritas abaixo.</block>
   <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">Use opções de suporte autônomo</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">Estas opções estão disponíveis gratuitamente, 24 horas por dia, 7 dias por semana:</block>
@@ -471,8 +468,6 @@
   <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">Selecione *Adicionar credenciais NSS* e siga o prompt de autenticação do site de suporte da NetApp (NSS).</block>
   <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">Para confirmar que o processo de Registro foi bem-sucedido, selecione o ícone Ajuda e selecione *suporte*.</block>
   <block id="2ba7f9eae7a02f9c3ac0fc07517d1c48" category="paragraph">A página *recursos* deve mostrar que sua organização do BlueXP  está registrada para suporte.</block>
-  <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">Uma captura de tela que mostra um número de série de conta e uma caixa de seleção verde e o texto registrado para suporte.</block>
-  <block id="3d183819a15163ef2e2e7d9d764254a9" category="paragraph"><block ref="3d183819a15163ef2e2e7d9d764254a9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c05e530d1466e986d570cfe3f92656c3" category="paragraph">Observe que outros usuários do BlueXP  não verão esse mesmo status de Registro de suporte se não tiverem associado uma conta do site de suporte da NetApp ao login do BlueXP . No entanto, isso não significa que sua organização do BlueXP  não esteja registrada para suporte. Desde que um usuário na organização tenha seguido esses passos, sua organização foi registrada.</block>
   <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">Cliente existente, mas sem conta NSS</block>
   <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">Se você já é um cliente NetApp com licenças e números de série existentes, mas _no_ conta NSS, você precisa criar uma conta NSS e associá-la ao seu login no BlueXP .</block>
@@ -1309,9 +1304,7 @@
   <block id="948fdcd481f1b60f64cd0a1415b8772c" category="inline-link-macro">Habilitar recuperação de desastres BlueXP para Amazon EVS</block>
   <block id="3b4041796a7d19952ce4f05d7ac1296e" category="list-text"><block ref="3b4041796a7d19952ce4f05d7ac1296e" category="inline-link-macro-rx"></block></block>
   <block id="48640808aa8de0e397783c9f0bf7d38c" category="inline-link-macro">Adicionar sites do vCenter à recuperação de desastres do BlueXP</block>
-  <block id="b1a91a36f01e2b398842c4fafba5b827" category="list-text"><block ref="b1a91a36f01e2b398842c4fafba5b827" category="inline-link-macro-rx"></block></block>
   <block id="4870ca95287127b763711668002ae46a" category="inline-link-macro">Adicionar clusters do vCenter à recuperação de desastres do BlueXP</block>
-  <block id="b58a5282def19b2cfa0d6a21a2fb1873" category="list-text"><block ref="b58a5282def19b2cfa0d6a21a2fb1873" category="inline-link-macro-rx"></block></block>
   <block id="77b6a574c8fd563a40ba5d3ced2f6995" category="summary">Você deve garantir que vários pré-requisitos sejam atendidos antes de continuar a configurar o Amazon EVS com a recuperação de desastres do BlueXP.</block>
   <block id="3cfd631225e4a5cd11bb7f070aa490d3" category="paragraph">Especificamente, faça o seguinte:</block>
   <block id="0c16cce0fa7cbfe2c47b9b35b500ef09" category="list-text">Crie uma conta de usuário do vCenter com os privilégios específicos do VMware necessários para a recuperação de desastres do BlueXP para executar as operações necessárias.</block>
@@ -1626,7 +1619,6 @@
   <block id="28312bff8dd6c634a03c918b3596d5f7" category="sidebar">Instale o conetor BlueXP</block>
   <block id="c56bd649320b98b22e1f05d40935c0f6" category="sidebar">Configurar a recuperação de desastres do BlueXP para o Amazon EVS</block>
   <block id="4f94a228aaf45b495bf1d0a2993b0783" category="sidebar">Pré-requisitos para o Amazon EVS</block>
-  <block id="d1b981f857dccafd90e2d47d3dd9b84c" category="sidebar">Adicionar matrizes para Amazon EVS</block>
   <block id="429e79e40c66df3fe31a40b9087107f5" category="sidebar">Adicionar recuperação de desastres BlueXP para Amazon EVS</block>
   <block id="456d07ca1e92ff93932f43241f478198" category="sidebar">Adicionar clusters vCenter para Amazon EVS</block>
   <block id="ad115bee9be4ef501777f6719a0fe513" category="sidebar">Crie planos de replicação para o Amazon EVS</block>
@@ -1725,4 +1717,12 @@
   <block id="c63f107526be606f4a1357ceb85fa571" category="paragraph">*Função BlueXP necessária* Administrador da organização, administrador de pasta ou projeto ou administrador de recuperação de desastres.</block>
   <block id="bfc307710c1f872e4dfb6ec657573e8a" category="sidebar">Funções e privilégios de BlueXP disaster recovery</block>
   <block id="0b6db37b4e08c0c7d93c7363682d4617" category="admonition">Não recomendamos usar a conta de administrador padrão "\administrator@vsphere.com". Em vez disso, você deve criar uma conta de usuário específica para recuperação de desastres do BlueXP em todos os clusters do vCenter que participarão do processo de recuperação de desastres. Para obter uma lista de privilégios específicos necessários, consulte <block ref="81359e3dc28c5def835ffa82482dcdcf" category="inline-link-macro-rx"></block> .</block>
+  <block id="ba2befc5eb2af5c1c7f9d7cdbe007c3f" category="list-text"><block ref="ba2befc5eb2af5c1c7f9d7cdbe007c3f" category="inline-link-macro-rx"></block></block>
+  <block id="1ab0b0508e3ee0ed9909c87545358ccc" category="list-text"><block ref="1ab0b0508e3ee0ed9909c87545358ccc" category="inline-link-macro-rx"></block></block>
+  <block id="bbbc9b55f08bfe80f146b5207bdb7728" category="paragraph">A NetApp oferece suporte para o BlueXP e seus serviços de nuvem de diversas maneiras. Oferecemos amplas opções gratuitas de autossuporte 24 horas por dia, 7 dias por semana, como artigos da base de conhecimento (KB) e um fórum da comunidade. Seu cadastro no suporte inclui suporte técnico remoto por meio de tickets online.</block>
+  <block id="1215f8190533dfdf63d2224a6d88266f" category="inline-link-macro">Google Cloud NetApp Volumes</block>
+  <block id="cb4bf32603c89d08cad17e7e7dd302f2" category="list-text"><block ref="cb4bf32603c89d08cad17e7e7dd302f2" category="inline-link-macro-rx"></block></block>
+  <block id="759d32287efdf88cd8ac71dccc0ecf8d" category="inline-image-macro">Uma captura de tela que mostra um número de série da conta, uma caixa de seleção verde e o texto Registrado para suporte.</block>
+  <block id="4c441b388bebcddf8c08fb782095b864" category="paragraph"><block ref="4c441b388bebcddf8c08fb782095b864" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b48bf926273d62cab06e1bce2eeec67f" category="sidebar">Adicionar matrizes de armazenamento ONTAP para Amazon EVS</block>
 </blocks>

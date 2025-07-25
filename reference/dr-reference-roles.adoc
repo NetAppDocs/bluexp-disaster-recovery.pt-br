@@ -8,7 +8,7 @@ summary: A BlueXP disaster recovery emprega funções para controlar o acesso qu
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/use
 
 
 [role="lead"]
