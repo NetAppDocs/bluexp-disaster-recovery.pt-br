@@ -75,7 +75,7 @@ IMPORTANT: Alguns lançamentos incluem uma prévia da tecnologia. A NetApp não 
 Você pode usar os seguintes tipos de licença:
 
 * Inscreva-se para uma avaliação gratuita de 30 dias.
-* Compre uma assinatura PAYGO (pay-as-you-go) para *Serviços inteligentes da NetApp* com o mercado da Amazon Web Services (AWS).
+* Adquira uma assinatura pré-paga (PAYGO) do * NetApp Intelligent Services* com o Amazon Web Services (AWS) Marketplace e o Microsoft Azure Marketplace.
 * Traga sua própria licença (BYOL), que é um arquivo de licença NetApp (NLF) que você obtém de seu representante de vendas da NetApp Você pode usar o número de série da licença para ativar o BYOL na carteira digital BlueXP .
 
 

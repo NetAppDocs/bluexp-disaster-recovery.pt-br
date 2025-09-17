@@ -1,0 +1,19 @@
+= Configuração de script para failover de teste
+:allow-uri-read: 
+
+
+
+
+=== Configuração de script para failover de teste
+
+Com esta versão, agora você pode executar scripts em VMs depois que elas forem ligadas durante o processo de failover de teste.  Isso permite que você teste e valide scripts.  Por exemplo, você pode atualizar as montagens NFS para apontar para um novo servidor de destino, garantindo que os aplicativos convidados fiquem totalmente online e que seu processo de recuperação possa ser testado de ponta a ponta.
+
+Para obter mais informações sobre o processo de failover, consultelink:https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["Failover de aplicativos para um local remoto"] .
+
+
+
+=== Processo de failback aprimorado
+
+Durante o failover, o processo de failback agora fica desabilitado até que a descoberta seja concluída.  Isso garante que todas as configurações sejam corretamente identificadas e contabilizadas antes de iniciar um failback, reduzindo o risco de erros.
+
+Para obter mais informações sobre o processo de failback, consultelink:https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failback.html["Fazer failback de aplicativos para a fonte original"] .
